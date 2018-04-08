@@ -1,0 +1,244 @@
+#wrapper{
+	width:1100px;
+	height:900px;
+	margin:0px auto;
+	overflow:hidden;
+	position:relative;
+    background-color:antiquewhite;
+}
+header{
+	width:100%;
+	height:200px;
+	background-color:#00086A;
+    overflow: hidden;
+}
+#headline{
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	-webkit-transition: all 3s linear 0s;
+	-o-transition: all 1s linear 0s;
+	-moz-transition:all 1s linear 0s;
+	transition: all 1s linear 0s;
+	padding-left: 25px;
+	padding-top: 30px;
+	font-size: 2em;
+	color:lightskyblue;
+	z-index:999;
+	width:100px;
+}
+#sub{
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	-webkit-transition: all 1s linear 0s;
+	-o-transition: all 1s linear 0s;
+	-moz-transition:all 1s linear 0s;
+	transition: all 1s linear 0s;
+	padding-left: 25px;
+	margin-top: -18px;
+	font-size: 3em;
+	color:white;
+	z-index:3;
+    width:400px;
+}
+#wheel{
+	background-image:url(../image/wheel_500.png);
+	background-repeat:no-repeat;
+	width:500px;
+	height:493px;
+    margin-top:-110px;
+    margin-left:400px;
+	opacity:1;
+	-webkit-animation:spin 20s linear infinite;
+	-moz-animation:spin 20s linear infinite;
+	animation:spin 20s linear infinite;
+}
+@-moz-keyframes spin { 100% 
+{ -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } 
+}
+@-moz-keyframes stop { 100% { -moz-transform: rotate(0deg); } }
+@-webkit-keyframes stop { 100% { -webkit-transform: rotate(0deg); } 
+}
+@keyframes stop { 100% { -webkit-transform: rotate(0deg); transform:rotate(0deg); } 
+}
+/*#wheel:hover{
+	-webkit-animation:stop 0s linear;
+}*/
+#business_partnering{
+	width:75px;
+	height:75px;	
+	background-image:url(../image/business_partnering.png);
+	background-repeat:no-repeat;
+}
+#core_competency_guide{
+	width:543px;
+	height:750px;
+	background-image:url(../image/Competency_Guide_for_BIW2.png);
+	background-repeat:no-repeat;	
+	position:absolute;
+	left:200px;
+	top:150px;
+}
+body {
+    background-color:white;
+    margin:0px; padding:0px;
+}
+
+#levereging {
+    width:75px;
+	height:75px;	
+	background-image:url(../image/leveraging_external_ideas.png);
+	background-repeat:no-repeat;
+}
+
+#buttons {
+    list-style-type: none;
+    float:left;
+}
+#buttons li {
+    margin-bottom: 10px;
+}
+
+#customer_focus {
+    width:75px;
+	height:75px;	
+	background-image:url(../image/customer_focus.png);
+	background-repeat:no-repeat;
+}
+
+#talent_development {
+    width:75px;
+	height:75px;	
+	background-image:url(../image/talent_development.png);
+	background-repeat:no-repeat;
+}
+
+#operational_excellence {
+    width:75px;
+	height:75px;	
+	background-image:url(../image/operational_excellence.png);
+	background-repeat:no-repeat;
+}
+
+#talent_development:hover {
+    background-image:url(../image/talent_development_hover.png);
+	background-repeat:no-repeat;
+}
+
+#business_partnering:hover {
+    background-image:url(../image/business_partnering_hover.png);
+	background-repeat:no-repeat;
+}
+
+#levereging:hover {
+    background-image:url(../image/leveraging_external_ideas_hover.png);
+	background-repeat:no-repeat;
+}
+
+#customer_focus:hover {
+    background-image:url(../image/customer_focus_hover.png);
+	background-repeat:no-repeat;
+}
+
+#operational_excellence:hover {
+    background-image:url(../image/operational_excellence_hover.png);
+	background-repeat:no-repeat;
+}
+
+#enterprise {
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    margin-top: 5px;
+    float:left;
+    opacity:1;
+}
+
+#business_partnering2 {
+    width:75px;
+	height:75px;	
+	background-image:url(../image/business_partnering.png);
+	background-repeat:no-repeat;
+}
+
+#business_partnering2:hover {
+    background-image:url(../image/business_partnering_hover.png);
+	background-repeat:no-repeat;
+}
+
+#agile {
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    margin-top: 5px;
+    float:left;
+    opacity:1;
+}
+
+#courageous_innovator {
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    margin-top: 5px;
+    float:left;
+    opacity:1;
+}
+
+#customer_and_patient_ambassador {
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    margin-top: 5px;
+    float:left;
+    opacity:1;
+}
+
+#analytical_problem_solver {
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    margin-top: 5px;
+    float:left;
+    opacity:1;
+}
+
+#talent_builder {
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    margin-top: 5px;
+    float:left;
+    opacity:1;
+}
+
+#adaptable_achiever {
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    margin-top: 5px;
+    float:left;
+    opacity:1;
+}
+
+#bullets {
+    color:#00086A;
+}
+
+
+
+

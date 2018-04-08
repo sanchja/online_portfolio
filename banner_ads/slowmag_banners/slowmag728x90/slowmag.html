@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>slow-mag</title>    
+<!--    <link href="css/styles_728_90.css" rel="stylesheet" type="text/css">-->
+<!--    <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>-->
+    <style>
+        .banner {
+    width:728px;
+    height:90px;
+    margin:0px auto;
+    position: relative;
+    overflow: hidden;
+    opacity: 1;
+    display: block;
+}
+#wrapper {
+	margin:0px auto;
+    width:728px;
+    height:90px;
+}
+
+.copy {
+    position:absolute;
+    right:50px;
+    top:5px;
+    display: none;
+}
+
+.logo {
+    position:absolute;
+    left:150px;
+    top:5px;
+}
+
+.copy2 {
+    position:absolute;
+    right:120px;
+    top:8px;
+    display: none;
+}
+
+.copy3 {
+    position:absolute;
+    right:150px;
+    top:12px;
+    display: none;
+}
+
+.copy4 {
+    position:absolute;
+    right:150px;
+    top:8px;
+    display: none;
+}
+
+.bottles {
+    position:absolute;
+    right:10px;
+    top:0px;
+    display: none;
+}
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="banner">
+            <a href="http://www.slowmag.com" target="_blank">
+            <div>
+                <img class="1st" src="running.jpg" width="728" height="90"/>
+            </div>
+            <div class="logo"><img src="logo.png"/></div>
+            <div class="copy"><img src="copy.png"/></div>
+            <div class="copy2"><img src="copy2.png"/></div>
+            <div class="bottles"><img src="image2.png"/></div>
+            <div class="copy3"><img src="copy3.png"/></div>
+            <div class="copy4"><img src="copy4.png"/></div>
+            </a>
+        </div>
+    </div>
+    
+<!--Animation script-->    
+    <script>
+        $('.copy').delay(1000).fadeIn(1500).fadeOut();
+        $('.copy2').delay(3500).fadeIn(1500).fadeOut();
+        $('.bottles').delay(3500).fadeIn(1500);
+        $('.copy3').delay(6000).fadeIn(1500).fadeOut();
+        $('.copy4').delay(8000).fadeIn(1500);
+    </script>
+</body>
+</html>

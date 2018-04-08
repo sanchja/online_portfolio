@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>slow-mag - Yoga</title>
+<style>
+    .banner {
+        width:728px;
+        height:90px;
+        margin:0px auto;
+        position: relative;
+        overflow: hidden;
+        opacity: 1;
+        display: block;
+    }
+    #wrapper {
+        margin:0px auto;
+        width:728px;
+        height:90px;
+    }
+
+    .copy {
+        position:absolute;
+        left:300px;
+        top:20px;
+        display: none;
+        z-index: 999;
+    }
+
+    .logo {
+        position:absolute;
+        left:600px;
+        top:10px;
+        display:none;
+        z-index: 999;
+    }
+
+    .copy2 {
+        position:absolute;
+        left:300px;
+        top:30px;
+        display: none;
+        z-index: 999;
+    }
+
+    .copy3 {
+        position:absolute;
+        left:350px;
+        top:30px;
+        display: none;
+        z-index: 999;
+    }
+
+    .copy4 {
+        position:absolute;
+        right:150px;
+        top:8px;
+        display: none;
+    }
+
+    .bottles {
+        position:absolute;
+        right:10px;
+        top:0px;
+        display: none;
+    }
+
+    .person {
+        position: absolute;
+        left:0px;
+        z-index: -100;
+    }
+
+    .1st {
+        z-index: 100;
+        position: absolute;
+    }
+
+    .person2 {
+        position: absolute;
+        left:0px;
+        display:none;
+        z-index: -100;
+    }
+
+    .person3 {
+        position: absolute;
+        left:0px;
+        display:none;
+        z-index: -100;
+    }
+
+</style>    
+<!--    <link href="css/styles_yoga_728_90.css" rel="stylesheet" type="text/css">-->
+<!--    <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="banner">
+            <a href="http://www.slowmag.com" target="_blank">
+                <div>
+                    <img class="1st" src="green_bkgd.png" align="right" width="535" height="90"/>
+                </div>
+                <div class="person"><img src="yoga1.png" width="208" height="90"/></div>
+                <div class="person2"><img src="yoga2.png" width="208" height="90"/></div>
+                <div class="person3"><img src="yoga3.png" width="208" height="90"/></div>
+                <div class="logo"><img src="slowmag_logo.png"/></div>
+                <div class="copy"><img src="yoga_copy1.png"/></div>
+                <div class="copy2"><img src="yoga_copy2.png"/></div>
+                <div class="copy3"><img src="yoga_copy3.png"/></div>
+            </a>
+        </div>
+    </div>
+<!--Animation script-->
+    <script>
+        $('.copy').delay(1000).fadeIn(1500).fadeOut(1500);
+        $('.logo').delay(1000).fadeIn(1500);
+        $('.person').delay(3500).fadeOut(1500);      
+        $('.person2, .copy2').delay(3500).fadeIn(2000).fadeOut(1500);        
+        $('.person3, .copy3').delay(5500).fadeIn(2000);
+    </script>
+</body>
+</html>

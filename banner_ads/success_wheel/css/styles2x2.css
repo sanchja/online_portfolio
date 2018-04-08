@@ -1,0 +1,89 @@
+#wrapper{
+			width:308px;
+			height:308px;
+			margin:0px auto;
+			overflow:hidden;
+			position:relative;
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#B7C6E8+0,223789+69 */
+
+background: #ffffff; /* Old browsers */
+
+background: -moz-linear-gradient(top,  #B7C6E8 0%, #00086A 69%); /* FF3.6+ */
+
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(69%,#00086A)); /* Chrome,Safari4+ */
+
+background: -webkit-linear-gradient(top,  #B7C6E8 0%,#00086A 69%); /* Chrome10+,Safari5.1+ */
+
+background: -o-linear-gradient(top,  #B7C6E8 0%,#00086A 69%); /* Opera 11.10+ */
+
+background: -ms-linear-gradient(top,  #B7C6E8 0%,#00086A 69%); /* IE10+ */
+
+background: linear-gradient(to bottom,  #B7C6E8 0%,#00086A 69%); /* W3C */
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#B7C6E8', endColorstr='#00086A',GradientType=0 ); /* IE6-9 */
+
+
+		}
+    	#wheel{
+			background-image:url(../image/wheel_300.png);
+			background-repeat:no-repeat;
+			position:absolute;
+			/*width:539px;
+			height:531px;*/
+			/*width:300px;
+			height:296px;*/
+			width:300px;
+			height:296px;
+			top:110px;
+			left:5px;
+			
+			-webkit-animation:spin 20s linear infinite;
+    		-moz-animation:spin 20s linear infinite;
+    		animation:spin 20s linear infinite;
+		}
+		@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+@-moz-keyframes stop { 100% { -moz-transform: rotate(0deg); } }
+@-webkit-keyframes stop { 100% { -webkit-transform: rotate(0deg); } }
+@keyframes stop { 100% { -webkit-transform: rotate(0deg); transform:rotate(0deg); } }
+		/*#wheel:hover {
+  			-webkit-transform: rotate(360deg);
+  			transform: rotate(360deg);
+		}*/
+		
+/*#wheel:hover{
+	-webkit-animation:stop 0s linear;
+}*/
+
+		#headline{
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	-webkit-transition: all 3s linear 0s;
+	-o-transition: all 1s linear 0s;
+	-moz-transition:all 1s linear 0s;
+	transition: all 1s linear 0s;
+	padding-left: 25px;
+	padding-top: 30px;
+	font-size: 2em;
+	color:#00086A;
+	/*-webkit-animation: color_change 1s;
+	-moz-animation: color_change 1s infinite alternate;
+	-ms-animation: color_change 1s infinite alternate;
+	-o-animation: color_change 1s infinite alternate;
+	animation: color_change 1s infinite alternate;*/
+		}
+/*@-webkit-keyframes color_change {
+	from {color: white; }
+	to { color: #1476C6; }
+}*/
+#sub{
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	-webkit-transition: all 1s linear 0s;
+	-o-transition: all 1s linear 0s;
+	-moz-transition:all 1s linear 0s;
+	transition: all 1s linear 0s;
+	padding-left: 25px;
+	margin-top: -54px;
+	font-size: 2.2em;
+	color:white;
+}

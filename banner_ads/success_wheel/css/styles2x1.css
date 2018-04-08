@@ -1,0 +1,89 @@
+#wrapper{
+			width:308px;
+			height:148px;
+			margin:0px auto;
+			overflow:hidden;
+			position:relative;
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cfe7fa+0,6393c1+100;Grey+Blue+3D */
+			
+			background: #cfe7fa; /* Old browsers */
+			
+			background: -moz-linear-gradient(top,  #cfe7fa 0%, #6393c1 100%); /* FF3.6+ */
+			
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cfe7fa), color-stop(100%,#6393c1)); /* Chrome,Safari4+ */
+			
+			background: -webkit-linear-gradient(top,  #cfe7fa 0%,#6393c1 100%); /* Chrome10+,Safari5.1+ */
+			
+			background: -o-linear-gradient(top,  #cfe7fa 0%,#6393c1 100%); /* Opera 11.10+ */
+			
+			background: -ms-linear-gradient(top,  #cfe7fa 0%,#6393c1 100%); /* IE10+ */
+			
+			background: linear-gradient(to bottom,  #cfe7fa 0%,#6393c1 100%); /* W3C */
+			
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfe7fa', endColorstr='#6393c1',GradientType=0 ); /* IE6-9 */
+
+
+		}
+    	#wheel{
+			background-image:url(../image/wheel_200.png);
+			background-repeat:no-repeat;
+			position:absolute;
+			/*width:539px;
+			height:531px;*/
+			/*width:300px;
+			height:296px;*/
+			width:200px;
+			height:197px;
+			top:10px;
+			left:100px;
+			
+			-webkit-animation:spin 20s linear infinite;
+    		-moz-animation:spin 20s linear infinite;
+    		animation:spin 20s linear infinite;
+		}
+		@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+@-moz-keyframes stop { 100% { -moz-transform: rotate(0deg); } }
+@-webkit-keyframes stop { 100% { -webkit-transform: rotate(0deg); } }
+@keyframes stop { 100% { -webkit-transform: rotate(0deg); transform:rotate(0deg); } }
+		/*#wheel:hover {
+  			-webkit-transform: rotate(360deg);
+  			transform: rotate(360deg);
+		}*/
+		
+/*#wheel:hover{
+	-webkit-animation:stop 0s linear;
+}*/
+
+		#headline{
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	-webkit-transition: all 3s linear 0s;
+	-o-transition: all 1s linear 0s;
+	-moz-transition:all 1s linear 0s;
+	transition: all 1s linear 0s;
+	padding-left: 5px;
+	padding-top: 30px;
+	font-size: 1.2em;
+	color:#1476C6;
+	/*-webkit-animation: color_change 1s;
+	-moz-animation: color_change 1s infinite alternate;
+	-ms-animation: color_change 1s infinite alternate;
+	-o-animation: color_change 1s infinite alternate;
+	animation: color_change 1s infinite alternate;*/
+		}
+/*@-webkit-keyframes color_change {
+	from {color: white; }
+	to { color: #1476C6; }
+}*/
+#sub{
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	-webkit-transition: all 1s linear 0s;
+	-o-transition: all 1s linear 0s;
+	-moz-transition:all 1s linear 0s;
+	transition: all 1s linear 0s;
+	padding-left: 5px;
+	margin-top: -30px;
+	font-size: 1.5em;
+	color:white;
+}

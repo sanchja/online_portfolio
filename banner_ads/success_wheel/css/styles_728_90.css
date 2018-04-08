@@ -1,0 +1,12 @@
+.banner {
+    width:728px;
+    height:90px;
+    margin:0px auto;
+    background-color: mediumaquamarine;
+}
+
+#wrapper {
+	margin:0px auto;
+    width:728px;
+    height:90px;
+}

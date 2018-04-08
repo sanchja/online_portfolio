@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+    <title>Butrans Medi-Cal 160x600</title>
+        <meta name="ad.size" content="width=160,height=600">
+<script type="text/javascript">
+    var clickTag = "https://butrans.com/hcpportal/f?p=BUTRANSRX:MANAGED_CARE::::::"; 
+    var clickTag2 = "http://app.purduepharma.com/xmlpublishing/pi.aspx?id=b"; 
+</script>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+<script language="javascript">
+    ScrollRate = 40;
+
+    function scrollDiv_init() {
+        DivElmnt = document.getElementById('warning');
+        ReachedMaxScroll = false;
+
+        DivElmnt.scrollTop = 0;
+        PreviousScrollTop  = 0;
+
+        ScrollInterval = setInterval('scrollDiv()', ScrollRate);
+    }
+
+    function scrollDiv() {
+
+        if (!ReachedMaxScroll) {
+            DivElmnt.scrollTop = PreviousScrollTop;
+            PreviousScrollTop++;
+
+            ReachedMaxScroll = DivElmnt.scrollTop >= (DivElmnt.scrollHeight - DivElmnt.offsetHeight);
+        }
+// THIS CAN BE UNCOMMENTED IF YOU WANT IT TO SCROLL BACK UP
+//        else {
+//            ReachedMaxScroll = (DivElmnt.scrollTop == 0)?false:true;
+//
+//            DivElmnt.scrollTop = PreviousScrollTop;
+//            PreviousScrollTop--;
+//        }
+    }
+
+    function pauseDiv() {
+        clearInterval(ScrollInterval);
+    }
+
+    function resumeDiv() {
+        PreviousScrollTop = DivElmnt.scrollTop;
+        ScrollInterval    = setInterval('scrollDiv()', ScrollRate);
+    }
+        
+</script>
+    
+<style>
+    p{margin:.7em 0; color:#000000; font-family:Arial, Helvetica, sans-serif;}
+    #wrapper{width:160px; height:600px; border: 1px solid #000000;overflow: hidden; position: relative;}
+    #main{overflow: hidden; border-bottom:1px solid #000000;
+    }
+    #callout{
+        position: absolute; top:200px; left:170px; z-index: 999;
+        transition: all 2s ease;
+        -webkit-transition: all 2s ease; /** Chrome & Safari **/
+        -moz-transition: all 2s ease; /** Firefox **/
+        -o-transition: all 2s ease; /** Opera **/
+    }
+    .animate{
+        transform: translate(-125px,0);
+        -webkit-transform: translate(-125px,0); /** Chrome & Safari **/
+        -o-transform: translate(-125px,0); /** Opera **/
+        -moz-transform: translate(-125px,0); /** Firefox **/
+    }
+    #fpi{ color:#000000; font-family:Arial, Helvetica, sans-serif; font-size: 8px; font-weight: bold; margin:0em auto; height:10px;
+       position: absolute; top:305px; left:5px;
+    }
+    #warning{
+        width:140px; height:175px; overflow:auto; color:#000000; font-family:Arial, Helvetica, sans-serif; font-size:8px; font-weight:bold; line-height:1.2em; text-align:left; margin:1.5em .5em; padding:.5em; border:1px solid #000000;position: absolute; top:325px;
+    }
+    #disclaimer{color:#000000; font-family:Arial, Helvetica, sans-serif; font-size: 6px; height:120px; margin:.5em auto; padding:1em; line-height: 7px; position: absolute; top:520px;
+    }
+    
+    
+</style>
+    
+</head>
+<body onLoad="scrollDiv_init()">
+<div id="wrapper">
+    <div id="main"><img src="main.svg"/></div>
+    <div id="callout"><a href="javascript:window.open(window.clickTag)"><img src="callout.png"/></a></div>
+    
+    <div id="fpi">
+        <p>Click <a href="javascript:window.open(window.clickTag2)">here</a> to read Full Prescribing Information, including Boxed Warning.</p>
+    </div>
+    
+    <div id="warning" onMouseOver="pauseDiv()" onMouseOut="resumeDiv()">
+        <p>WARNING: ADDICTION, ABUSE and MISUSE; LIFE-THREATENING 
+            RESPIRATORY DEPRESSION; ACCIDENTAL EXPOSURE; and NEONATAL OPIOID WITHDRAWAL SYNDROME
+        </p>
+        
+        <p><u>Addiction, Abuse, and Misuse</u><br>
+            Butrans exposes patients and other users to the risks of opioid addiction, abuse, and misuse, which can lead to overdose and death. Assess each patient’s risk prior to prescribing Butrans, and monitor all patients regularly for the development of these behaviors or conditions <em>[see Warnings and Precautions (5.1) and Overdosage (10)]</em>.
+        </p>
+        
+        <p><u>Life-Threatening Respiratory Depression</u><br>
+            Serious, life-threatening, or fatal respiratory depression may occur with use of Butrans. Monitor for respiratory depression, especially during initiation of Butrans or following a dose increase. Misuse or abuse of Butrans by chewing, swallowing, snorting or injecting buprenorphine extracted from the transdermal system will result in the uncontrolled delivery of buprenorphine and pose a significant risk of overdose and death <em>[see Warnings and Precautions (5.2)]</em>.
+        </p>
+        
+        <p><u>Accidental Exposure</u><br>
+            Accidental exposure to even one dose of Butrans, especially by children, can result in a fatal overdose of buprenorphine <em>[see Warnings and Precautions (5.2)]</em>.
+        </p>
+        <p><u>Neonatal Opioid Withdrawal Syndrome</u><br>
+            Prolonged use of Butrans during pregnancy can result in neonatal opioid withdrawal syndrome, which may be life-threatening if not recognized and treated, and requires management according to protocols developed by neonatology experts. If opioid use is required for a prolonged period in a pregnant woman, advise the patient of the risk of neonatal opioid withdrawal syndrome and ensure that appropriate treatment will be available <em>[see Warnings and Precautions (5.3)]</em>.
+        </p>
+    </div>
+    
+    <div id="disclaimer">
+        Please note that formularies are subject to change. Please check with the health plan directly to confirm coverage for individual patients. Patient costs may vary among plans.<br>
+        Covered represents on formulary (on any tier, with or without restrictions) and may include quantity limits, prior authorizations, and/or step edits.<br>
+        *Managed Markets Insight & Technology, LLC, database as of October 2016.<br>
+        <span style="float:right;">MR-02474</span>
+    </div>
+</div>
+<!--
+    <script>
+        $( document ).ready(function() {
+            $('#callout').animate({left: '45px'}, 1500);
+        });
+    </script>
+-->
+    <script>
+        $( document ).ready(function() {
+            $('#callout').addClass('animate');  
+        })
+    </script>
+</body>
+</html>
