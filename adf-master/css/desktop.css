@@ -1,0 +1,366 @@
+<!--GLOBAL STYLES-->
+*{margin:0px; padding:0px;}
+body{
+	background-color:#6d6e71;
+	position:relative;
+	font-size:100%;
+	font-family:"Proxima Nova";
+	background-image:url(../images/radial_background.png);
+	background-repeat:no-repeat;
+}
+
+h1{ font-size:2em; margin-top:0px;}
+h2{ font-size:1.2em;}
+h5{ font-size:1em; color: #ef3e25; text-align:center; margin-bottom:0px;}
+h6{ font-size:.8em; font-weight:normal;}
+p{ font-size:.9em; line-height:1.5em;}
+sub, sup { line-height: 0; }
+a:hovered{ color:#72BF44;}
+nav.menu ul li a:{ color:#72BF44;}
+/*nav.menu ul li a:visited{ color:#6d6e71;}*/
+nav.menu ul li a:hover{ color:#72BF44;background-image:url(../images/go_icon.png) no-repeat;}
+nav.menu ul li a:active{ color:black; background-image:url(../images/go_icon.png) no-repeat;}
+nav.menu ul li a.activeLink{ font-weight:bold; color:black; background-image:url(../images/go_icon.png) no-repeat;}
+.activeLink:visited{ font-weight:bold; /*border-bottom:4px solid #72BF44;*/ color:black;}
+.anchor a{ font-size:.8em; color:#6d6e71; font-weight:lighter;}
+.anchor a:visited{ font-size:.8em; color:#6d6e71;font-weight:lighter;}
+/*.anchor a:hover{ color:#72BF44; }*/
+<!-- COLOR STYLE GUIDES -->
+<!-- GOLD COLOR = #ffc222 -->
+<!-- GREEN COLOR = #72BF44-->
+<!-- GREY COLOR = #6d6e71-->
+.wrapper{
+	width:1200px;
+	height:auto;
+	background-color:#6d6e71;
+	margin:0px auto;
+	position:absolute;
+}
+.desktop_nav{
+	display:block;
+	float:left;	
+}
+.rounded_corners_container {
+    background-color: white;
+    padding: 4%;
+	padding-left:100px;
+    width: 88%;
+	border:thin solid black;
+    -webkit-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+    float: left;
+    margin-left: -50px;
+	margin-bottom:30px;
+}
+div#sb-site.wrapper{
+	/*background-color:grey;*/
+}
+header{
+	width:100%;
+	height:250px;
+	margin-bottom:30px;
+	margin-top:1%;
+	background-color:black;
+}
+.stop_ad{
+	width:45%;
+	height:250px;
+	float:left;
+	background-color:#000000;
+	background-image:url(../images/stop_ad_mobile_713px.png);
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size:60% auto;
+	display:block;
+	overflow:hidden;
+	
+}
+.go_ad{
+	width:55%;
+	height:250px;
+	background-color:#ffc222;
+	float:left;
+	background-image:url(../images/go_ad_mobile_1000px.png);
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size:80%;
+	display:block;
+}
+nav.menu{
+	width:200px;
+	height:100%;
+	margin-right:30px;
+	margin-left:-30px;
+	padding-top:20px;
+}
+nav{
+	width:100%;
+	float:left;
+}
+
+nav ul{
+	/*list-style-image:url(../images/stop_icon_mobile.png);*/
+	list-style-type:none;
+	padding-left:0px;
+}
+nav ul li{
+	margin-bottom: 10px;
+	padding-bottom: 15px;
+	border-bottom: thin solid #6d6e71;
+	background-image:url(../images/stop_icon_mobile.png);
+	background-repeat: no-repeat;
+	background-position: 0px top;
+	padding-left: 20px;
+	display: block;
+	height: 50px;
+}
+nav ul li a:active nav ul li a:visited{
+	margin-bottom: 10px;
+	padding-bottom: 15px;
+	border-bottom: thin solid #6d6e71;
+	background-image:url(../images/go_icon.png);
+	background-repeat: no-repeat;
+	background-position: 0px top;
+	padding-left: 20px;
+	display: block;
+	height: 50px;
+}
+nav ul li a{
+	/*line-height:14px;*/
+	color:#6d6e71;
+	text-decoration:none;
+}
+nav ul li a:hover{
+	color:#6d6e71;
+}
+.desktop_articles{
+	width:80%;
+	margin-left:200px;
+}
+#challenge_article1{
+	width:80%;
+	margin-left:200px;
+}
+#challenge_article_2{
+	width:80%;
+	margin-left:200px;
+}
+#challenge_article3{
+	width:80%;
+	margin-left:200px;
+}
+
+/* CHART IMAGES */
+#abuseDependenceChart{
+	width:100%;
+	height:500px;
+	display:block;
+	background-image:url(../images/abuseDependenceRatesChart_1000px.png);
+	background-repeat:no-repeat;
+	background-size:65%;
+	background-position:center;
+}
+#tamperingChart{
+	width:100%;
+	height:420px;
+	display:block;
+	background-image:url(../images/TamperingChart_1000px.png);
+	background-repeat:no-repeat;
+	background-size:85%;
+	background-position:center;	
+}
+
+#sourcesAbuseChart{
+	width:100%;
+	height:475px;
+	display:block;
+	background-image:url(../images/sourcesOfAbuseChart_1000px.png);
+	background-repeat:no-repeat;
+	background-size:95%;
+	background-position:center;	
+}
+#opioidFormulationsChart{
+	width:100%;
+	height:500px;
+	display:block;
+	background-image:url(../images/opioidFormulationsChart_1000px.png);
+	background-repeat:no-repeat;
+	background-size:90%;
+	background-position:center;		
+}
+#fdaCategoriesChart{
+	width:100%;
+	height:500px;
+	display:block;
+	background-image:url(../images/fdaCategoriesChart_1200px.png);
+	background-repeat:no-repeat;
+	background-size:99%;
+	background-position:center;		
+}
+#fourTiers{
+	list-style-type:none;
+	padding:0px; margin:0px;
+	width:100%;	
+	height:auto;
+}
+#fourTiers li{
+	margin:10px 0px;
+	display:inline-block;
+	margin-right:2.5%;
+	width:21%;
+}
+#tier1{
+	width:23%;
+	height:140px;
+	display:block;
+	background-image:url(../images/tier1.png);
+	background-repeat:no-repeat;
+	background-size:100%;
+	background-position:center;
+}
+#tier2{
+	width:23%;
+	height:140px;
+	display:block;
+	background-image:url(../images/tier2.png);
+	background-repeat:no-repeat;
+	background-size:100%;
+	background-position:center;
+}
+#tier3{
+	width:23%;
+	height:140px;
+	display:block;
+	background-image:url(../images/tier3.png);
+	background-repeat:no-repeat;
+	background-size:100%;
+	background-position:center;
+}
+#tier4{
+	width:23%;
+	height:140px;
+	display:block;
+	background-image:url(../images/tier4.png);
+	background-repeat:no-repeat;
+	background-size:100%;
+	background-position:center;
+}
+.dropdown_menu select{
+	width:40%;
+	height:25px;
+	font-size:1em;
+	margin-right:20px;
+}
+
+#go_button{
+	width:10%;
+	height:30px;
+	border-radius:5px;	
+}
+#showLeftPush{
+	display:none;
+}
+footer{
+	height:auto;
+	background-color:black;
+	color:#6d6e71;
+	line-height:30px;
+	font-size:1em;
+	padding:10px;
+	bottom:0px;
+	margin-bottom:0px;
+	width:100%;
+	clear:both;
+}
+footer a{
+	text-decoration:none;
+	color:#6d6e71;	
+}
+footer a:hover{
+	color:#72BF44;	
+}
+#draft_guidance{
+	font-size:.8em;	
+}
+
+.chart_titles{
+	font-size:1.2em;
+}
+h5 .chart_titles a{
+	text-decoration:none;	
+}
+ol li{
+	margin-bottom:20px;	
+}
+/*#home{
+	background-image:url(../images/stop_icon_mobile.png);
+	background-repeat:no-repeat;
+	padding-left:20px;	
+}
+#challenge{
+	background-image:url(../images/stop_icon_mobile.png);
+	background-repeat:no-repeat;
+	padding-left:20px;	
+}
+#types{
+	background-image:url(../images/stop_icon_mobile.png);
+	background-repeat:no-repeat;
+	padding-left:20px;	
+}
+#clinical{
+	background-image:url(../images/stop_icon_mobile.png);
+	background-repeat:no-repeat;
+	padding-left:20px;	
+}
+#opioids{
+	background-image:url(../images/stop_icon_mobile.png);
+	background-repeat:no-repeat;
+	padding-left:20px;	
+}
+#references{
+	background-image:url(../images/stop_icon_mobile.png);
+	background-repeat:no-repeat;
+	padding-left:20px;	
+}*/
+.goicons{
+	margin-bottom: 10px;
+	padding-bottom: 15px;
+	background-image:url(../images/go_icon.png);
+	background-repeat: no-repeat;
+	background-position: 0px top;
+	padding-left: 20px;
+	display: block;
+	height: 50px;	
+}
+.activeLink{
+	background-image:url(../images/go_icon.png);
+	background-repeat:no-repeat;
+	background-position: -14px;	
+}
+.indent{
+	margin-left:30px;	
+}
+#sitemap a{
+	text-decoration:none;
+	color:black;	
+}
+#sitemap a:hover{
+	color:#72BF44;	
+}
+#sitemap a:visited{
+	color:black;	
+}
+#copyright{
+	color:white;
+	line-height:1.3em;
+	width:40%;
+	font-size:.8em;
+	font-weight:normal;
+	padding: 8px 0px;
+}
+.manipulation{
+	font-size:.9em;
+	line-height:1.5em;	
+}

@@ -1,0 +1,270 @@
+<!--GLOBAL STYLES-->
+*{margin:0px; padding:0px;}
+body{
+	background-color:#CCCCCC;
+	position:relative;
+	font-size:100%;
+	font-family:"Proxima Nova";
+}
+h1{ font-size:1.8em;}
+h2{ font-size:1.4em;}
+h5{ font-size:.9em; color: #ef3e25; text-align:center; margin-bottom:0px;}
+h6{ font-size:.9em; font-weight:normal;}
+p{ font-size:1em;}
+sub, sup { line-height: 0; }
+a:hovered{ color:#72BF44;}
+nav.menu ul li a:{ color:#72BF44;}
+/*nav.menu ul li a:visited{ color:#6d6e71;}*/
+nav.menu ul li a:active{ color:#72BF44;}
+/*a:visited{ color:#72BF44;}*/
+.activeLink{ font-weight:bold; /*border-bottom:4px solid #72BF44;*/ color:#72BF44;}
+.activeLink:visited{ font-weight:bold; /*border-bottom:4px solid #72BF44;*/ color:#72BF44;}
+.anchor a{ font-size:.8em; color:#6d6e71; font-weight:lighter;}
+.anchor a:visited{ font-size:.8em; color:#6d6e71;font-weight:lighter;}
+/*.anchor a:hover{ color:#72BF44; }*/
+<!-- COLOR STYLE GUIDES -->
+<!-- GOLD COLOR = #ffc222 -->
+<!-- GREEN COLOR = #72BF44-->
+<!-- GREY COLOR = #6d6e71-->
+
+
+
+.wrapper{
+	width:100%;
+	height:auto;
+	background-color:white;
+	margin:0px auto;
+	position:absolute;	
+}
+.desktop_nav{
+	display:none;	
+}
+.rounded_corners_container{
+	background-color:white;
+	padding:4%;
+}
+header{
+	width:100%;
+	height:150px;
+	margin-top:1%;
+	margin-bottom:
+	background-color:black;
+	display:block;
+}
+.stop_ad{
+	width:45%;
+	height:150px;
+	float:left;
+	background-color:#000000;
+	overflow:hidden;
+	background-image:url(../images/stop_ad_mobile_200px.png);
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size:70% auto;
+}
+.go_ad{
+	width:55%;
+	height:150px;
+	background-color:#ffc222;
+	float:left;
+	display:block;
+	background-image:url(../images/go_ad_mobile_600px.png);
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size:80% auto;
+}
+nav.menu{
+	left:-300px;
+	float:left;	
+}
+nav{
+	width:70%;
+	float:left;
+}
+
+nav ul{
+	/*list-style-image:url(../images/stop_icon_mobile.png);*/
+	list-style-type:none;
+	padding-left:0px;
+}
+nav ul li{
+	margin-bottom:10px;
+	padding-bottom:10px;
+}
+nav ul li a{
+	line-height:14px;
+	color:#6d6e71;
+	text-decoration:none;
+}
+
+/* CHART IMAGES */
+#abuseDependenceChart{
+	width:100%;
+	height:380px;
+	display:block;
+	background-image:url(../images/abuseDependenceRatesChart_800px.png);
+	background-repeat:no-repeat;
+	background-size:70%;
+	background-position:center;
+}
+#tamperingChart{
+	width:100%;
+	height:350px;
+	display:block;
+	background-image:url(../images/TamperingChart_700px.png);
+	background-repeat:no-repeat;
+	background-size:80%;
+	background-position:center;	
+}
+#sourcesAbuseChart{
+	width:100%;
+	height:380px;
+	display:block;
+	background-image:url(../images/sourcesOfAbuseChart_800px.png);
+	background-repeat:no-repeat;
+	background-size:80%;
+	background-position:center;	
+}
+#opioidFormulationsChart{
+	width:100%;
+	height:380px;
+	display:block;
+	background-image:url(../images/opioidFormulationsChart_800px.png);
+	background-repeat:no-repeat;
+	background-size:100%;
+	background-position:center;		
+}
+#fdaCategoriesChart{
+	width:100%;
+	height:380px;
+	display:block;
+	background-image:url(../images/fdaCategoriesChart_800px.png);
+	background-repeat:no-repeat;
+	background-size:90%;
+	background-position:center;		
+}
+#fourTiers{
+	list-style-type:none;
+	padding:0px; margin:0px;
+	width:100%;	
+	height:500px;
+	margin-bottom:150px;
+}
+#fourTiers li{
+	margin:10px 0px;
+	margin-right:auto;
+	margin-left:auto;
+	width:100%;
+	display:block;
+}
+
+#tier1{
+	width:100%;
+	height:150px;
+	display:block;
+	background-image:url(../images/tier1.png);
+	background-repeat:no-repeat;
+	background-size:40%;
+	background-position:center;
+}
+
+#tier2{
+	width:100%;
+	height:150px;
+	display:block;
+	background-image:url(../images/tier2.png);
+	background-repeat:no-repeat;
+	background-size:40%;
+	background-position:center;
+}
+#tier3{
+	width:100%;
+	height:150px;
+	display:block;
+	background-image:url(../images/tier3.png);
+	background-repeat:no-repeat;
+	background-size:40%;
+	background-position:center;
+}
+#tier4{
+	width:100%;
+	height:150px;
+	display:block;
+	background-image:url(../images/tier4.png);
+	background-repeat:no-repeat;
+	background-size:40%;
+	background-position:center;
+}
+#tier4 img{
+	width:100%;
+	height:auto;	
+}
+.dropdown_menu select{
+	width:75%;
+	height:30px;
+	margin-right:10px;
+}
+#go_button{
+	width:20%;
+	height:30px;
+	border-radius:5px;	
+}
+#showLeftPush{
+	background-image:url(../images/bullets-green.png);
+	background-repeat: no-repeat;
+	display:block;
+	/*-webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);*/
+	-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+	width:44px;
+	height:40px;
+	cursor:pointer;
+	margin-bottom:5px;
+	clear:both;
+}
+footer{
+	height:auto;
+	background-color:black;
+	color:#6d6e71;
+	line-height:30px;
+	font-size:1em;
+	padding:10px;
+	bottom:0px;
+	margin-bottom:0px;
+	width:100%;
+}
+footer a{
+	text-decoration:none;
+	color:#6d6e71;	
+}
+footer a:hover{
+	color:#72BF44;	
+}
+.chart_titles{
+	font-size:1.5em;	
+}
+ol li{
+	margin-bottom:20px;	
+}
+.indent{
+	margin-left:20px;	
+}
+#sitemap a{
+	text-decoration:none;
+	color:black;	
+}
+#sitemap a:hover{
+	color:#72BF44;	
+}
+#sitemap a:visited{
+	color:black;	
+}
+#copyright{
+	color:white;
+	line-height:1.3em;
+	width:100%;
+	font-weight:normal;
+	font-size:.9em;
+}
