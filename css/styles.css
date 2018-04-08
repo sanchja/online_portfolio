@@ -1,0 +1,180 @@
+ul {         
+          padding:0 0 0 0;
+          margin:0 0 0 0;
+      }
+      ul li {     
+          list-style:none;
+          margin-bottom:0px;           
+      }
+      ul li img {
+          cursor: pointer;
+      }
+      .modal-body {
+          padding:5px !important;
+      }
+      .modal-content {
+          border-radius:0;
+      }
+      .modal-dialog img {
+          text-align:center;
+          margin:0 auto;
+      }
+    .controls{          
+        width:50px;
+        display:block;
+        font-size:11px;
+        padding-top:8px;
+        font-weight:bold;          
+    }
+    .next {
+        float:right;
+        text-align:right;
+    }
+      /*override modal for demo only*/
+      .modal-dialog {
+          max-width:500px;
+          padding-top: 90px;
+      }
+      @media screen and (min-width: 768px){
+          .modal-dialog {
+              width:500px;
+              padding-top: 90px;
+          }          
+      }
+      @media screen and (max-width:1500px){
+          #ads {
+              display:none;
+          }
+      }
+
+.cover {
+    background-image: url(../img/A10468-B%20slow-mag_yoga_static.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.navbar { border-radius: 0px; font-family: 'Jura', sans-serif; margin-bottom: 0px;}
+.wrapper_home {
+    background-image: url(../img/A10468-B%20slow-mag_yoga_static.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+    height:600px;
+}
+nav { padding:0px; }
+body { background-color: lightgray;
+    color: #a99e9e;
+    background-image: url('../img/code_bkgd_blur.jpg');
+    background-repeat: no-repeat; 
+    background-size:cover;
+    height: 600px;
+}
+
+nav.navbar-nav { height:0px; }
+#ipad {
+    background-image: url('../img/iPad_Air_Mock_up.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.h1 { margin-bottom:30px; color:#fff;}
+
+h4 { padding-bottom: .2em; margin-bottom:0px; }
+
+.col-md-2 { padding-top:2em; padding-bottom: 1em; }
+.col-md-10 { padding-top:0em; }
+
+.thumbnail { margin-bottom:0px; }
+@media screen and (min-width: 769px) {
+    .col-md-10 { padding-top:0em; }
+    h4 { padding-bottom: .5em; margin-bottom:0px; }
+    .col-md-2 { padding-top:0px; padding-bottom: 2em;}
+    .thumbnail { margin-bottom:20px; }
+    a#resume>img:hover {
+    border: 1px solid blue;
+    opacity: .8;
+    font-weight: bold;
+    color: red;
+    }
+    a#resume:hover:after{
+    content: 'Click to view or download pdf resume';
+    border: 1px solid #cccccc;
+    background-color: lightyellow;
+    position: absolute;
+    padding: 3px 8px;
+    font-size: 1em;
+    z-index: 9999;
+    margin-left: 80%;
+    margin-top: -93%;
+    width: 200px;
+    border-radius: 5px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .thumbnail {
+    margin-bottom:10px;
+    }
+}
+
+div .row { margin-bottom: 20px;}
+.logo {
+    width:200px;
+    height:120px;
+    background-color:#000;
+    font-family:font-family: 'Jura', sans-serif;
+    color:#9d9d9d;
+    font-size: 16px;
+    padding:0 auto;
+}
+
+#card {
+    position: relative;
+    width:200px; height: 500px;
+    background-image: url('../img/profile.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-right: 1px solid #fff;
+    float:left;
+}
+.submenu { float:left; display: inline-block; }
+.viewer {
+    float:left;
+    margin-left: 50px;
+    padding:10px;
+    text-align: center;
+    width:600px;
+    height:100%;
+}
+.viewer img { margin-right:20px; margin-bottom: 20px; }
+.viewer img:hover { opacity: 0.5; }
+
+.btn-grad {background-image: linear-gradient(to right, #8e9eab 0%, #eef2f3 51%, #8e9eab 100%);
+    color:#337ab7;
+    color:black;
+    border-radius: 5px;
+}
+.btn-grad:hover { background-position: right center;
+}
+
+
+#profile_text {
+    position:absolute;
+    width:100%;
+    top:200px;
+    padding-right:20px;
+    font-size: 1em; 
+    text-align: right;
+    color:#fff;
+}
+
+.fast_links {
+    float:left;
+    color:#fff;
+    padding:20px;
+    width:650px;
+    height:500px;
+    background-color:rgba(255,255,200, 0.1);
+    line-height:2em;
+}
+.fast_links a {
+    color:lightgray;
+}
