@@ -170,15 +170,14 @@ $(document).ready(function() {
         });
     });
     
-    var media = document.querySelector('d_media');
-    
-    var d_links = document.getElementsByClassName('d_media_links').addEventListener('click', clicked(){
-                                                                                    
-     });
-    
-    function clicked(){
-        media.appendChild('Lets be friends');
-    }
+    var viewer = document.getElementsByClassName("viewer"); // HANDLER FOR THE MEDIA BOX
+
+    $("#sidebar_links").on("click",function(){
+	//$(viewer).css("background-image","none");
+	$(viewer).html('<a href="ipad_apps/ehr_production/index.html" target="_blank"><img src="img/ehr.png" width="400" alt="Electronic Health Records"/> </a>').addClass('animated lightSpeedIn');
+        
+        
+	});
 
 
 });
