@@ -112,6 +112,7 @@ h4 { padding-bottom: .2em; margin-bottom:0px; }
     width: 200px;
     border-radius: 5px;
     }
+    
 }
 
 @media screen and (max-width: 414px) {
@@ -139,18 +140,19 @@ div .row { margin-bottom: 20px;}
     background-size: contain;
     border-right: 1px solid #010203;
     float:left;
+    background-color: rgba(1, 44, 96, 0.3);
+    color:lightgrey;
 }
 .submenu { float:left; display: inline-block; }
 .viewer {
     float:left;
-    margin-left: 50px;
     padding:10px;
     text-align: center;
-    width:600px;
+    width:150px;
     height:600px;
 }
 .viewer img { margin-right:20px; margin-bottom: 20px; }
-.viewer img:hover { opacity: 0.5; }
+/* .viewer img:hover { opacity: 0.5; } */
 
 .btn-grad {background-image: linear-gradient(to right, #8e9eab 0%, #eef2f3 51%, #8e9eab 100%);
     color:#337ab7;
@@ -181,7 +183,7 @@ div .row { margin-bottom: 20px;}
 }
 #sidebar_links li a:hover{
     text-decoration: none;
-    
+
 }
 
 footer {
@@ -198,3 +200,16 @@ footer {
     letter-spacing: .15em;
     line-height:1.7em;
 }
+
+@media screen and (max-width:521px){
+    footer {
+        bottom:10px;
+        padding:.5em;
+        padding-left:30px;
+        font-size: .9em;
+        letter-spacing: .15em;
+        line-height:1.3em;
+    }
+}
+a { color:lightgrey;}
+a:hover { color: #23527c;}
