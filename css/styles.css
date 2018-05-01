@@ -225,7 +225,7 @@ Responsive Mobile Phone Portrait
 Responsive Mobile Phone Landscape
 
 *******************************************************************************/
-@media screen and (min-width:522px) and (max-width:667px) and (orientation: Landscape) {
+@media screen and (min-width:530px) and (max-width:667px){
     #card {
         height: 320px;
         background-size: 140px 140px;
@@ -244,9 +244,9 @@ Responsive Mobile Phone Landscape
 
     }
     .viewer img { 
-        margin-left:0px;
-        margin-right:0px; 
-        margin-bottom: 0px;
+        margin-right:0px; margin-bottom: 0px;
+        margin-top:20px;
+        float:left;
     }
     footer {
         height: 30px;
