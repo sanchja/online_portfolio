@@ -162,6 +162,9 @@ div .row { margin-bottom: 20px;}
 .btn-grad:hover { background-position: right center;
 }
 
+a { color:lightgrey;}
+a:hover { color: #23527c;}
+
 .fast_links {
     float:left;
     color:#fff;
@@ -200,7 +203,29 @@ footer {
     letter-spacing: .15em;
     line-height:1.7em;
 }
-@media screen and (min-width:522px) and (max-width:667px){
+/******************************************************************************
+
+Responsive Mobile Phone Portrait
+
+*******************************************************************************/
+@media screen and (max-width:521px){
+    
+    footer {
+        bottom:10px;
+        padding:.5em;
+        padding-left:30px;
+        font-size: .9em;
+        letter-spacing: .15em;
+        line-height:1.3em;
+    }
+}
+
+/******************************************************************************
+
+Responsive Mobile Phone Landscape
+
+*******************************************************************************/
+@media screen and (min-width:522px) and (max-width:667px) and (orientation: Landscape) {
     #card {
         height: 320px;
         background-size: 140px 140px;
@@ -233,16 +258,3 @@ footer {
         line-height: 1.7em;
     }
 }
-@media screen and (max-width:521px){
-    
-    footer {
-        bottom:10px;
-        padding:.5em;
-        padding-left:30px;
-        font-size: .9em;
-        letter-spacing: .15em;
-        line-height:1.3em;
-    }
-}
-a { color:lightgrey;}
-a:hover { color: #23527c;}
