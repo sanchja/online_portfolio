@@ -180,9 +180,9 @@ a:hover { color: #23527c;}
 
 #sidebar_links {
     position:absolute;
-    top:250px;
+    top:200px;
     padding-left:15px;
-    line-height: 2em;
+    line-height: 1.5em;
 }
 #sidebar_links li a:hover{
     text-decoration: none;
@@ -233,9 +233,10 @@ Responsive Mobile Phone Landscape
     }
     #sidebar_links {
         position: absolute;
-        top: 140px;
+        top: 150px;
         padding-left: 15px;
-        line-height: 2em;
+        line-height: 1.5em;
+        font-size:.9em;
     }
     .viewer { 
         width: 450px;
@@ -248,13 +249,13 @@ Responsive Mobile Phone Landscape
         margin-bottom: 0px;
     }
     footer {
-        height: 50px;
+        height: 30px;
         position: fixed;
         bottom: 10px;
         color: lightgrey;
-        padding: 1em;
+        padding: 0px;
         padding-left: 30px;
         letter-spacing: .15em;
-        line-height: 1.7em;
+        line-height:30px;
     }
 }
