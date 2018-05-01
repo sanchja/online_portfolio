@@ -140,7 +140,7 @@ div .row { margin-bottom: 20px;}
     background-size: contain;
     border-right: 1px solid #010203;
     float:left;
-    background-color: rgba(1, 44, 96, 0.3);
+    background-color: rgba(1, 44, 96, 0.5);
     color:lightgrey;
 }
 .submenu { float:left; display: inline-block; }
@@ -213,10 +213,10 @@ Responsive Mobile Phone Portrait
     footer {
         bottom:10px;
         padding:.5em;
-        padding-left:30px;
+        padding-left:20px;
         font-size: .9em;
         letter-spacing: .15em;
-        line-height:1.3em;
+        line-height:1.7em;
     }
 }
 
