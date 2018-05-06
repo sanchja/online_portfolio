@@ -244,7 +244,7 @@ Responsive Mobile Phone Portrait
         height:100%;
     }
     .content_main{
-        background-color:rgba(201, 199, 199, 0.5); 
+        background-color:rgba(201, 199, 199, 0.6); 
     }
 }
 
@@ -284,7 +284,7 @@ Responsive Mobile Phone Landscape
         width:20em; height:20em;
     }
     .content_main{
-        background-color:rgba(201, 199, 199, 0.5); 
+        background-color:rgba(201, 199, 199, 0.6); 
     }
     footer {
         height: 30px;
