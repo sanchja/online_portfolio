@@ -46,7 +46,7 @@ ul {
               display:none;
           }
       }
-html { background-color: lightgray;
+/* html { background-color: lightgray;
     color: #a99e9e;
     background-image: url('../img/bkgd_image.png');
     background-repeat: no-repeat;
@@ -55,8 +55,16 @@ html { background-color: lightgray;
     -o-background-size: cover;
     background-size: cover;
     height:100%;
-}
-body { background: none;}
+} */
+body { background-color: lightgray;
+    /* color: #a99e9e; */
+    background-image: url('../img/bkgd_image.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height:100%;}
 .cover {
     background-image: url(../img/A10468-B%20slow-mag_yoga_static.jpg);
     background-repeat: no-repeat;
@@ -154,6 +162,14 @@ div .row { margin-bottom: 20px;}
 .viewer img { margin-right:20px; margin-bottom: 20px; }
 /* .viewer img:hover { opacity: 0.5; } */
 
+.main_image{
+    float:left;
+}
+.content_main{
+    float:left; 
+    background-color:rgba(201, 199, 199, 0.3); 
+    padding:.5em;
+}
 .btn-grad {background-image: linear-gradient(to right, #8e9eab 0%, #eef2f3 51%, #8e9eab 100%);
     color:#337ab7;
     color:black;
@@ -162,7 +178,7 @@ div .row { margin-bottom: 20px;}
 .btn-grad:hover { background-position: right center;
 }
 
-a { color:lightgrey;}
+a { color: #23527c;}
 a:hover { color: #23527c;}
 
 .fast_links {
@@ -216,7 +232,19 @@ Responsive Mobile Phone Portrait
         padding-left:20px;
         font-size: .9em;
         letter-spacing: .15em;
-        line-height:1.7em;
+        line-height:1.5em;
+    }
+    body {
+        background-image: url('../img/bkgd_image_mobile.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height:100%;
+    }
+    .content_main{
+        background-color:rgba(201, 199, 199, 0.5); 
     }
 }
 
@@ -227,8 +255,9 @@ Responsive Mobile Phone Landscape
 *******************************************************************************/
 @media screen and (min-width:530px) and (max-width:667px){
     #card {
-        height: 320px;
-        background-size: 140px 140px;
+        position: relative;
+        width:200px; height: 320px;
+        background-size: 140px;
         background-position-x: 20px;
     }
     #sidebar_links {
@@ -248,6 +277,15 @@ Responsive Mobile Phone Landscape
         margin-top:20px;
         float:left;
     }
+    .main_image{
+        float:left;
+    }
+    .main_image img{
+        width:20em; height:20em;
+    }
+    .content_main{
+        background-color:rgba(201, 199, 199, 0.5); 
+    }
     footer {
         height: 30px;
         position: fixed;
@@ -257,5 +295,7 @@ Responsive Mobile Phone Landscape
         padding-left: 30px;
         letter-spacing: .15em;
         line-height:30px;
+        font-size: .9em;
     }
 }
+
