@@ -270,6 +270,7 @@ Responsive Mobile Phone Landscape
     .viewer { 
         width: 450px;
         text-align: left;
+        height:auto;
 
     }
     .viewer img { 
