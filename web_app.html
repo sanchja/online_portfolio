@@ -62,52 +62,40 @@
           </div><!-- /.container-fluid -->
         </nav>
     </header>
-        <div class="container">
-            <div class="row">
-                <h1 class="h1 text-center">Web Apps</h1>
+    <div class="container">
+        <div class="row">
+            <h1 class="h1 text-center">Web Apps</h1>
+        </div>
+    </div>
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-4">
+                <img src="img/iPad_Air_Mock_up.png" width="100" height="auto" style="float:left; padding-right:5px;"/>
+                <h5 style="line-height:1.4em;">Links should be viewed on an iPad, as these links were specifically made to be used by an iPad <u>only</u> sales force</h5>
+
+                <a id="ehr" href="#"><h5 style="clear:both;">Electronic Health Records</h5></a>
+
+                <a  href="ipad_apps/2014_NationalSalesMeeting/DM_Version/www/index.html" target="_blank"><h5>2014_NationalSalesMeeting</h5></a>
+
+                <a  href="ipad_apps/Level620/www/index.html" target="_blank"><h5>Level 620</h5></a>
+            </div>
+
+            <div class="col-md-4" style="text-align:center;">
+                <div class="viewer"></div>
             </div>
         </div>
-        <div class="container">
-            
-             <div class="row">
-                <div class="col-md-4">
-                    <img src="img/iPad_Air_Mock_up.png" width="100" height="auto" style="float:left; padding-right:5px;"/>
-                    <h5 style="line-height:1.4em;">Links should be viewed on an iPad, as these links were specifically made to be used by an iPad <u>only</u> sales force</h5>
-
-                    <a id="ehr" href="#"><h5 style="clear:both;">Electronic Health Records</h5></a>
-
-                    <a  href="ipad_apps/2014_NationalSalesMeeting/DM_Version/www/index.html" target="_blank"><h5>2014_NationalSalesMeeting</h5></a>
-
-                    <a  href="ipad_apps/Level620/www/index.html" target="_blank"><h5>Level 620</h5></a>
-                </div>
-
-                <div class="col-md-4" style="text-align:center;">
-                    <div class="viewer"></div>
-<!--
-                    <a  href="ipad_apps/ehr_production/index.html" target="_blank"><h5 style="clear:both;">Electronic Health Records</h5></a>
-
-                    <a  href="ipad_apps/2014_NationalSalesMeeting/DM_Version/www/index.html" target="_blank"><h5>2014_NationalSalesMeeting</h5></a>
-
-                    <a  href="ipad_apps/Level620/www/index.html" target="_blank"><h5>Level 620</h5></a>
--->
-                </div>
-
-            </div>
+    </div>
 
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/bootstrap.js"></script>
 <script>
-    
     var viewer = document.getElementsByClassName("viewer"); // HANDLER FOR THE MEDIA BOX
 
     $("#ehr").on("click",function(){
 	//$(viewer).css("background-image","none");
 	$(viewer).html('<a href="ipad_apps/ehr_production/index.html" target="_blank"><img src="img/ehr.png" width="400" alt="Electronic Health Records"/> </a>').addClass('animated lightSpeedIn');
-        
-        
-	});
-    
-    
+    });
 </script>
 </body>
 </html>
