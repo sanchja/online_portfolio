@@ -66,8 +66,31 @@
                 <h1 class="h1 text-center">Responsive Web</h1>
             </div>
         </div>
+        
         <div class="container">
             <div class="row">
+                <div class="col-xs-12">
+                    <div class="col-sm-4">
+                        <div>
+                            <img src="img/ResponsiveDevices.png"/>
+                        </div>
+                    </div>
+                <div class="col-sm-3 col-xs-12">
+                    <h4><a id="slowmag" href="#">Slow-Mag Website</a></h4>
+                    <p>Purdue Pharma's first "Responsive" Website in it's history!</p>
+                    <hr>
+                    <h4><a id="adf" href="#">Abuse Deterrent Formulations</a></h4>
+                    <p>Prescription opioids: The importance of developing formulations with abuse-deterrent properties</p>
+                    <hr>
+                    <h4><a id="hr" href="#">HR Boardroom Documents</a></h4>
+                    <p>Prototype of a responsive web site for Human Resources Q&A Documents</p>
+                </div>
+                <div class="col-sm-5 col-xs-12">
+                    <h5>Please select image below to view larger</h5>
+                    <div class="display"></div> 
+                </div>
+            </div>
+            <!-- <div class="row">
                 <div class="col-md-10">
                     <div class="main_image">
                         <img src="img/ResponsiveDevices.png"/>
@@ -90,11 +113,28 @@
                     </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
 
-<script src="js/jquery-2.1.1.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/photo-gallery.js"></script>
-</body>
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        var display = document.getElementsByClassName("display"); // HANDLER FOR THE MEDIA BOX
+    
+        $("#slowmag").on("mouseover",function(){
+        $(display).html('<a href="http://www.slowmag.com" target="_blank"><img src="img/slowMagLogo.png" alt="Slowmag"></a>');
+        });
+
+        $("#adf").on("mouseover",function(){
+        $(display).html('<a href="responsive/adf-master/index.html" target="_blank"><img src="responsive/adf-master/images/header.png" alt="Abuse Deterrent Formulations"></a>');
+        });
+
+        $("#hr").on("mouseover",function(){
+        $(display).html('<a href="hr_board_docs/index.html" target="_blank"><img src="banner_ads/Purdue/images/purdue-logo.png" alt="HR Boardroom Docs"></a>');
+        }); 
+
+        
+           
+    </script>
+    </body>
 </html>
