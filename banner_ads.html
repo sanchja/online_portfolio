@@ -4,7 +4,7 @@
 	<head>
 		<title>Animated Banner Ads</title>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noindex,nofollow">
         <link href="css/bootstrap.css" rel="stylesheet"/>
         <link href="css/bootstrap-theme.css"/>
@@ -63,78 +63,57 @@
         </nav>
     </header>
         <div class="container">
-            <div class="row">
-                <h1 class="h1 text-center">Animated Banner Ads</h1>
+                <div class="page-header">
+                    <h1 class="h1 text-center">Animated Banner Ads</h1>
+                </div>
             </div>
-        </div>
-<!--
-        <div class="submenu">
-            <ul>
-                <li id="responsive">Responsive design</li>
-                <li id="web_app">Web app</li>
-                <li id="html_email">Html email</li>
-                <li id="banner_ads">Animated banner ads</li>
-            </ul>
-        </div>
--->
             
-        <div class="container">
-            <ul class="row">
-                <li class="col-xs-12 col-sm-6 col-md-4">
-                    <h4 id="banner_ads" class="h4">Html5 CSS animations</h4>
-<!--                    <h5 id="butrans_button">Butrans</h5>-->
-                    <button id="butrans_button" class="btn-grad">Butrans Banners</button>
-                        
-<!--
-                    <a  href="banner_ads/Butrans_Medi_Cal_Banner160x600/Butrans_Medi_Cal_Banner160x600.html" target="_blank"><h6>Landscape 160x600</h6></a>
-                    <a href="banner_ads/Butrans_Medi_Cal_Banner300x250/Butrans_Medi_Cal_Banner300x250.html" target="_blank"><h6>Butrans 300x250</h6></a>
-                    <a href="banner_ads/Mkesson_Butrans_Challenge/Mkesson_Butrans_Challenge.html" target="_blank"><h6>Butrans Challenge 180x150</h6></a>
--->
-                    <br>
-                    <h5>Slowmag</h5>
-                    <a href="banner_ads/slowmag_banners/slowmag728x90/slowmag.html" target="_blank"><h6>Landscape Running 728x90</h6></a>
-                    <a href="banner_ads/slowmag_banners/slowmag_gym_728x90/slowmag_gym.html" target="_blank"><h6>Landscape Gym 728x90</h6></a>
-                    <a href="banner_ads/slowmag_banners/slowmag_yoga_728x90/slowmag_yoga.html" target="_blank"><h6>Landscape Yoga 728x90</h6></a>
-                    <br>
-                    <h5>Success Wheel</h5>
-                    <a href="banner_ads/success_wheel/index2x1.html" target="_blank"><h6>Success Wheel 4x1</h6></a>
-                    <a href="banner_ads/success_wheel/index2x2.html" target="_blank"><h6>Success Wheel 2x2</h6></a>
-                    <a href="banner_ads/success_wheel/index4x2.html" target="_blank"><h6>Success Wheel 4x2</h6></a>
-                    <a href="banner_ads/success_wheel/index4x4.html" target="_blank"><h6>Success Wheel 4x4</h6></a>
-                </li>
-                <div class="viewer"></div>
-
-            </ul>            
-        </div>
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-          <div class="modal-dialog">
-            <div class="modal-content">         
-              <div class="modal-body"></div>
-            </div><!-- /.modal-content -->
-          </div><!-- /.modal-dialog -->
-        </div>
-        
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="col-xs-12 col-sm-2">
+                            <!-- <img class="img-responsive" src="img/ResponsiveDevices.png"/> -->
+                        </div>
+                        <div class="col-xs-12 col-sm-3 background">
+                            <h4 class="h4">Html5 CSS animations</h4>
+                            <a href="#" id="butrans_button">Butrans Banners</a>
+                            <hr>
+                            <a href="#" id="slowmag_button">Slowmag</a>
+                            <hr>
+                            <a href="#" id="success_button">Success Wheel</a>
+                            <hr>
+                            <a href="#" id="holiday_button">Holiday Card</a>
+                        </div>
+                        <div class="col-xs-12 col-sm-7">
+                            <h5>Please select image below to view larger</h5>
+                            <div class="display"></div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/bootstrap.js"></script>
 <script>
     
-    var viewer = document.getElementsByClassName("viewer"); // HANDLER FOR THE MEDIA BOX
+    var display = document.getElementsByClassName("display"); // HANDLER FOR THE MEDIA BOX
     
-    $("#banner_ads").on("click",function(){
-//	$(viewer).css("background-image","none");
-	$(viewer).html('<img src="img/oadp.png" alt="Abuse Deterrent Formulations"/><img src="img/butrans-challenge.png" width="200" alt="Butrans Challenge"/><img src="img/icb.png" width="300" alt="International Credit Banking"/>').addClass('animated lightSpeedIn');
+    $("#butrans_button").on("mouseover",function(){
+	$(display).html('<a  href="banner_ads/Butrans_Medi_Cal_Banner160x600/Butrans_Medi_Cal_Banner160x600.html" target="_blank"><img src="img/160x600.png" width="150" alt="slowmag"/></a><a href="banner_ads/Butrans_Medi_Cal_Banner300x250/Butrans_Medi_Cal_Banner300x250.html" target="_blank"><img src="img/300x250.png" width="170" alt="slowmag"/></a><a href="banner_ads/Mkesson_Butrans_Challenge/Mkesson_Butrans_Challenge.html" target="_blank"><img src="img/butrans-challenge.png" width="170" alt="Butrans Challenge"/></a>');
 	});
-    $("#responsive").on("click",function(){
-	$(viewer).css("background-image","none");
-	$(viewer).html('<img src="img/slowMagLogo.png" width="200" alt="slowmag"/>');
+    // $("#butrans_button").on("mouseover",function(){
+	// $(display).html('<img class="img-responsive thumbnail" src="img/oadp.png" alt="Abuse Deterrent Formulations"/><img src="img/butrans-challenge.png" width="200" alt="Butrans Challenge"/><img src="img/icb.png" width="300" alt="International Credit Banking"/>');
+	// });
+    $("#slowmag_button").on("mouseover",function(){
+	$(display).css("background-image","none");
+	$(display).html('<img src="img/slowMagLogo.png" width="200" alt="slowmag"/>');
 	});
     
-    $("#butrans_button").on("click",function(){
-	$(viewer).css("background-image","none");
-	$(viewer).html('<a  href="banner_ads/Butrans_Medi_Cal_Banner160x600/Butrans_Medi_Cal_Banner160x600.html" target="_blank"><img src="img/160x600.png" width="150" alt="slowmag"/></a><a href="banner_ads/Butrans_Medi_Cal_Banner300x250/Butrans_Medi_Cal_Banner300x250.html" target="_blank"><img src="img/300x250.png" width="170" alt="slowmag"/></a><a href="banner_ads/Mkesson_Butrans_Challenge/Mkesson_Butrans_Challenge.html" target="_blank"><img src="img/butrans-challenge.png" width="170" alt="Butrans Challenge"/></a>').addClass('animated lightSpeedIn');
-        
-        
+    $("#success_button").on("mouseover",function(){
+	$(display).html('<a  href="banner_ads/Butrans_Medi_Cal_Banner160x600/Butrans_Medi_Cal_Banner160x600.html" target="_blank"><img src="img/160x600.png" width="150" alt="slowmag"/></a><a href="banner_ads/Butrans_Medi_Cal_Banner300x250/Butrans_Medi_Cal_Banner300x250.html" target="_blank"><img src="img/300x250.png" width="170" alt="slowmag"/></a><a href="banner_ads/Mkesson_Butrans_Challenge/Mkesson_Butrans_Challenge.html" target="_blank"><img src="img/butrans-challenge.png" width="170" alt="Butrans Challenge"/></a>');
+    });
+    $("#holiday_button").on("mouseover",function(){
+	$(display).html('<a  href="banner_ads/Butrans_Medi_Cal_Banner160x600/Butrans_Medi_Cal_Banner160x600.html" target="_blank"><img src="img/160x600.png" width="150" alt="slowmag"/></a><a href="banner_ads/Butrans_Medi_Cal_Banner300x250/Butrans_Medi_Cal_Banner300x250.html" target="_blank"><img src="img/300x250.png" width="170" alt="slowmag"/></a><a href="banner_ads/Mkesson_Butrans_Challenge/Mkesson_Butrans_Challenge.html" target="_blank"><img src="img/butrans-challenge.png" width="170" alt="Butrans Challenge"/></a>');
 	});
     
     

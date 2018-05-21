@@ -162,18 +162,17 @@ div .row { margin-bottom: 20px;}
 }
 .viewer img { margin-right:20px; margin-bottom: 20px; }
 /* .viewer img:hover { opacity: 0.5; } */
-
+.background{
+background-color:rgba(201, 199, 199, 0.3);
+}
 .display {
     /* height:30em; */
-    /* background-color: rgba(1, 44, 96, 0.5); */
     background-color:rgba(201, 199, 199, 0.3);
     color:#9d9d9d;
     padding:1em;
     text-align: center;
 }
-.display img {
-    width: 80%; height:80%;
-}
+
 .main_image{
     float:left;
 }
@@ -257,6 +256,16 @@ Responsive Mobile Phone Portrait
     .content_main{
         background-color:rgba(201, 199, 199, 0.6); 
     }
+    .background{
+        background-color: rgba(1, 44, 96, 0.5);
+    /* background-color:rgba(201, 199, 199, 0.3); */
+    color:#9d9d9d;
+    }
+    .display img {
+        width: 80%; height:80%;
+    }
+
+
 }
 
 /******************************************************************************

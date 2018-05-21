@@ -57,34 +57,33 @@
     </header>
 
     <div class="container">
-        <div class="row">
+        <div class="page-header">
             <h1 class="h1 text-center">Html Email</h1>
         </div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-sm-2 col-m-1">
-                <div>
-                    <img src="img/document_icon.png" width="60"/>
+            <div class="col-xs-12">
+                <div class="col-xs-12 col-sm-1">
+                    <img class="img-responsive" src="img/document_icon.png"/>
                 </div>
-            </div>
-            <div class="col-sm-2 col-xs-6">
-                <h4>Email</h4>
-                <a id="oxyContin" href="#"><h6>OxyContin Tri Care</h6></a>
-                <a id="stop" href="#"><h6>OxyContin Stop</h6></a>
-                <a id="insights" href="#"><h6>Purdue Insights</h6></a>
-                <a id="butrans" href="#"><h6>Butrans Tri Care</h6></a>
-            </div>
-            <div class="col-sm-2 col-xs-6">    
-                <h4>Newsletters</h4>
-                <a id="debevois" href="#"><h6>Debevois RSVP</h6></a>
-                <a id="debevois2" href="#"><h6>Debevois RSVP 2</h6></a>
-                <a id="healthychoice" href="#"><h6>Healthy Choice</h6></a>
-                <a id="bridgeleader" href="#"><h6>Bridge Leader</h6></a>
-            </div>
-            <div class="col-sm-6 col-xs-12">
-                <p>Please select image below to view larger</p>
-                <div class="display"></div> 
+                <div class="col-xs-12 col-sm-2">
+                    <h4>Email</h4>
+                    <a id="oxyContin" href="email/A10277_OxyContin_Tricare_Email/A10277_Tricare_OxyContin_Formulary_Email_11_03_15.html" target="blank" alt="OxyContin Tri-care"><h6>OxyContin Tri Care</h6></a>
+                    <a id="stop" href="email/A8959_O_ISTOP/A8959_O_ISTOP_09.22.14.html" target="_blank" alt="oxyContin"><h6>OxyContin Stop</h6></a>
+                    <a id="insights" href="email/A10142-I/A1042_I_7/A1042_I_7_09.14.15.html" target="_blank" alt="Insights"><h6>Purdue Insights</h6></a>
+                    <a id="butrans" href="email/A10278_Butrans_Tricare_Formulary_Email/Butrans_Tricare_Formulary_Email_11_04_15.html" target="_blank" alt="Butrans Tri-care"><h6>Butrans Tri Care</h6></a>
+                    <hr>
+                    <h4>Newsletters</h4>
+                    <a id="debevois" href="email/Debevois_&_Plimpton/July2013_HarbourVest_1.jpg" target="_blank" alt="Debevois & Plimpton"><h6>Debevois RSVP</h6></a>
+                    <a id="debevois2" href="email/Debevois_&_Plimpton/Oct2013_IBA_Reception_invite_2.jpg" target="_blank" alt="Debevois & Plimpton2"><h6>Debevois RSVP 2</h6></a>
+                    <a id="healthychoice" href="banner_ads/Healthy_Choice/healthychoice_NL.jpg" target="_blank" alt="Healthy Choice"><h6>Healthy Choice</h6></a>
+                    <a id="bridgeleader" href="img/BLnewsletter.jpg" target="_blank" alt="The Bridge Leader"><h6>Bridge Leader</h6></a>
+                </div>
+                <div class="col-xs-12 col-sm-7">
+                    <p>Please select image below to view larger</p>
+                    <div class="display"></div> 
+                </div>
             </div>
         </div>        
     </div>
@@ -94,6 +93,12 @@
     <script>
         var display = document.getElementsByClassName("display"); // HANDLER FOR THE MEDIA BOX
     
+
+    $(window).resize(function(){
+
+        if ($(window).width() >= 321) {  
+
+
             $("#oxyContin").on("mouseover",function(){
             $(display).html('<a href="email/A10277_OxyContin_Tricare_Email/A10277_Tricare_OxyContin_Formulary_Email_11_03_15.html" target="_blank"><img src="img/oxyContin_tricare.png" alt="Abuse Deterrent Formulations"/></a>');
             });
@@ -125,6 +130,12 @@
             $("#bridgeleader").on("mouseover",function(){
             $(display).html('<a  href="img/BLnewsletter.jpg" target="_blank"><img src="img/bridgeleader.png" alt="The Bridge Leader"/></a>');
             });
+
+        }     
+
+        });
+
+        
         </script>     
     </body>
 </html>
