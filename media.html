@@ -11,6 +11,9 @@
         <link rel="stylesheet" href="css/styles.css" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
         <link rel="stylesheet" href="css/fonts.css" type="text/css">
+        <link rel="stylesheet" href="css/lightgallery.min.css">
+        <link rel="stylesheet" href="css/lg-transitions.css">
+        
 	</head>
 
 	<body>
@@ -66,64 +69,95 @@
                 <h1 class="h1 text-center">Media design</h1>
             </div>
         </div>
-        <div class="container">
+        <div id="lightgallery"  class="container">
             <div class="row">
                 <ul>
                     <li class="col-xs-12 col-sm-6 col-md-3">
-                        <img class="img-responsive thumbnail" src="img/amex.jpg">
+                        <a href="img/amex.jpg">
+                            <img class="img-responsive thumbnail" src="img/amex.jpg">
+                        </a>
                     </li>
                     <li class="col-xs-12 col-sm-6 col-md-3">
-                        <img class="img-responsive thumbnail" src="img/debeers.jpg">
+                        <a href="img/debeers.jpg">
+                            <img class="img-responsive thumbnail" src="img/debeers.jpg">
+                        </a>
                     </li>
                     <li class="col-xs-12 col-sm-6 col-md-3">
-                        <img class="img-responsive thumbnail" src="img/tassimo.jpg">
+                        <a href="img/tassimo.jpg">
+                            <img class="img-responsive thumbnail" src="img/tassimo.jpg">
+                        </a>
                     </li>
                     <li class="col-xs-12 col-sm-6 col-md-3">
-                        <img class="img-responsive thumbnail" src="img/ibm.jpg">
+                        <a href="img/ibm.jpg">
+                            <img class="img-responsive thumbnail" src="img/ibm.jpg">
+                        </a>
                     </li>
                 </ul>
             </div>
             <div class="row">
                 <ul>
                     <li class="col-xs-12 col-sm-6 col-md-3">
-                        <img class="img-responsive thumbnail" src="img/dhl.jpg">
+                        <a href="img/dhl.jpg">
+                            <img class="img-responsive thumbnail" src="img/dhl.jpg">
+                        </a>
                     </li>
                     <li class="col-xs-12 col-sm-6 col-md-3">
-                        <img class="img-responsive thumbnail" src="img/tandus.jpg">
+                        <a href="img/tandus.jpg">
+                            <img class="img-responsive thumbnail" src="img/tandus.jpg">
+                        </a>
                     </li>
                     <li class="col-xs-12 col-sm-6 col-md-3">
-                        <img class="img-responsive thumbnail" src="img/arezzo.jpg">
+                        <a href="img/arezzo.jpg">
+                            <img class="img-responsive thumbnail" src="img/arezzo.jpg">
+                        </a>
                     </li>
                     <li class="col-xs-12 col-sm-6 col-md-3">
-                        <img class="img-responsive thumbnail" src="img/tandus2.jpg">
+                        <a href="img/tandus2.jpg">
+                            <img class="img-responsive thumbnail" src="img/tandus2.jpg">
+                        </a>
                     </li>
                 </ul>
             </div>
             <div class="row">
                 <ul>
                     <li class="col-xs-12 col-sm-6 col-md-3">
-                        <img class="img-responsive thumbnail" src="img/loopposter2.jpg">
+                        <a href="img/loopposter2.jpg">
+                            <img class="img-responsive thumbnail" src="img/loopposter2.jpg">
+                        </a>
                     </li>
                     <li class="col-xs-12 col-sm-6 col-md-3">
-                        <img class="img-responsive thumbnail" src="img/marchofdimesposter.jpg">
+                        <a href="img/marchofdimesposter.jpg">
+                            <img class="img-responsive thumbnail" src="img/marchofdimesposter.jpg">
+                        </a>
                     </li>
                     <li class="col-xs-12 col-sm-6 col-md-3">
-                        <img class="img-responsive thumbnail" src="img/rkf_cover.jpg">
+                        <a href="img/rkf_cover.jpg">
+                            <img class="img-responsive thumbnail" src="img/rkf_cover.jpg">
+                        </a>
                     </li>
                 </ul>
             </div>
+            <!-- <div id="lightgallery">
+                <a href="img/loopposter2.jpg">
+                    <img src="img/loopposter2.jpg">
+                </a>
+            </div> -->
                 
         </div>
-        
-   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-      <div class="modal-dialog">
-        <div class="modal-content">         
-          <div class="modal-body"></div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div>
+ 
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/bootstrap.js"></script>
-<script src="js/photo-gallery.js"></script>
+<!-- <script src="js/photo-gallery.js"></script> -->
+<script src="http://www.jsdelivr.com/projects/lightgallery.js"></script>
+
+<!-- lightgallery plugins -->
+<script src="js/lg-thumbnail.min.js"></script>
+<script src="js/lg-pager.min.js"></script>
+<script src="js/lg-hash.min.js"></script>
+<script src="js/lg-utils.js"></script>
+<script src="js/lg-fullscreen.min.js"></script>
+<script>
+    lightGallery(document.getElementById('lightgallery'));
+</script>
 </body>
 </html>
