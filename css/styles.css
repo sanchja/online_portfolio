@@ -241,6 +241,15 @@ footer {
     letter-spacing: .15em;
     line-height:1.7em;
 }
+.phones img {
+    width: 50%;
+    max-height:auto;
+}
+#scentennial {display:none; }
+#fintech {display:none; }
+#l4s {display:none; }
+#spring_wear {display:none; }
+#comingsoon {display:none; }
 /******************************************************************************
 
 Responsive Mobile Phone Portrait
