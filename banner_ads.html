@@ -61,60 +61,36 @@
         </nav>
     </header>
         <div class="container">
-                <div class="page-header">
-                    <h1 class="h1 text-center">Animated Banner Ads</h1>
+            <div class="page-header">
+                <h1 class="h1 text-center">Animated Banner Ads</h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>Html5 CSS animations</h3>
+                    <br>
+                    <a href="banner_ads/Butrans_Medi_Cal_Banner160x600/Butrans_Medi_Cal_Banner160x600.html" id="butrans_banner" target="pictureInPic"><h4>Butrans Banners</h4></a>
+                    <a href="banner_ads/Butrans_Medi_Cal_Banner300x250/Butrans_Medi_Cal_Banner300x250.html" id="butrans_banner2" target="pictureInPic"><h4>Butrans Banner 330x250</h4></a>
+                    <a href="banner_ads/success_wheel/index4x2.html" id="success1" target="pictureInPic"><h4>Success Wheel 4x2</h4></a>
+                    <a href="banner_ads/success_wheel/index4x4.html" id="success2" target="pictureInPic"><h4>Success Wheel 4x4</h4></a>
+                    <a href="banner_ads/Mkesson_Butrans_Challenge/Mkesson_Butrans_Challenge.html" id="mkesson" target="pictureInPic"><h4>Mkesson Banner</h4></a>
+                    <a href="banner_ads/slowmag_banners/slowmag728x90/slowmag.html" id="slowmag1" target="pictureInPic"><h4>Slowmag</h4></a>
+                    <a href="banner_ads/slowmag_banners/slowmag_gym_728x90/slowmag_gym.html" id="slowmag_gym" target="pictureInPic"><h4>Slowmag Gym</h4></a>
+                    <a href="banner_ads/slowmag_banners/slowmag_yoga_728x90/slowmag_yoga.html" id="slowmag_yoga" target="pictureInPic"><h4>Slowmag Yoga</h4></a>
+                    <a href="banner_ads/HolidayCard/index.html" id="holiday Card" target="pictureInPic"><h4>Holiday Card</h4></a>
+                    <a href="banner_ads/Betadine_swipe/index.html" id="Betadine" target="pictureInPic"><h4>Betadine Swipe</h4></a>
+                </div>
+                <div class="col-md-9">
+                    <div class="ipad">
+                        <!-- style on the iframe is to scale the incoming html files within the window -->
+                        <iframe frameborder="0" class="pictureInPic" name="pictureInPic" style="-webkit-transform:scale(0.7);-moz-transform-scale(0.7);"></iframe>
+                    </div>                
                 </div>
             </div>
-            
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="col-xs-12 col-sm-2">
-                            <!-- <img class="img-responsive" src="img/ResponsiveDevices.png"/> -->
-                        </div>
-                        <div class="col-xs-12 col-sm-3">
-                            <h4 class="h4">Html5 CSS animations</h4>
-                            <a href="#" id="butrans_button">Butrans Banners</a>
-                            <hr>
-                            <a href="#" id="slowmag_button">Slowmag</a>
-                            <hr>
-                            <a href="#" id="success_button">Success Wheel</a>
-                            <hr>
-                            <a href="#" id="holiday_button">Holiday Card</a>
-                        </div>
-                        <div class="col-xs-12 col-sm-7">
-                            <h5>Please select image below to view larger</h5>
-                            <div class="display"></div> 
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-<script src="js/jquery-2.1.1.js"></script>
-<script src="js/bootstrap.js"></script>
-<script>
-    
-    var display = document.getElementsByClassName("display"); // HANDLER FOR THE MEDIA BOX
-    
-    $("#butrans_button").on("mouseover",function(){
-	$(display).html('<a  href="banner_ads/Butrans_Medi_Cal_Banner160x600/Butrans_Medi_Cal_Banner160x600.html" target="_blank"><img src="img/160x600.png" width="150" alt="slowmag"/></a><a href="banner_ads/Butrans_Medi_Cal_Banner300x250/Butrans_Medi_Cal_Banner300x250.html" target="_blank"><img src="img/300x250.png" width="170" alt="slowmag"/></a><a href="banner_ads/Mkesson_Butrans_Challenge/Mkesson_Butrans_Challenge.html" target="_blank"><img src="img/butrans-challenge.png" width="170" alt="Butrans Challenge"/></a>');
-	});
-    // $("#butrans_button").on("mouseover",function(){
-	// $(display).html('<img class="img-responsive thumbnail" src="img/oadp.png" alt="Abuse Deterrent Formulations"/><img src="img/butrans-challenge.png" width="200" alt="Butrans Challenge"/><img src="img/icb.png" width="300" alt="International Credit Banking"/>');
-	// });
-    $("#slowmag_button").on("mouseover",function(){
-	$(display).css("background-image","none");
-	$(display).html('<img src="img/slowMagLogo.png" width="200" alt="slowmag"/>');
-	});
-    
-    $("#success_button").on("mouseover",function(){
-	$(display).html('<a  href="banner_ads/Butrans_Medi_Cal_Banner160x600/Butrans_Medi_Cal_Banner160x600.html" target="_blank"><img src="img/160x600.png" width="150" alt="slowmag"/></a><a href="banner_ads/Butrans_Medi_Cal_Banner300x250/Butrans_Medi_Cal_Banner300x250.html" target="_blank"><img src="img/300x250.png" width="170" alt="slowmag"/></a><a href="banner_ads/Mkesson_Butrans_Challenge/Mkesson_Butrans_Challenge.html" target="_blank"><img src="img/butrans-challenge.png" width="170" alt="Butrans Challenge"/></a>');
-    });
-    $("#holiday_button").on("mouseover",function(){
-	$(display).html('<a  href="banner_ads/Butrans_Medi_Cal_Banner160x600/Butrans_Medi_Cal_Banner160x600.html" target="_blank"><img src="img/160x600.png" width="150" alt="slowmag"/></a><a href="banner_ads/Butrans_Medi_Cal_Banner300x250/Butrans_Medi_Cal_Banner300x250.html" target="_blank"><img src="img/300x250.png" width="170" alt="slowmag"/></a><a href="banner_ads/Mkesson_Butrans_Challenge/Mkesson_Butrans_Challenge.html" target="_blank"><img src="img/butrans-challenge.png" width="170" alt="Butrans Challenge"/></a>');
-	});
-    
-    
-</script>
+        </div>
+         
+         <script src="js/jquery-2.1.1.js"></script>
+         <script src="js/bootstrap.js"></script>
 </body>
 </html>
