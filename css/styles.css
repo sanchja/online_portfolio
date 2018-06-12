@@ -241,15 +241,28 @@ footer {
     letter-spacing: .15em;
     line-height:1.7em;
 }
+/* ANGULAR WEB APP VIEWS */
 .phones img {
-    width: 50%;
+    width: 100%;
     max-height:auto;
 }
+#blank {display:block; }
 #scentennial {display:none; }
 #fintech {display:none; }
-#l4s {display:none; }
 #spring_wear {display:none; }
 #comingsoon {display:none; }
+
+/* ANGULAR WEB APP VIEWS */
+.phones2 img {
+    width: 100%;
+    max-height:auto;
+}
+#blank2 { display:block;}
+#ehr_view {display:none; }
+#l620_view {display:none; }
+#nsm_view {display:none; }
+#l4s_view {display:none; }
+
 /******************************************************************************
 
 Responsive Mobile Phone Portrait
