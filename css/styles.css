@@ -371,8 +371,7 @@ Responsive Mobile Phone Landscape
         font-size:.9em;
     }
     .viewer { 
-        /* width: 530px; */
-        width: 1.000em;
+        width: 530px;
         text-align: left;
         height:auto;
 
