@@ -175,7 +175,7 @@ div .row { margin-bottom: 20px;}
     padding:10px;
     text-align: center;
     width:150px;
-    height:600px;
+    height:550px;
 }
 .viewer img { margin-right:20px; margin-bottom: 20px; }
 /* .viewer img:hover { opacity: 0.5; } */
@@ -376,7 +376,7 @@ Responsive Mobile Phone Landscape
     .viewer { 
         width: 450px;
         text-align: left;
-        height:auto;
+        height: auto;
 
     }
     .viewer img { 
