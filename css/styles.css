@@ -359,7 +359,7 @@ Responsive Mobile Phone Portrait
 Responsive Mobile Phone Landscape
 
 *******************************************************************************/
-@media screen and (min-width:421px) and (max-width:667px) and (orientation:landscape) {
+@media screen and (min-width:421px) and (orientation:landscape) {
     #card {
         position: relative;
         width:200px; height: 320px;
