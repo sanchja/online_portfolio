@@ -56,6 +56,9 @@ ul {
     background-size: cover;
     height:100%;
 } */
+html {
+    height:100%;
+}
 body { background-color: lightgray;
     /* color: #a99e9e; */
     background-image: url('../img/bkgd_image_subpages.png');
@@ -371,7 +374,7 @@ Responsive Mobile Phone Landscape
         font-size:.9em;
     }
     .viewer { 
-        width: 530px;
+        width: 450px;
         text-align: left;
         height:auto;
 
