@@ -1,0 +1,547 @@
+/******* COLORS USED ************ 
+Wine color: #7f0600;
+body copy: #2d2d2d;
+light Grey : #efefef;
+
+**********************************/
+* { 
+    margin:0;
+    padding:0;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+html{ 
+    height:100%; 
+    color:#2d2d2d;
+    font-family: 'Montserrat', sans-serif;
+
+}
+h3 {
+    margin-bottom: .5em;
+}
+p {
+    margin-bottom: .5em;
+    text-indent: 2em;
+}
+body {
+    width: 100%;
+    position:relative;
+    background: #efefef;
+}
+#wrapper {
+    width: 100%;
+    min-height: 100%;
+    margin:auto;
+    position:absolute;
+}
+header {
+    width:100%;
+    height: 80px;
+    display:block;
+    background: #7f0600;
+    border-bottom: 1px solid black;
+}
+.desktop_nav {
+    display:none;
+}
+.brand{ width: 100px; float:left;}
+.brand img {
+    width:100%;
+    height:100%;
+    margin: 10%;
+}
+.mobile_nav {
+    cursor: pointer;
+    float: right;
+    margin-right: 8%;
+    margin-top: 20px;
+}
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 5px;
+    background-color: #efefef;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+nav ul li a {
+    list-style-type: none;
+    color:#efefef;
+    text-decoration: none;
+}
+nav ul li:hover {
+    background: #efefef;
+    cursor: pointer;
+    color: #7f0600;
+}
+.active {
+    background: #efefef;
+    color: #7f0600;
+}
+.hero {
+    width:100%;
+    height:200px;
+    background-image: url('../img/grapes_small.jpeg');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.hero_about {
+    width:100%;
+    height:200px;
+    background-image: url('../img/bottles.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.hero_regions {
+    width:100%;
+    height:200px;
+    background-image: url('../img/regions.jpeg');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.hero_specials {
+    width:100%;
+    height:200px;
+    background-image: url('../img/travel_specials.jpeg');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.hero_copy {
+    color: #efefef;
+    text-align: center;
+    padding-top: 80px;
+    text-shadow: 2px 2px 4px black;
+}
+.subhead {
+    font-size:.9em;
+}
+.region {
+    width:92%;
+    padding:4%;
+    height:auto;
+    background:#efefef;
+}
+.about {
+    width:92%;
+    padding:4%;
+    height:auto;
+    background:#efefef;
+    line-height:1.5em;
+    text-indent: 2em;
+}
+.about img {
+    width: 30%;
+    height:auto;
+    float:left;
+    margin:5%;
+    margin-top:0px;
+}
+img.country {
+    width:50%;
+    height:auto;
+    border: 4px solid white;
+    border-radius: 15px;
+}
+.circles {
+    /* border-radius: 120px; */
+    width: 100%;
+    height: auto;
+    background: #efefef;
+    color:rgb(57, 2, 2);
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    line-height: 1.5em;
+}
+.circles img:hover {
+    -webkit-box-shadow: 1px 1px 58px 9px rgba(0,0,0,0.71); 
+    box-shadow: 1px 1px 58px 9px rgba(0,0,0,0.71); 
+}
+.center {
+    text-align:center;
+    margin-bottom:2em;
+}
+.padLeft {
+    padding-left:1.7em;
+    line-height:1.7em;
+    margin-top:0px;
+}
+.travel_img {
+    width: 30%;
+    height: auto;
+    float:left;
+    margin:1em;
+}
+.imageClip {
+    background-image: url('../img/grapes_small.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -80px;
+    height: 60px;
+    width: 100%;
+    margin: 20px 0;
+}
+article {
+    width:92%;
+    padding:4%;
+    height:auto;
+    display:block;
+    background: #efefef;
+    line-height:1.5em;
+}
+footer {
+    width:100%;
+    height:30px;
+    background: black;
+    position: static;
+    bottom: -30px;
+    color: #efefef;
+    text-align:center;
+    line-height: 30px;
+    font-size:.7em;
+}
+footer a {
+    color: #efefef;
+    text-decoration:none;
+}
+footer a:hover {
+    text-decoration:underline;
+}
+
+/********* Responsive Portrait mobile ***********/
+@media screen and (max-width: 320px) and (orientation: portrait ) {
+    .brand img {
+        width:100%;
+        height:100%;
+        padding: 2%;
+    }       
+    
+
+}
+
+/********* Responsive landscape mobile ***********/
+@media screen and (max-width: 320px) and (orientation: landscape ) {
+
+}
+
+/********* Responsive Portrait tablet ***********/
+@media screen and (min-width: 768px) and (orientation: portrait ) {
+    .brand{ width: 100px; float:left;}
+    .brand img {
+        width:100%;
+        height:100%;
+        margin-left: 30%;
+    }
+    .mobile_nav {
+        display:none;
+    }
+    .desktop_nav {
+        float:right;
+        display:block;
+        margin-right:5%;
+    }
+    nav ul li {
+        list-style-type: none;
+        color:#efefef;
+        display: inline-block;
+        line-height: 80px;
+        text-align:center;
+        margin-left:20px;
+    }
+    .hero {
+        width:100%;
+        height:400px;
+        background-image: url('../img/grapes_small.jpeg');
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+    .hero_about {
+        width:100%;
+        height:200px;
+        background-image: url('../img/bottles.png');
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+    .hero_regions {
+        width:100%;
+        height:400px;
+        background-image: url('../img/regions.jpeg');
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+    .hero_specials {
+        width:100%;
+        height:400px;
+        background-image: url('../img/travel_specials.jpeg');
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+    .region {
+        width:92%;
+        padding:4%;
+        height:auto;
+        background:#efefef;
+        margin-left:auto; margin-right:auto;
+    }
+    .circles {
+        width: 28%;
+        height: 28%;
+        color:rgb(57, 2, 2);
+        border-bottom: none;
+        margin-bottom: 0px;
+        margin-right:3%;
+        padding-bottom: 0px;
+        line-height: 1.5em;
+        display:inline-block;
+        vertical-align: top;
+    }
+    .circles:nth-child(1) {
+        margin-left:3%;
+    }
+    img.country {
+        width:100%;
+        height:auto;
+        border: 4px solid white;
+        border-radius: 0px;
+    }
+    article {
+        width:86%;
+        height:auto;
+        display:block;
+        background: #efefef;
+        line-height:1.5em;
+        margin-left:auto; margin-right: auto;
+    }
+}
+/********* Responsive landscape tablet ***********/
+@media screen and (min-width: 1024px) and (orientation: landscape ) {
+    .brand{ width: 100px; float:left;}
+    .brand img {
+        width:100%;
+        height:100%;
+        margin-left:30%;
+    }
+    .mobile_nav {
+        display:none;
+    }
+    .desktop_nav {
+        float:right;
+        display:block;
+        margin-right:5%;
+    }
+    nav ul li {
+        list-style-type: none;
+        color:#efefef;
+        width: 120px;
+        display: inline-block;
+        line-height: 80px;
+        text-align:center;
+    }
+    .hero {
+        width:100%;
+        height:500px;
+        background-image: url('../img/grapes_small.jpeg');
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+    .hero_about {
+        width: 100%;
+        height: 310px;
+        background-image: url(../img/bottles.png);
+        background-repeat: no-repeat;
+        background-size: 100% 105%;
+    }
+    .hero_regions {
+        width:100%;
+        height:500px;
+        background-image: url('../img/regions.jpeg');
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+    .hero_specials {
+        width:100%;
+        height:500px;
+        background-image: url('../img/travel_specials.jpeg');
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+
+    .hero_copy {
+        color: #efefef;
+        text-align: center;
+        padding-top: 120px;
+        text-shadow: 2px 2px 4px black;
+        font-size:2em;
+    }
+    .subhead {
+        font-size:.9em;
+    }
+    .region {
+        width:92%;
+        padding:4%;
+        height:auto;
+        background:#efefef;
+        margin-left:auto; margin-right:auto;
+    }
+    .circles {
+        width: 28%;
+        height: 28%;
+        color:rgb(57, 2, 2);
+        border-bottom: none;
+        margin-bottom: 0px;
+        margin-right:3%;
+        padding-bottom: 0px;
+        line-height: 1.5em;
+        display:inline-block;
+        vertical-align: top;
+    }
+    .circles:nth-child(1) {
+        margin-left:3%;
+    }
+    img.country {
+        width:100%;
+        height:auto;
+        border: 4px solid white;
+        border-radius: 0px;
+    }
+    article {
+        width:86%;
+        height:auto;
+        display:block;
+        background: #efefef;
+        line-height:1.5em;
+        margin-left:auto; margin-right: auto;
+    }
+}
+
+/********* Responsive Desktop ***********/
+@media screen and (min-width: 1025px) {
+
+    .brand{ width: 100px; float:left;}
+    .brand img {
+        width:100%;
+        height:100%;
+        margin-left:30%;
+    }
+    .mobile_nav {
+        display:none;
+    }
+    .desktop_nav {
+        float:right;
+        display:block;
+        margin-right:5%;
+    }
+    nav ul li{
+        list-style-type: none;
+        color:#efefef;
+        width: 120px;
+        display: inline-block;
+        line-height: 80px;
+        text-align:center;
+    }
+    .hero {
+        width:100%;
+        height:500px;
+        background-image: url('../img/grapes_small.jpeg');
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+    .hero_about {
+        width:100%;
+        height:500px;
+        background-image: url('../img/bottles.png');
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+    .hero_regions {
+        width:100%;
+        height:500px;
+        background-image: url('../img/regions.jpeg');
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+    .hero_specials {
+        width:100%;
+        height:500px;
+        background-image: url('../img/travel_specials.jpeg');
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+    .hero_copy {
+        color: #efefef;
+        text-align: center;
+        padding-top: 120px;
+        text-shadow: 2px 2px 4px black;
+        font-size:2em;
+    }
+    .subhead {
+        font-size:.9em;
+    }
+    .region {
+        width:1024px;
+        padding:4%;
+        height:auto;
+        background:#efefef;
+        margin-left:auto; margin-right:auto;
+    }
+    .about {
+        width:1024px;
+        padding:4%;
+        height:auto;
+        background:#efefef;
+        margin-left:auto; margin-right:auto;
+        line-height: 2em;
+        text-indent: 2em;
+    }
+    .circles {
+        width: 28%;
+        height: 28%;
+        color:rgb(57, 2, 2);
+        border-bottom: none;
+        margin-bottom: 0px;
+        margin-right:3%;
+        padding-bottom: 0px;
+        line-height: 1.5em;
+        display:inline-block;
+        vertical-align: top;
+    }
+    .circles:nth-child(1) {
+        margin-left:3%;
+    }
+    img.country {
+        width:100%;
+        height:auto;
+        border: 4px solid white;
+        border-radius: 0px;
+    }
+    article {
+        width:1024px;
+        height:auto;
+        background: #efefef;
+        line-height:1.5em;
+        margin-left:auto; margin-right: auto;
+    }
+    article p {
+        margin-left: 4%; margin-right: 4%;
+    }
+    footer {
+        height: 50px;
+        line-height:50px;
+        font-size:1em;
+    }
+}
+
