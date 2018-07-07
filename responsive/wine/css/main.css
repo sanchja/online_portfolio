@@ -1,8 +1,11 @@
 /******* COLORS USED ************ 
+*********************************
+
 Wine color: #7f0600;
 body copy: #2d2d2d;
 light Grey : #efefef;
 
+**********************************
 **********************************/
 * { 
     margin:0;
@@ -16,11 +19,8 @@ html{
     height:100%; 
     color:#2d2d2d;
     font-family: 'Montserrat', sans-serif;
-
 }
-h3 {
-    margin-bottom: .5em;
-}
+h3 { margin-bottom: .5em; }
 p {
     margin-bottom: .5em;
     text-indent: 2em;
@@ -44,9 +44,7 @@ header {
     border-bottom: 1px solid black;
     overflow:hidden;
 }
-.desktop_nav {
-    display:none;
-}
+.desktop_nav { display:none; }
 .brand{ width: 100px; float:left;}
 .brand img {
     width:100%;
@@ -60,20 +58,17 @@ header {
     margin-top: 20px;
 }
 .bar1, .bar2, .bar3 {
-    width: 30px;
-    height: 5px;
+    width: 40px;
+    height: 3px;
     background-color: #efefef;
-    margin: 6px 0;
+    margin: 8px 0;
     transition: 0.4s;
 }
-
 .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
+    -webkit-transform: rotate(-45deg) translate(-8px, 6px);
+    transform: rotate(-45deg) translate(-8px, 6px);
 }
-
 .change .bar2 {opacity: 0;}
-
 .change .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
