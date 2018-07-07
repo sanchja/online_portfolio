@@ -10,15 +10,15 @@
         <title>Wine Valley | Contact Us</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/form.css">
         <link rel="stylesheet" href="css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-        <link rel="stylesheet" href="css/form.css">
     </head>
     <body>
         <div id="wrapper">
             <header>
                 <nav>
-                    <div class="brand"><a href="index.html"><img src="img/wineValleyLogo.png"></a></div>
+                    <a class="brand" href="index.html"><img src="img/wineValleyLogo.png"></a>
                     <div class="mobile_nav" onclick="myFunction(this)">
                         <div class="bar1"></div>
                         <div class="bar2"></div>
@@ -33,7 +33,13 @@
                     </ul>
                 </nav>
             </header>
-            
+            <ul class="mobile_links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="regions.html">Regions</a></li>
+                <li><a href="specials.html">Our Specials</a></li>
+                <li class="active"><a href="contactus.html">&#10148; Contact Us</a></li>
+            </ul>
             <div class="container"> 
                 <form id="contact" action="" method="">
                     <h3>Wine Valley Contact Form</h3>
@@ -64,6 +70,7 @@
             </article> -->
             <footer>&copy; 2018 - Wine Valley | <a href="#">Terms of Service</a></footer>
         </div>
+        <script src="//code.jquery.com/jquery-latest.js"></script>
         <script src="js/main.js"></script>   
     </body>
 </html>

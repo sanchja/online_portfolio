@@ -10,7 +10,6 @@ light Grey : #efefef;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -o-font-smoothing: antialiased;
-    font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 }
 html{ 
@@ -43,6 +42,7 @@ header {
     display:block;
     background: #7f0600;
     border-bottom: 1px solid black;
+    overflow:hidden;
 }
 .desktop_nav {
     display:none;
@@ -141,7 +141,6 @@ nav ul li:hover {
     height:auto;
     background:#efefef;
     line-height:1.5em;
-    text-indent: 2em;
 }
 .about img {
     width: 30%;
@@ -222,19 +221,78 @@ footer a:hover {
     text-decoration:underline;
 }
 
+
 /********* Responsive Portrait mobile ***********/
-@media screen and (max-width: 320px) and (orientation: portrait ) {
-    .brand img {
-        width:100%;
-        height:100%;
+@media screen and (min-width: 320px) and (orientation: portrait ) {
+    a .brand {
+        width:96%;
+        height:96%;
         padding: 2%;
-    }       
+    }
+    .mobile_links{
+        background-color: rgba(127,6,0,.6);
+        list-style-type:none;
+        text-align: right;
+        width:100%;
+        overflow:hidden;
+        height:0px;
+    }
+    .mobile_links li {
+        border-bottom: 1px solid #7f0600;
+        padding: 5px;
+        margin:0px;
+    }
+    .mobile_links a {
+        text-decoration:none;
+        color:#efefef;
+        padding-right: 25px;
+        line-height:1.8em;
+        width:100%;
+    }
+    .active {
+        background-color:#3ca536;
+    }
+    .open {
+        height: auto;
+    }
+    #contact {
+        margin: 50px 0;
+      }
     
 
 }
 
 /********* Responsive landscape mobile ***********/
-@media screen and (max-width: 320px) and (orientation: landscape ) {
+@media screen and (min-width: 321px) and (orientation: landscape ) {
+    .mobile_links{
+        background-color: rgba(127,6,0,.6);
+        list-style-type:none;
+        text-align: right;
+        width:100%;
+        overflow:hidden;
+        height:0px;
+    }
+    .mobile_links li {
+        border-bottom: 1px solid #7f0600;
+        padding: 5px;
+        margin:0px;
+    }
+    .mobile_links a {
+        text-decoration:none;
+        color:#efefef;
+        padding-right: 25px;
+        line-height:1.8em;
+        width:100%;
+    }
+    .active {
+        background-color:#3ca536;
+    }
+    .open {
+        height: auto;
+    }
+    #contact {
+        margin: 50px 0;
+      }
 
 }
 
@@ -247,6 +305,9 @@ footer a:hover {
         margin-left: 30%;
     }
     .mobile_nav {
+        display:none;
+    }
+    .mobile_links {
         display:none;
     }
     .desktop_nav {
@@ -326,6 +387,9 @@ footer a:hover {
         line-height:1.5em;
         margin-left:auto; margin-right: auto;
     }
+    .active {
+        background: #efefef;
+    }
 }
 /********* Responsive landscape tablet ***********/
 @media screen and (min-width: 1024px) and (orientation: landscape ) {
@@ -336,6 +400,9 @@ footer a:hover {
         margin-left:30%;
     }
     .mobile_nav {
+        display:none;
+    }
+    .mobile_links {
         display:none;
     }
     .desktop_nav {
@@ -426,6 +493,9 @@ footer a:hover {
         line-height:1.5em;
         margin-left:auto; margin-right: auto;
     }
+    .active {
+        background: #efefef;
+    }
 }
 
 /********* Responsive Desktop ***********/
@@ -505,7 +575,6 @@ footer a:hover {
         background:#efefef;
         margin-left:auto; margin-right:auto;
         line-height: 2em;
-        text-indent: 2em;
     }
     .circles {
         width: 28%;
