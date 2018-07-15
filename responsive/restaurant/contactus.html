@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Fine Dining | Contact Us</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/form.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    </head>
+    <body>
+        <div id="wrapper">
+            <header>
+                <nav>
+                    <a class="brand" href="index.html"><img src="img/fd_logo.png">Fine Dining</a>
+                    <div class="mobile_nav" onclick="myFunction(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                    <ul class="desktop_nav">
+                        <a href="index.html"><li>Home</li></a>
+                        <a href="aboutus.html"><li>About Us</li></a>
+                        <a href="menu.html"><li>Menu</li></a>
+                        <a href="contactus.html"><li class="active">Contact Us</li></a>
+                    </ul>
+                </nav>
+            </header>
+            <ul class="mobile_links">
+                <a href="index.html"><li>Home</li></a>
+                <a href="aboutus.html"><li>About Us</li></a>
+                <a href="menu.html"><li>Menu</li></a>
+                <a href="contactus.html"><li class="active">&#10148; Contact Us</li></a>
+            </ul>
+            <div class="hero">
+                <div class="hero">
+                    <span class="subhead">Wine Valley, where taste is everything</span>
+                </div>
+            </div>
+            <div class="container"> 
+                    <form id="contact" action="" method="">
+                        <h3>Fine Dining</h3>
+                        <h4>Contact us with any questions</h4>
+                        <fieldset>
+                        <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+                        </fieldset>
+                        <fieldset>
+                        <input placeholder="Your Email Address" type="email" tabindex="2" required>
+                        </fieldset>
+                        <fieldset>
+                        <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
+                        </fieldset>
+                        <fieldset>
+                        <input placeholder="Your Web Site (optional)" type="url" tabindex="4" >
+                        </fieldset>
+                        <fieldset>
+                        <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+                        </fieldset>
+                        <fieldset>
+                        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" onclick="alert('THIS IS TO EMULATE YOUR MESSAGE BEING RECEIVED - Your message has been received')">Submit</button>
+                        </fieldset>
+                    </form>
+                </div>
+            
+            <div class="social center">
+                <a href="http://www.facebook.com" target="_blank"><img src="img/soc-icon1.png"/></a> 
+                <a href="http://www.twitter.com" target="_blank"><img src="img/soc-icon2.png"/></a>
+            </div>
+            <footer>&copy; 2018 - Fine Dining | <a href="#">Terms of Service</a></footer>
+        </div>
+    <script src="//code.jquery.com/jquery-latest.js"></script>
+    <script src="js/main.js"></script>  
+    </body>
+</html>

@@ -1,0 +1,514 @@
+/******* COLORS USED ************ 
+*********************************
+
+gold color: #a45500;
+body copy: #2d2d2d;
+light Grey : #efefef;
+
+**********************************
+**********************************/
+* { 
+    margin:0;
+    padding:0;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+html{ 
+    height:100%; 
+    color:#2d2d2d;
+    font-family: 'Montserrat', sans-serif;
+}
+h3 { margin-bottom: .5em; }
+p {
+    margin-bottom: .5em;
+    text-indent: 2em;
+}
+body {
+    width: 100%;
+    position:relative;
+    background: #efefef;
+}
+#wrapper {
+    width: 100%;
+    min-height: 100%;
+    margin:auto;
+    position:absolute;
+    background:#fcac00;
+}
+header {
+    width:100%;
+    height: 80px;
+    display:block;
+    background: #a45500;
+    border-bottom: 1px solid black;
+    overflow:hidden;
+}
+.desktop_nav { display:none; }
+.brand{ width: 100px; float:left;}
+.brand img {
+    width:100%;
+    height:100%;
+    margin: 10%;
+}
+.mobile_nav {
+    cursor: pointer;
+    float: right;
+    margin-right: 8%;
+    margin-top: 20px;
+}
+.bar1, .bar2, .bar3 {
+    width: 40px;
+    height: 3px;
+    background-color: #efefef;
+    margin: 8px 0;
+    transition: 0.4s;
+}
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-8px, 6px);
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+.change .bar2 {opacity: 0;}
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+nav ul li a {
+    list-style-type: none;
+    color:#efefef;
+    text-decoration: none;
+}
+nav ul li:hover {
+    background: #efefef;
+    cursor: pointer;
+    color: #a45500;
+}
+.active {
+    background: #efefef;
+    color: #a45500;
+}
+.hero {
+    width:100%;
+    height:200px;
+    background-image: url('../img/main.jpeg');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.subhead {
+    font-size:.9em;
+}
+.region {
+    width:92%;
+    padding:4%;
+    height:auto;
+    background:#efefef;
+}
+.about {
+    width:92%;
+    padding:4%;
+    height:auto;
+    background:#efefef;
+    line-height:1.5em;
+}
+.about img {
+    width: 30%;
+    height:auto;
+    float:left;
+    margin:5%;
+    margin-top:0px;
+}
+img.category {
+    width:50%;
+    height:auto;
+}
+.circles {
+    /* border-radius: 120px; */
+    width: 100%;
+    height: auto;
+    background: #efefef;
+    color:rgb(57, 2, 2);
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    line-height: 1.5em;
+}
+.circles img:hover {
+    -webkit-box-shadow: 1px 1px 58px 9px rgba(0,0,0,0.71); 
+    box-shadow: 1px 1px 58px 9px rgba(0,0,0,0.71); 
+}
+.center {
+    text-align:center;
+    margin-bottom:2em;
+}
+.padLeft {
+    padding-left:1.7em;
+    line-height:1.7em;
+    margin-top:0px;
+}
+.travel_img {
+    width: 30%;
+    height: auto;
+    float:left;
+    margin:1em;
+}
+article {
+    width:92%;
+    padding:4%;
+    height:auto;
+    display:block;
+    background: #efefef;
+    line-height:1.5em;
+}
+.social {
+    width: 100%;
+    height: 25px;
+    margin-bottom:0px;
+    background: #ffcf31;
+    line-height: 35px;
+}
+footer {
+    width:100%;
+    height:30px;
+    background: #a45500;
+    position: static;
+    bottom: -30px;
+    color: #efefef;
+    text-align:center;
+    line-height: 30px;
+    font-size:.7em;
+    margin-bottom:0px;
+}
+footer a {
+    color: #efefef;
+    text-decoration:none;
+}
+footer a:hover {
+    text-decoration:underline;
+}
+
+
+/********* Responsive Portrait mobile ***********/
+@media screen and (min-width: 320px) and (orientation: portrait ) {
+    a .brand {
+        width:96%;
+        height:96%;
+        padding: 2%;
+    }
+    .mobile_links{
+        background: #4f2900;
+        list-style-type:none;
+        text-align: right;
+        width:100%;
+        overflow:hidden;
+        height:0px;
+    }
+    .mobile_links li {
+        border-bottom: 1px solid #a45500;
+        padding-right:25px;
+        background: #4f2900;
+        height: 2em;
+    }
+    .mobile_links a {
+        text-decoration:none;
+        color:#efefef;
+        display:block;
+        line-height:2em;
+    }
+    .active {
+        color: #ffcf31;
+    }
+    .open {
+        height: auto;
+    }
+    #contact {
+        margin: 50px 0;
+      }
+    
+
+}
+
+/********* Responsive landscape mobile ***********/
+@media screen and (min-width: 321px) and (orientation: landscape ) {
+    .mobile_links{
+        background: #4f2900;
+        list-style-type:none;
+        text-align: right;
+        width:100%;
+        overflow:hidden;
+        height:0px;
+    }
+    .mobile_links li {
+        border-bottom: 1px solid #a45500;
+        padding-right:50px;
+        background: #4f2900;
+        height: 3em;
+    }
+    .mobile_links a {
+        text-decoration:none;
+        color:#efefef;
+        display:block;
+        line-height:3em;
+    }
+    .active {
+        color: #ffcf31;
+    }
+    .open {
+        height: auto;
+    }
+    .hero {
+        width:100%;
+        height:300px;
+        background-image: url('../img/main.jpeg');
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+    #contact {
+        margin: 50px 0;
+      }
+
+}
+
+/********* Responsive Portrait tablet ***********/
+@media screen and (min-width: 768px) and (orientation: portrait ) {
+    .brand{ width: 100px; float:left;}
+    .brand img {
+        width:100%;
+        height:100%;
+        margin-left: 30%;
+    }
+    .mobile_nav {
+        display:none;
+    }
+    .mobile_links {
+        display:none;
+    }
+    .desktop_nav {
+        float:right;
+        display:block;
+        margin-right:5%;
+    }
+    nav ul li {
+        list-style-type: none;
+        color:#efefef;
+        display: inline-block;
+        line-height: 80px;
+        text-align:center;
+        margin-left:20px;
+    }
+    .hero {
+        width:100%;
+        height:400px;
+        background-image: url('../img/main.jpeg');
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+    .region {
+        width:92%;
+        padding:4%;
+        height:auto;
+        background:#efefef;
+        margin-left:auto; margin-right:auto;
+    }
+    .circles {
+        width: 28%;
+        height: 28%;
+        color:rgb(57, 2, 2);
+        border-bottom: none;
+        margin-bottom: 0px;
+        margin-right:3%;
+        padding-bottom: 0px;
+        line-height: 1.5em;
+        display:inline-block;
+        vertical-align: top;
+    }
+    .circles:nth-child(1) {
+        margin-left:3%;
+    }
+    img.category {
+        width:100%;
+        height:auto;
+        border-radius: 0px;
+    }
+    article {
+        width:86%;
+        height:auto;
+        display:block;
+        background: #efefef;
+        line-height:1.5em;
+        margin-left:auto; margin-right: auto;
+    }
+    .active {
+        background: #efefef;
+    }
+}
+/********* Responsive landscape tablet ***********/
+@media screen and (min-width: 1024px) and (orientation: landscape ) {
+    .brand{ width: 100px; float:left;}
+    .brand img {
+        width:100%;
+        height:100%;
+        margin-left:30%;
+    }
+    .mobile_nav {
+        display:none;
+    }
+    .mobile_links {
+        display:none;
+    }
+    .desktop_nav {
+        float:right;
+        display:block;
+        margin-right:5%;
+    }
+    nav ul li {
+        list-style-type: none;
+        color:#efefef;
+        width: 120px;
+        display: inline-block;
+        line-height: 80px;
+        text-align:center;
+    }
+    .hero {
+        width:100%;
+        height:500px;
+        background-image: url('../img/main.jpeg');
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+    .subhead {
+        font-size:.9em;
+    }
+    .region {
+        width:92%;
+        padding:4%;
+        height:auto;
+        background:#efefef;
+        margin-left:auto; margin-right:auto;
+    }
+    .circles {
+        width: 28%;
+        height: 28%;
+        color:rgb(57, 2, 2);
+        border-bottom: none;
+        margin-bottom: 0px;
+        margin-right:3%;
+        padding-bottom: 0px;
+        line-height: 1.5em;
+        display:inline-block;
+        vertical-align: top;
+    }
+    .circles:nth-child(1) {
+        margin-left:5%;
+    }
+    img.category {
+        width:100%;
+        height:auto;
+        border-radius: 100%;
+    }
+    img.category:nth-child(1){
+        margin-left:3%;
+    }
+    article {
+        width:86%;
+        height:auto;
+        display:block;
+        background: #efefef;
+        line-height:1.5em;
+        margin-left:auto; margin-right: auto;
+    }
+    .active {
+        background: #efefef;
+    }
+}
+
+/********* Responsive Desktop ***********/
+@media screen and (min-width: 1025px) {
+
+    .brand{ width: 100px; float:left;}
+    .brand img {
+        width:100%;
+        height:100%;
+        margin-left:30%;
+    }
+    .mobile_nav {
+        display:none;
+    }
+    .desktop_nav {
+        float:right;
+        display:block;
+        margin-right:5%;
+    }
+    nav ul li{
+        list-style-type: none;
+        color:#efefef;
+        width: 120px;
+        display: inline-block;
+        line-height: 80px;
+        text-align:center;
+    }
+    .hero {
+        width:1024px;
+        height:500px;
+        background-image: url('../img/main.jpeg');
+        background-repeat: no-repeat;
+        background-size:cover;
+        margin-left:auto; margin-right: auto;
+        margin-bottom: 2em;
+    }
+    .subhead {
+        font-size:.9em;
+    }
+    .region {
+        width:1024px;
+        padding:0;
+        height:auto;
+        background:none;
+        margin-left:auto; margin-right:auto;
+    }
+    .about {
+        width:1024px;
+        padding:4%;
+        height:auto;
+        background:#efefef;
+        margin-left:auto; margin-right:auto;
+        line-height: 2em;
+    }
+    .circles {
+        width: 28%;
+        height: 28%;
+        color:rgb(57, 2, 2);
+        border-bottom: none;
+        margin-bottom: 0px;
+        margin-right:3%;
+        padding-bottom: 0px;
+        line-height: 1.5em;
+        display:inline-block;
+        vertical-align: top;
+        background:none;
+    }
+    .circles:nth-child(1) {
+        margin-left:3%;
+    }
+    img.category {
+        width:100%;
+        height:auto;
+    }
+    article {
+        width:1024px;
+        height:auto;
+        background:none;
+        line-height:1.5em;
+        margin-left:auto; margin-right: auto;
+    }
+    article p {
+        margin-left: 4%; margin-right: 4%;
+    }
+    footer {
+        height: 50px;
+        line-height:50px;
+        font-size:1em;
+    }
+}
+
