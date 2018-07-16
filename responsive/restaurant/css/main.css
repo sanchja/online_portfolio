@@ -104,6 +104,18 @@ nav ul li:hover {
     background-size:cover;
 }
 
+.menu img {
+    width: 100%; height:auto;
+    float: left;
+    margin: 10px;
+    margin-left:0px;
+}
+.menu_description ul {
+    line-height: 2em;
+    margin-left: 10px;
+    font-size: 1em;
+    list-style-type:none;
+}
 .subhead {
     font-size:.9em;
 }
