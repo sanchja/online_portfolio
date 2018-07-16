@@ -88,6 +88,14 @@ nav ul li:hover {
     background: #efefef;
     color: #a45500;
 }
+.background {
+    width: 100%; 
+    height: 150px;
+    background-image: url('../img/brown-woodbg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20px;
+}
 .hero {
     width:100%;
     height:200px;
@@ -494,6 +502,18 @@ footer a:hover {
     img.category {
         width:100%;
         height:auto;
+    }
+    .menu img {
+        width: 300px; height:auto;
+        float: left;
+        margin: 10px;
+        margin-left:0px;
+    }
+    .menu_description {
+        float:left;
+        line-height: 1.7em;
+        margin-left: 50px;
+        font-size: 1.5em;
     }
     article {
         width:1024px;
