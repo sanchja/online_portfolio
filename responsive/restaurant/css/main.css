@@ -233,6 +233,18 @@ footer a:hover {
     #contact {
         margin: 50px 0;
       }
+    .menu img {
+        width: 100%; height:auto;
+        float: left;
+        margin: 10px;
+        margin-left:0px;
+    }
+    .menu_description ul {
+        line-height: 2em;
+        margin-left: 10px;
+        font-size: 1em;
+        list-style-type:none;
+    }
     
 
 }
@@ -503,17 +515,22 @@ footer a:hover {
         width:100%;
         height:auto;
     }
+    .menu_container {
+        width: 100%;
+        float:left;
+    }
     .menu img {
         width: 300px; height:auto;
         float: left;
         margin: 10px;
         margin-left:0px;
     }
-    .menu_description {
+    .menu_description ul {
         float:left;
         line-height: 1.7em;
         margin-left: 50px;
-        font-size: 1.5em;
+        font-size: 1.3em;
+        list-style-type:none;
     }
     article {
         width:1024px;
