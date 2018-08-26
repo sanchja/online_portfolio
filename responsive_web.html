@@ -72,6 +72,9 @@
                         <img class="img-responsive" src="img/ResponsiveDevices.png"/>
                     </div>
                     <div class="col-xs-12 col-sm-3">
+                        <h4><a id="betadine" href="#">Betadine Website</a></h4>
+                        <p>Betadine - The Brand Used in Hospitals Worldwide</p>
+                        <hr>
                         <h4><a id="slowmag" href="#">Slow-Mag Website</a></h4>
                         <p>Purdue Pharma's first "Responsive" Website in it's history!</p>
                         <hr>
@@ -100,6 +103,10 @@
     <script>
         var display = document.getElementsByClassName("display"); // HANDLER FOR THE MEDIA BOX
     
+        $("#betadine").on("mouseover",function(){
+        $(display).html('<a href="http://www.betadine.com" target="_blank"><img src="https://betadine.com/assets/images/logo-betadine.png" alt="Betadine"></a>');
+        });
+
         $("#slowmag").on("mouseover",function(){
         $(display).html('<a href="http://www.slowmag.com" target="_blank"><img src="img/slowMagLogo.png" alt="Slowmag"></a>');
         });
