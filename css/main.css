@@ -42,6 +42,7 @@ p:last-child { margin-bottom: 0; }
 .tech_icon img{
     width: 100px;
     height: auto;
+    padding-bottom: 10px;
 }
 .lineup{
     margin-right: 20px;
@@ -149,7 +150,7 @@ p:last-child { margin-bottom: 0; }
     margin-right: 35px;
 }
 
-.tm-main-nav { font-size: 1.6rem; }
+.tm-main-nav { font-size: 1.5rem; }
 .tm-main-nav li { list-style: none; }
 .tm-main-nav a {
     background-image: url(../img/nav-item.png);
@@ -300,9 +301,6 @@ footer a { color: rgb(240, 240, 240); }
 
 @media (max-width: 991px) {    
 
-    /*  Nav toggle
-        https://www.youtube.com/watch?v=uyT3NSHhke8
-    */
 
     .tm-main-row { position: relative; }
 
