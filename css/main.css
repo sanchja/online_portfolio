@@ -31,6 +31,7 @@ a {	color: rgb(35, 16, 159);  }
 a:hover { color: #FF0; text-decoration: none; }
 
 h1,h2,h3 { font-weight: 300; }
+.media-body h3 { color: #DD0031; background-color: rgb(17, 17, 17); padding:10px;}
 
 p {
     font-size: 1rem;
@@ -238,13 +239,12 @@ address { font-size: 1rem; }
 
 .footer-link {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
-    margin-left: 20px;
+    right:0px;
     color: rgb(240, 240, 240);
     text-align:right;    
-    width:100%;
     z-index: 999;
+    padding:10px;
+    background-color: rgba(0,0,0,0.5);
 }
 
 .footer-link.relative { position: relative; }
