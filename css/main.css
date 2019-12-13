@@ -47,8 +47,9 @@ p {
     font-size: 1rem;
 }
 .fa-globe {
-    font-size: 1.4em;
-    margin-right:5px;
+    font-size: 1.9em;
+    margin-right: 5px;
+    vertical-align: sub;
 }
 p:last-child { margin-bottom: 0; }
 
@@ -255,6 +256,12 @@ img.img-fluid {
     min-width: 400px;
     min-height: 471px;
 } */
+.project button {
+    margin-right: 20px;
+}
+.project button:hover {
+    cursor: pointer;
+}
 .projectImage {
     float:left;
     margin-right: 20px;
