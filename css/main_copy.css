@@ -409,6 +409,9 @@ footer a { color: rgb(240, 240, 240); }
     float:none;
     margin-right: 0px;
     }
+    .projectImage img {
+        width:100%;
+    }
 }
 
 @media (max-width: 640px) {
@@ -431,7 +434,8 @@ footer a { color: rgb(240, 240, 240); }
         margin-bottom:3rem;
     }
     header h2 {
-        margin-bottom: 3rem;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
     }
     .projectImage img {
         width: 98%;
