@@ -31,6 +31,7 @@ nav.menu ul li a.activeLink{ font-weight:bold; color:black; background-image:url
 <!-- GREY COLOR = #6d6e71-->
 .wrapper{
 	width:1200px;
+	max-width: 1400px;
 	height:auto;
 	background-color:#6d6e71;
 	margin:0px auto;
@@ -271,7 +272,6 @@ footer{
 	padding:10px;
 	bottom:0px;
 	margin-bottom:0px;
-	width:100%;
 	clear:both;
 }
 footer a{
