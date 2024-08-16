@@ -69,6 +69,9 @@ p:last-child { margin-bottom: 0; }
     background-color: rgba(0,0,0,0.10);    
     padding: 30px;
 }
+.fas fa-phone lineup:hover {
+    cursor: pointer;
+}
 
 .tm-contact-box-pad { padding: 60px 55px; }
 .tm-border-white { border: 1px solid rgb(240, 240, 240); }
