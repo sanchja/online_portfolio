@@ -41,6 +41,7 @@ a:focus {
 
 a {
  color: #9f1f00;
+ font-weight: 400;
 }
 a:visited {
  color: #9f1f00;
