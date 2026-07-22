@@ -40,7 +40,10 @@ a:focus {
 }
 
 a {
- color: #1d3a7c;
+ color: #9f1f00;
+}
+a:visited {
+ color: #9f1f00;
 }
 .a_normal {
  color: rgb(240, 240, 240);
