@@ -1,0 +1,38 @@
+<svg width="172" height="120" viewBox="0 0 172 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<g style="mix-blend-mode:multiply" filter="url(#filter0_f)">
+<path d="M124.376 93.7535H25.4851C19.6198 93.7535 14.914 88.9795 14.914 83.1824V25.0754C14.914 19.2102 19.688 14.5043 25.4851 14.5043H124.444C130.309 14.5043 135.015 19.2784 135.015 25.0754V83.1142C135.015 88.9795 130.241 93.7535 124.376 93.7535Z" fill="#EDF4FF"/>
+</g>
+<g style="mix-blend-mode:multiply">
+<path d="M155.203 79.2269L62.4501 113.736C56.994 115.782 50.856 112.986 48.8099 107.53L28.5543 53.106C26.5083 47.6499 29.3046 41.5119 34.7606 39.4659L127.514 4.95631C132.97 2.91029 139.108 5.70652 141.154 11.1626L161.409 65.5867C163.455 71.111 160.659 77.1809 155.203 79.2269Z" fill="#EDF4FF"/>
+</g>
+<path d="M118.034 87.1382H19.1425C13.2773 87.1382 8.57143 82.3642 8.57143 76.5671V18.4601C8.57143 12.5949 13.3455 7.88904 19.1425 7.88904H118.102C123.967 7.88904 128.673 12.6631 128.673 18.4601V76.4989C128.673 82.4324 123.899 87.1382 118.034 87.1382Z" fill="white"/>
+<g style="mix-blend-mode:multiply" filter="url(#filter1_f)">
+<path d="M95.5267 65.1094C81.5456 65.1094 70.2243 76.4307 70.2243 90.4118C70.2243 104.393 81.5456 115.714 95.5267 115.714C109.508 115.714 120.829 104.393 120.829 90.4118C120.829 76.4307 109.508 65.1094 95.5267 65.1094Z" fill="#EDF4FF"/>
+</g>
+<path d="M94.0256 66.8825C82.3633 66.8825 72.9516 76.2942 72.9516 87.9565C72.9516 99.6188 82.3633 109.03 94.0256 109.03C105.688 109.03 115.1 99.6188 115.1 87.9565C115.1 76.2942 105.688 66.8825 94.0256 66.8825Z" fill="white"/>
+<path d="M105.143 83.319L92.1846 96.2771C91.7754 96.6863 91.0252 96.6863 90.616 96.2771L82.9775 88.7751C82.5683 88.3659 82.5683 87.6156 82.9775 87.2064L85.16 85.024C85.5692 84.6148 86.3194 84.6148 86.7286 85.024L91.4344 89.5935L101.46 79.568C101.869 79.1588 102.619 79.1588 103.029 79.568L105.211 81.7504C105.552 82.2278 105.552 82.9098 105.143 83.319Z" fill="#2979FF"/>
+<path d="M23.0303 50.378H38.58" stroke="#1C428C" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M48.1957 50.378H63.7454" stroke="#1C428C" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M73.4301 50.378H88.9798" stroke="#1C428C" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M98.6635 50.378H114.213" stroke="#1C428C" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M36.875 36.1241H24.1897C23.5759 36.1241 23.0303 35.5785 23.0303 34.9647V22.2111C23.0303 21.5973 23.5759 21.0517 24.1897 21.0517H36.9432C37.557 21.0517 38.1026 21.5973 38.1026 22.2111V34.9647C38.0344 35.5785 37.557 36.1241 36.875 36.1241Z" fill="#EDF4FF"/>
+<path d="M122.397 33.6004H134.878" stroke="#1C428C" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M128.67 39.8067V27.326" stroke="#1C428C" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<filter id="filter0_f" x="4.91397" y="4.50432" width="140.101" height="99.2492" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="5" result="effect1_foregroundBlur"/>
+</filter>
+<filter id="filter1_f" x="60.2243" y="55.1094" width="70.6049" height="70.6049" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="5" result="effect1_foregroundBlur"/>
+</filter>
+<clipPath id="clip0">
+<rect width="171.429" height="120" fill="white"/>
+</clipPath>
+</defs>
+</svg>

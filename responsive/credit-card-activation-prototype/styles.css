@@ -1,0 +1,244 @@
+html {
+  margin: 0 auto;
+  background-color: rgba(176, 190, 197, 0.5);
+}
+body,
+input,
+select {
+  font-family: "Roboto", sans serif;
+  -webkit-font-smoothing: antialiased;
+}
+.wrapper {
+  margin: 0 auto;
+  position: relative;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  background: #fafafa;
+  padding: 0 40px;
+  border-radius: 0 0 5px 5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+label,
+input,
+select {
+  color: #263238;
+}
+
+p,
+label,
+input {
+  font-size: 17px;
+  line-height: 1em;
+}
+.modal {
+  max-width: 800px;
+  box-shadow: 0px 20px 30px rgb(111 135 147 / 30%);
+  border-radius: 5px;
+  padding: 0;
+  margin: 50px auto;
+}
+
+.modal header {
+  text-align: center;
+  border-bottom: 1px solid #cfd8dc;
+  background-color: #ffffff;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 5px 5px 0 0;
+}
+
+.modal-content {
+  border-radius: 0 0 5px 5px;
+}
+
+.modal h3 {
+  display: inline;
+  text-align: center;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+.close-btn {
+  float: right;
+  padding-top: 6px;
+  cursor: pointer;
+}
+
+.modal-content {
+  display: flex;
+  background: #fafafa;
+  padding: 20px 40px;
+  justify-content: center;
+  text-align: center;
+}
+
+.large-icon-stack {
+  margin-bottom: 45px;
+}
+
+.subtextActivation {
+  max-width: 500px;
+  text-align: center;
+}
+.idle {
+  height: 16px;
+  width: 16px;
+  border-radius: 0px;
+  position: absolute;
+  margin-left: 6px;
+  margin-top: 14px;
+  background-image: url("/assets/greyIcon.svg");
+  background-size: contain;
+  cursor: pointer;
+}
+.success {
+  height: 16px;
+  width: 16px;
+  border-radius: 0px;
+  position: absolute;
+  margin-left: 6px;
+  margin-top: 14px;
+  background-image: url("/assets/checkIcon.svg");
+  background-size: contain;
+}
+.unsuccessful {
+  height: 16px;
+  width: 16px;
+  border-radius: 0px;
+  position: absolute;
+  margin-left: 6px;
+  margin-top: 14px;
+  background-image: url("/assets/xIcon.svg");
+  background-size: contain;
+}
+.message {
+  font-style: italic;
+  font-size: 0.8rem;
+}
+#errorMessage {
+  margin: 10px 0;
+}
+.submit-btn {
+  padding: 8px 24px;
+  text-transform: none;
+  margin-top: 0;
+  background: #b4b6ba;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  font-size: 17px;
+}
+.submit-btn-active {
+  padding: 8px 24px;
+  text-transform: none;
+  margin-top: 0;
+  background: #2979ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  font-size: 17px;
+  cursor: pointer;
+}
+#successfulCardActivation {
+  opacity: 0;
+}
+.subtextContainer {
+  width: 500px;
+}
+.closeButton {
+  padding: 8px 24px;
+  text-transform: none;
+  background: #2979ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  font-size: 17px;
+  cursor: pointer;
+}
+.activatedLayout {
+  max-width: 500px;
+  text-align: center;
+  margin-bottom: 47px;
+}
+fieldset {
+  border: none;
+  margin-bottom: 0px;
+}
+.MuiInput-root {
+  padding: 0px 10px;
+  min-height: 40px;
+  border: 1px solid #cfd8dc;
+  border-radius: 5px;
+  font-size: 17px;
+}
+fieldset .MuiInput-root {
+  width: 50px;
+  margin-right: 10px;
+}
+label {
+  padding-right: 16px;
+}
+
+input:hover,
+input:active,
+input:focus-visible,
+select:active,
+select:focus-visible {
+  outline-color: #9dc7f9;
+  outline-width: thin;
+}
+input:invalid {
+  box-shadow: 0 0 1px 1px red;
+}
+
+.submit-btn-active:hover {
+  background: #0d3d92;
+}
+.closeButton:hover {
+  background: #0d3d92;
+}
+
+select {
+  min-height: 40px;
+}
+
+.divider {
+  margin: 60px 0;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0.3;
+}
+
+@media only screen and (max-width: 600px) {
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 36px 5px;
+  }
+
+  label {
+    display: block;
+    padding: 8px 0;
+  }
+
+  .large-icon {
+    margin-top: 0;
+  }
+  fieldset {
+    width: 93%;
+  }
+}

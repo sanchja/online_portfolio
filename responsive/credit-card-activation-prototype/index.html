@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Activation API</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="text/javascript">
+      let downStrokeField;
+
+      function autojump(fieldName, nextFieldName, fakeMaxLength) {
+        const myForm = document.forms[document.forms.length - 1];
+        const myField = myForm.elements[fieldName];
+        myField.nextField = myForm.elements[nextFieldName];
+        if (myField.maxLength == null) myField.maxLength = fakeMaxLength;
+        myField.onkeydown = autojump_keyDown;
+        myField.onkeyup = autojump_keyUp;
+      }
+      function autojump_keyDown() {
+        this.beforeLength = this.value.length;
+        downStrokeField = this;
+      }
+      function autojump_keyUp() {
+        if (
+          this == downStrokeField &&
+          this.value.length > this.beforeLength &&
+          this.value.length === this.maxLength
+        )
+          if (accountNumberField4.value.length !== 4) {
+            this.nextField.focus();
+            downStrokeField = null;
+          } else {
+            removeDisable();
+            console.log("it worked");
+          }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="activation" class="modal">
+      <form id="omaha-card-activation-form" name="activationForm">
+        <header>
+          <h3>Card Activation</h3>
+          <img class="close-btn" src="assets/icon__close.svg" />
+        </header>
+        <div class="modal-content">
+          <div>
+            <img class="large-icon" src="assets/Icon_Pan.svg" />
+            <p class="subtext">
+              Enter your account number to activate or deactivate card.
+            </p>
+            <fieldset>
+              <input
+                inputmode="numeric"
+                id="omaha-card-activation-accountNumber1"
+                name="accountNumber1"
+                pattern="^(\+|-)?[1-9][0-9]*(\.[0-9]*)?$"
+                class="MuiInput-root"
+                minlength="4"
+                maxlength="4"
+                size="4"
+                onchange="checkLengthOfInputOne()"
+              />
+              <input
+                inputmode="numeric"
+                id="omaha-card-activation-accountNumber2"
+                name="accountNumber2"
+                pattern="^(\+|-)?[1-9][0-9]*(\.[0-9]*)?$"
+                class="MuiInput-root"
+                minlength="4"
+                maxlength="4"
+                size="4"
+                onchange="checkLengthOfInputTwo()"
+              />
+              <input
+                inputmode="numeric"
+                id="omaha-card-activation-accountNumber3"
+                name="accountNumber3"
+                pattern="^(\+|-)?[1-9][0-9]*(\.[0-9]*)?$"
+                class="MuiInput-root"
+                minlength="4"
+                maxlength="4"
+                size="4"
+                onchange="checkLengthOfInputThree()"
+              />
+              <input
+                inputmode="numeric"
+                id="omaha-card-activation-accountNumber4"
+                name="accountNumber4"
+                pattern="^(\+|-)?[1-9][0-9]*(\.[0-9]*)?$"
+                class="MuiInput-root"
+                minlength="4"
+                maxlength="4"
+                size="4"
+                onchange="checkLengthOfInputFour()"
+              />
+              <span id="check" class="idle"></span>
+            </fieldset>
+            <div id="errorMessage" class="subtext message"></div>
+          </div>
+        </div>
+
+        <div class="flex">
+          <button id="submitButton" class="submit-btn">Activate</button>
+        </div>
+      </form>
+      <!-- Script for autojumping to the next account input -->
+      <script>
+        autojump("accountNumber1", "accountNumber2", 4);
+        autojump("accountNumber2", "accountNumber3", 4);
+        autojump("accountNumber3", "accountNumber4", 4);
+        autojump("accountNumber4", "disableBtn", 4);
+      </script>
+    </div>
+
+    <!-- ACTIVATION SUCCESSFUL CARD -->
+    <div id="successfulCardActivation" class="modal">
+      <form>
+        <header>
+          <h3>Card Activation</h3>
+          <img class="close-btn" src="assets/icon__close.svg" />
+        </header>
+        <div class="modal-content">
+          <div class="activatedLayout">
+            <img class="large-icon-stack" src="assets/new_card.svg" />
+            <div>
+              <p class="subtextActivation">
+                The card has been successfully activated
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex">
+          <button id="close-btn" class="closeButton">Close</button>
+        </div>
+      </form>
+    </div>
+    <script src="./validation.js"></script>
+  </body>
+</html>
