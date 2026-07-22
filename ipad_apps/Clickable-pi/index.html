@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Nuplazid FPI</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.typekit.net/fmc8pys.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <!-- <script src="https://hammerjs.github.io/dist/hammer.js"></script> -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <span id="drawer"><a id="toggle" href="#"><img src="images/3dotsMenu.png" width="28"></a></span>
+            <form>
+                <input id="search" type="text" placeholder="search...">
+                <input type="hidden" id="search-hide">
+                <span id="search-mag"></span>
+                <div id="search-tray" class="hidden-important">
+                  <span class="run">submit</span>
+                  <span class="count">0/0</span>
+                  <i class="next fa fa-angle-down"></i>
+                  <i class="previous fa fa-angle-up"></i>
+                  <i class="empty fa fa-times"></i>
+                </div>
+            </form>
+            <h1 id="fpi">Full Prescribing Information</h1>
+            <div>
+                <a href="#highlights"><img id="brand" src="images/logo.png" width="150"/></a>
+            </div>
+        </div>
+        
+    </header>
+    <nav id="nav">
+        <ul id="toc" class="nav orange">
+            <!-- <div class="overlay-top" style="display:none;"><img src="images/arrow-up.png"/></div> -->
+            <li class="active" style="line-height: 1.3rem; margin-bottom:10px;"><a href="#highlights">Highlights of Prescribing <span class="lineUp">Information</span></a></li>
+            <li><a href="#indications_usage">Indications and Usage</a></li>
+            <li><a class="toggle" href="#dosage_administration">Dosage and Administration</a>
+                <ul class="inner sub orange li">
+                    <li><a href="#general_dosing">General Dosing Information</a></li>
+                    <li><a href="#administration_information">Administration Information</a></li>
+                    <li><a href="#dosage_modifications">Dosage Modifications for<br>
+                         <span class="lineUp">Concomitant Use with CYP3A4</span> <span class="lineUp">Inhibitors and Inducers</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#dosage_forms">Dosage Forms and Strengths</a></li>
+            <li><a href="#contraindications">Contraindications</a></li>
+            <li><a class="toggle" href="#warnings_precautions">Warnings and Precautions</a>
+                <ul class="inner sub orange li">
+                    <li><a href="#risk_mortality">Risk of Mortality with Antipsychotic 
+                        <span class="lineUp">Use in Elderly Patients with</span><br> 
+                        <span class="lineUp">Dementia-Related Psychosis</span></a></li>
+                    <li><a href="#qt_interval">QT Interval Prolongation</a></li>
+                </ul>
+            </li>
+            <li><a class="toggle" href="#adverse_reactions">Adverse Reactions</a>
+                <ul class="inner sub orange li">
+                    <li><a href="#clinical_trials">Clinical Trials Experience</a></li>
+                    <li><a href="#postmarketing_experience">Postmarketing Experience</a></li>
+                </ul>
+            </li>
+            <li><a class="toggle" href="#drug_interactions">Drug Interactions</a>
+                <ul class="inner sub orange li">
+                    <li><a href="#drugs7-1">Drugs Having Clinically Important<br> 
+                        <span class="lineUp">Interactions with NUPLAZID</span></a></li>
+                    <li><a href="#drugs7-2">Drugs Having No Clinically<br> <span class="lineUp">Important 
+                        Interactions with</span><br>
+                         <span class="lineUp">NUPLAZID</span></a></li>
+                </ul>
+            </li>
+            <li><a class="toggle" href="#use_specific">Use in Specific Populations</a>
+                <ul class="inner sub orange li">
+                    <li><a href="#pregnancy">Pregnancy</a></li>
+                    <li><a href="#lactation">Lactation</a></li>
+                    <li><a href="#pediatric_use">Pediatric Use</a></li>
+                    <li><a href="#geriatric_use">Geriatric Use</a></li>
+                    <li><a href="#patients_renal">Patients with Renal Impairment</a></li>
+                    <li><a href="#patients_hepatic">Patients with Hepatic Impairment</a></li>
+                    <li><a href="#other_specific">Other Specific Populations</a></li>
+                </ul>
+            </li>
+            <li><a class="toggle" href="#drug_abuse">Drug Abuse and Dependence</a>
+                <ul class="inner sub orange li">
+                    <li><a href="#controlled_substance">Controlled Substance</a></li>
+                    <li><a href="#abuse9-2">Abuse</a></li>
+                </ul>
+            </li>
+            <li><a class="toggle" href="#overdosage">Overdosage</a>
+                <ul class="inner sub orange li">
+                    <li><a href="#human_experience">Human Experience</a></li>
+                    <li><a href="#management_overdose">Management of Overdose</a></li>
+                </ul>
+            </li>
+            <li><a href="#description">Description</a></li>
+            <li><a class="toggle" href="#clinical_pharmacology">Clinical Pharmacology</a>
+                <ul class="inner sub orange li">
+                    <li><a href="#mechanism_action">Mechanism of Action</a></li>
+                    <li><a href="#pharmacodynamics">Pharmacodynamics</a></li>
+                    <li><a href="#pharmacokinetics">Pharmacokinetics</a></li>
+                </ul>
+            </li>
+            <li><a class="toggle" href="#nonclinical_toxicology">Nonclinical Toxicology</a>
+                <ul class="inner sub orange li">
+                    <li><a href="#carcinogenesis">Carcinogenesis, Mutagenesis,<br> 
+                        <span class="lineUp">Impairment of Fertility</span></a></li>
+                    <li><a href="#animal_toxicology">Animal Toxicology and/or<br> 
+                        <span class="lineUp">Pharmacology</span></a></li>
+                </ul>
+            </li>
+            <li><a class="toggle" href="#clinical_studies">Clinical Studies</a>
+                <ul class="inner sub orange li">
+                    <li><a href="#parkinsons">Parkinson&apos;s Disease Psychosis</a></li>
+                    <li><a href="#dementia_psychosis">Dementia-Related Psychosis</a></li>
+                </ul>
+            </li>
+            <li style="line-height: 1.3rem; margin-bottom:10px;"><a href="#supplied_storage">How Supplied/Storage and <span class="lineUp">Handling</span></a></li>
+            <li><a href="#patient_counseling">Patient Counseling Information</a></li><br>
+            <div class="overlay-bottom" style="display:none;"><img src="images/arrow-down.png"/></div>
+        </ul>
+        <!-- <div class="overlay-bottom" style="display:none;"><img src="images/arrow-down.png"/></div> -->
+    </nav>
+
+    <!-- Start PI Content -->
+
+    <main style="overflow:scroll; width: 675px;">
+      <!-- HIGHLIGHTS -->
+      <h2 id="highlights" class="nav-marker">HIGHLIGHTS OF PRESCRIBING INFORMATION</h2>
+      <h5>These highlights do not include all the information needed to use NUPLAZID safely and effectively.<br/> 
+          See full prescribing information for NUPLAZID.</h5>
+          <h5>NUPLAZID<sup>&reg;</sup> (pimavanserin) capsules, for oral use<br/>
+          NUPLAZID<sup>&reg;</sup> (pimavanserin) tablets, for oral use<br/>
+          Initial U.S. Approval: 2016</h5>
+      </h5>
+      <!-- FIRST PAGE TILE SECTION -->
+      <section id="tileContainer">
+          <a href="#indications_usage" class="orangeTile recentTile">
+              <div class="innerTile">
+                  <h4>RECENT MAJOR CHANGES</h4>
+                  <div style="line-height: 1rem; margin-bottom: 0.5em; margin-top: 0px; list-style-type: disc;">
+                      Boxed Warning-Removed <span class="magenta" style="padding-left: 55px;text-align: right;">[06/2020]</span><br>
+                      Indications and Usage (<span class="colorLink">1</span>) <span class="magenta" style="padding-left: 61px;text-align: right;">[06/2020]</span><br>
+                      Warnings and Precautions (<span class="colorLink">5.1</span>) <span class="magenta" style="padding-left: 32px;text-align: right;">[06/2020]</span>
+                  </div>
+              </div>
+              <div style="position:absolute;right:10px; height:87px;line-height:87px;"><img src="images/tileArrow.png" width="10"/></div>
+          </a>
+          <a href="#contraindications" class="orangeTile contraindicationsTile">
+              <div class="innerTile">
+                  <h4>CONTRAINDICATIONS</h4>
+                  <div style="line-height: 1rem; margin-bottom: 0.5em; margin-top: 0px;">
+                      Known hypersensitivity to NUPLAZID<br>
+                      or any of its components. (<span class="colorLink">4</span>)
+                  </div>
+              </div>
+              <div style="position:absolute;right:10px; height:87px;line-height:87px;"><img src="images/tileArrow.png" width="10"/></div>
+          </a>
+          <a href="#indications_usage" class="orangeTile indicationsTile">
+              <div class="innerTile">
+                  <h4>INDICATIONS AND USAGE</h4>
+                  <div style="line-height: 1rem; margin-bottom: 0.5em; margin-top: 0px;">
+                      NUPLAZID is an atypical antipsychotic indicated for the treatment of hallucinations and delusions associated with:<br>
+                      <span class="bullet">&bull;</span>&nbsp;Parkinson&#8217;s disease psychosis (<span class="colorLink">1</span>, <span class="colorLink">14.1</span>)<br>
+                      
+                      <span class="bullet">&bull;</span>&nbsp;Dementia-related psychosis (<span class="colorLink">1</span>, <span class="colorLink">14.2</span>)
+                  </div>
+              </div>
+              <div style="position:absolute;right:10px; height:115px;line-height:115px;"><img src="images/tileArrow.png" width="10"/></div>
+          </a>
+          <a href="#warnings_precautions" class="orangeTile warningsTile">
+              <div class="innerTile">
+                  <h4>WARNINGS AND PRECAUTIONS</h4>
+                  <div style="line-height: 1rem; margin-bottom: 0.5em; margin-top: 0px;">
+                      <span class="bullet">&bull;</span>&nbsp;QT Interval Prolongation: Increases in QT interval;<br>
+                      &nbsp;&nbsp; avoid use with drugs that also increase the<br>
+                      &nbsp;&nbsp; QT interval and in patients with risk factors<br>
+                      &nbsp;&nbsp; for prolonged QT interval. (<span class="colorLink">5.2</span>)
+                  </div>
+              </div>
+              <div style="position:absolute;right:10px; height:115px;line-height:115px;"><img src="images/tileArrow.png" width="10"/></div>
+          </a>
+          
+          <a href="#dosage_administration" class="orangeTile dosageTile">
+              <div class="innerTile">
+                  <h4>DOSAGE AND ADMINISTRATION</h4>
+                  <div style="line-height: 1rem; margin-bottom: 0.5em; margin-top: 0px;">
+                      <span class="bullet">&bull;</span>&nbsp;Recommended dose is 34 mg taken orally<br>
+                      &nbsp;&nbsp; once daily, without titration. (<span class="colorLink">2</span>)<br>
+
+                      <span class="bullet">&bull;</span>&nbsp;Can be taken with or without food. (<span class="colorLink">2</span>)<br>
+                      
+                      <span class="bullet">&bull;</span>&nbsp;Capsule may be swallowed whole or opened and<br>
+                      &nbsp;&nbsp; contents sprinkled over a tablespoon of certain<br>
+                      &nbsp;&nbsp; types of soft food (<span class="colorLink">2.2</span>)
+                  </div>
+              </div>
+              <div style="position:absolute;right:10px; height:130px;line-height:130px;"><img src="images/tileArrow.png" width="10"/></div>
+          </a>
+          <a href="#adverse_reactions" class="orangeTile adverseTile">
+              <div class="innerTile">
+                  <h4>ADVERSE REACTIONS</h4>
+                  <div style="line-height: 1rem; margin-bottom: 0.5em; margin-top: 0px;">
+                      Most common adverse reactions (&ge;4% and twice the rate of placebo): peripheral edema and confusional state. (<span class="colorLink">6.1</span>)<br>
+
+                      <p style="font-size:10px; font-weight:600; color:#000000; margin-top:2px;">To report SUSPECTED ADVERSE REACTIONS, contact<br>
+                      Acadia Pharmaceuticals Inc. at 1-844-422-2342 or<br>
+                      FDA at 1-800-FDA-1088 or www.fda.gov/medwatch.</p>
+                  </div>
+              </div>
+              <div style="position:absolute;right:10px; height:130px;line-height:130px;"><img src="images/tileArrow.png" width="10"/></div>
+          </a>
+          <a href="#dosage_forms" class="orangeTile dosageFormsTile">
+              <div class="innerTile">
+                  <h4>DOSAGE FORMS AND STRENGTHS</h4>
+                  <div style="line-height: 1rem; margin-bottom: 0.5em; margin-top: 0px;">
+                      <span class="bullet">&bull;</span>&nbsp;Capsules: 34 mg (<span class="colorLink">3</span>)<br>
+                      
+                      <span class="bullet">&bull;</span>&nbsp;Tablets: 10 mg (<span class="colorLink">3</span>)
+                  </div>
+              </div>
+              <div style="position:absolute;right:10px; height:113px;line-height:113px;"><img src="images/tileArrow.png" width="10"/></div>
+          </a>
+          <a href="#drug_interactions" class="orangeTile drugsTile">
+              <div class="innerTile">
+                  <h4>DRUG INTERACTIONS</h4>
+                  <div style="line-height: 1rem; margin-bottom: 0.5em; margin-top: 0px;">
+                      <span class="bullet">&bull;</span>&nbsp;Strong CYP3A4 Inhibitors (e.g., ketoconazole):<br>
+                      &nbsp;&nbsp;&nbsp;Reduce NUPLAZID dose to 10 mg once daily.
+                      <br> &nbsp;&nbsp;&nbsp;(<span class="colorLink">2.2</span>, <span class="colorLink">7.1</span>)<br>
+                      
+                      <span class="bullet">&bull;</span>&nbsp;Strong or Moderate CYP3A4 Inducers: Avoid<br>&nbsp;&nbsp;&nbsp;concomitant use of NUPLAZID (<span class="colorLink">2.2</span>, <span class="colorLink">7.1</span>)
+                  </div>
+              </div>
+              <div style="position:absolute;right:10px; height:113px;line-height:113px;"><img src="images/tileArrow.png" width="10"/></div>
+          </a>
+      </section>
+      
+      
+      <!-- <img class="tables" src="images/fpo2.png" width="650"> -->
+      <p id="tileFootnote"><a href="#patient_counseling">Click here for PATIENT COUNSELING INFORMATION</a> <br>Revised: <span class="magenta">[ XX/XXXX ]</span></p>
+      
+
+      <!-- INDICATIONS AND USAGE -->
+      <h2 id="indications_usage" class="nav-marker">1 &nbsp;INDICATIONS AND USAGE</h2>
+      <p>NUPLAZID<sup>&reg;</sup> is indicated for the treatment of hallucinations and delusions associated with:</p>
+      <div class="orange activeMain">
+        <span class="bulletMain">&bull;</span>Parkinson&apos;s disease psychosis <em>[see Clinical Studies (<a href="#clinical studies">14.1</a>)]</em>.<br>
+
+        <span class="bulletMain">&bull;</span>Dementia-related psychosis <em>[see Clinical Studies (<a href="#dementia_psychosis">14.2</a>)]</em>.
+      </div>
+
+      <!-- DOSAGE AND ADMINISTRATION -->
+      <h2 id="dosage_administration" class="nav-marker">2 &nbsp;DOSAGE AND ADMINISTRATION</h2>
+      <h3 id="general_dosing" class="nav-marker">2.1 &nbsp;General Dosing Information</h3>
+      <p>The recommended dose of NUPLAZID is 34 mg taken orally once daily, without titration.</p><br>
+          
+      <h3 id="administration_information" class="nav-marker">2.2 &nbsp;Administration Information</h3>
+      <p>NUPLAZID can be taken with or without food <em>[see Clinical Pharmacology (<a href="#pharmacokinetics">12.3</a>)]</em>.</p>
+      <p><br>
+          NUPLAZID capsules can be taken whole, or opened and the entire contents sprinkled over a tablespoon (15 mL) of applesauce, yogurt, pudding, or a liquid nutritional supplement. Consume the drug/food mixture immediately without chewing; do not store for future use.</p>
+      <br/>
+      <h3 id="dosage_modifications" class="nav-marker">2.3 &nbsp;Dosage Modifications for Concomitant Use with CYP3A4 Inhibitors and Inducers</h3>
+      <div class="orange activeMain">
+            <span class="bulletMain">&bull;</span><span style="text-decoration: underline;">Coadministration with Strong CYP3A4 Inhibitors</span><br>
+            <span class="lineUpMain">The recommended dose of NUPLAZID when coadministered with strong CYP3A4 inhibitors</span><br> 
+            <span class="lineUpMain">ketoconazole) is 10 mg, taken orally as one tablet once daily <em>[see Drug Interactions (<a href="#drugs7-1">7.1</a>)]</em>.</span><br>
+
+            <span class="bulletMain">&bull;</span><span style="text-decoration: underline;">Coadministration with Strong or Moderate CYP3A4 Inducers</span><br>
+            <span class="lineUpMain">Avoid concomitant use of strong or moderate CYP3A4 inducers with NUPLAZID.</span><br> 
+            <span class="lineUpMain"><em>[see Drug Interactions (<a href="#drugs7-1">7.1</a>)]</em>.</span>
+      </div>
+
+      <!-- 3 DOSAGE FORMS AND STRENGTHS -->
+      <h2 id="dosage_forms" class="nav-marker">3 &nbsp;DOSAGE FORMS AND STRENGTHS</h2>
+      <p>NUPLAZID (pimavanserin) is available as:</p>
+      <div class="orange activeMain">
+        <span class="bulletMain">&bull;</span>34 mg strength capsules. The capsules are opaque white and light green with "PIMA" and<br>
+        <span class="lineUpMain">"34" printed in black.</span><br>
+
+        <span class="bulletMain">&bull;</span>10 mg strength tablets. The orange, round, coated tablets are debossed on one side with a<br>
+        <span class="lineUpMain">"P" and "10" on the reverse side.</span>
+      </div>
+
+      <!-- 4 CONTRAINDICATIONS -->
+      <h2 id="contraindications" class="nav-marker">4 &nbsp;CONTRAINDICATIONS</h2>
+          <p>NUPLAZID is contraindicated in patients with a history of a hypersensitivity reaction to pimavanserin or any of its components. 
+              Rash, urticaria, and reactions consistent with angioedema (e.g., tongue swelling, circumoral edema, throat tightness, and dyspnea) 
+              have been reported <em>[see Adverse Reactions (<a href="#postmarketing_experience">6.2</a>)]</em>.</p>
+              <br/>
+
+      <!-- 5 WARNINGS AND PRECAUTIONS -->
+      <h2 id="warnings_precautions" class="nav-marker">5 &nbsp;WARNINGS AND PRECAUTIONS</h2>
+      <h3 id="risk_mortality" class="nav-marker">5.1 &nbsp;Risk of Mortality with Antipsychotic Use in Elderly Patients with Dementia-Related Psychosis</h3>
+          <p>Antipsychotic drugs increase the all-cause risk of death in elderly patients with dementia-related psychosis. Analyses of 17 dementia-related psychosis placebo-controlled trials (modal duration of 10 weeks and largely in patients taking atypical antipsychotic drugs) revealed a risk of death in the drug-treated patients of between 1.6- to 1.7-times that in placebo-treated patients. Over the course of a typical 10-week controlled trial, the rate of death in drug-treated patients was about 4.5%, compared to a rate of about 2.6% in placebo-treated patients.<br/><br/>
+              
+          Although the causes of death were varied, most of the deaths 
+          appeared to be either cardiovascular (e.g., heart failure, sudden death) or infectious (e.g., pneumonia) in nature.</p>
+          <br/>
+          <p style="text-decoration: underline;">Safety Experience with NUPLAZID in Elderly Patients with Parkinson&apos;s Disease Psychosis and Dementia-Related Psychosis</p><br>
+          <p>The risk of all-cause mortality for NUPLAZID 34 mg was evaluated in an analysis of five placebo-controlled studies of 6-12 weeks duration in 939 elderly, frail patients with neurodegenerative disease, 802 of whom had dementia-related psychosis and/or Parkinson&#8217;s disease psychosis. The observed rate of death in NUPLAZID 34 mg treated patients was 1.5% compared to 1.5% in placebo-treated patients.</p><br/>
+
+      <h3 id="qt_interval" class="nav-marker">5.2 &nbsp;QT Interval Prolongation</h3>
+          <p style="letter-spacing:.02em;">NUPLAZID prolongs the QT interval. The use of NUPLAZID should be avoided in patients with known QT prolongation or in combination with other drugs known to prolong QT interval including Class 1A antiarrhythmics (e.g., quinidine, procainamide) or Class 3 antiarrhythmics (e.g., amiodarone, sotalol), certain antipsychotic medications (e.g., ziprasidone, chlorpromazine, thioridazine), and certain antibiotics (e.g., gatifloxacin, moxifloxacin) <em>[see Drug Interactions (<a href="#drugs7-1">7.1</a>)]</em>. NUPLAZID should also be avoided in patients with a history of cardiac arrhythmias, as well as other circumstances that may increase the risk of the occurrence of torsade de pointes and/or sudden death, including symptomatic bradycardia, hypokalemia or hypomagnesemia, and the presence of congenital prolongation of the QT interval <em>[see Clinical Pharmacology (<a href="#pharmacokinetics">12.2</a>)]</em>.</p><br>
+      
+      <!-- 6 ADVERSE REACTIONS -->
+      <h2 id="adverse_reactions" class="nav-marker">6 &nbsp;ADVERSE REACTIONS</h2>
+      <p>The following serious adverse reactions are discussed elsewhere in the labeling:</p>
+      <div class="orange activeMain">
+          <span class="bulletMain">&bull;</span>Increased Mortality in Elderly Patients with Dementia-Related Psychosis <em>[see Warnings and <span class="lineUpMain">
+             Precautions (<a href="#risk_mortality">5.1</a>)]</span></em><br>
+
+          <span class="bulletMain">&bull;</span>QT Interval Prolongation <em>[see Warnings and Precautions (<a href="#qt_interval">5.2</a>)]</em>
+      </div>
+      <h3 id="clinical_trials" class="nav-marker">6.1 &nbsp;Clinical Trials Experience</h3>
+          <p>Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice.</p><br>
+          <p>The clinical trial database for NUPLAZID consists of over 2700 subjects and patients exposed to one or more doses of NUPLAZID. Of these, 1394 were elderly frail patients with neurodegenerative disease including patients with hallucinations and delusions associated with Parkinson&apos;s disease psychosis (PDP) and dementia-related psychosis (DRP).</p><br>
+
+          <p>In the placebo-controlled setting in PDP, the majority of experience in patients comes from studies evaluating once daily NUPLAZID doses of 34 mg (N=202) compared to placebo (N=231) for up to 6 weeks. In the controlled trial setting, the study population was approximately 64% male and 91% Caucasian, and the mean age was about 71 years at study entry. Additional clinical trial experience in patients with hallucinations and delusions associated with PDP comes from two open-label, safety extension studies (total N=497). The majority of patients receiving long-term treatment received <br>34 mg once-daily (N=459). In these studies, over 300 patients have been treated for more than 6 months; over 270 have been treated for at least 12 months; and over 150 have been treated for at least 24 months. The types of adverse events reported in the open-label, safety extension studies were comparable to the 6-week placebo-controlled studies.</p><br>
+              
+          <p>Additional safety data was collected from five double-blind studies in patients with neurodegenerative disease and DRP, including patients in nursing home care. Patients were randomized to receive either NUPLAZID (N=342) or placebo (N=310). The duration of exposure varied from 2 to 12 weeks. Safety data are also available from a 9-month relapse prevention study in patients with DRP (N=392).</p><br>
+          
+          <p>The following adverse reactions are based on the 6-12 week, placebo-controlled studies in which NUPLAZID 34 mg was administered once daily to elderly, frail patients with neurodegenerative disease, including patients with hallucinations and delusions associated with PDP and DRP.</p><br>
+          
+          <p>Common Adverse Reactions (incidence &#8805;4% and at least twice the rate of placebo): peripheral edema (4% NUPLAZID 34 mg vs. 1% placebo) and confusional state (4% NUPLAZID 34 mg vs. 2% placebo).</p><br>
+          
+          <p style="text-decoration:underline;">Adverse Reactions Leading to Discontinuation of Treatment</p>
+          <p>A total of 6.6% of 472 of NUPLAZID 34 mg treated patients and 5.3% of 467 placebo-treated patients discontinued because of adverse reactions. The adverse reactions that occurred in more than one patient and with an incidence at least twice that of placebo were depressed level of consciousness (0.4% NUPLAZID vs. 0% placebo), psychotic disorder (1.0% NUPLAZID vs. 0.2% placebo), hallucination (0.8% NUPLAZID vs. 0.2% placebo), urinary tract infection (0.4% NUPLAZID vs. 0.2% placebo), and fatigue (0.4% NUPLAZID vs. 0% placebo).</p><br>
+          
+          <p>Adverse reactions that occurred in 6- to 12-week placebo-controlled studies and that were reported at an incidence of &#8805;3% and &#62;placebo are presented in <span style="font-weight:500;">Table 1.</span></p><br>
+
+          <h3 style="letter-spacing: -.05px;"><span class="titleSpacer">Table 1</span> Adverse Reactions in Placebo-Controlled Studies of 6- to 12-Weeks Duration in Neurodegenerative Disease Patients including PDP and DRP and Reported in &#8805;3% and &#62;Placebo</h3>
+
+          <table class="tables" width="650" border="1" cellspacing="0" cellpadding="1" align="center">
+              <tbody>
+                  <tr>
+                      <th colspan="3">Percentage of Patients Reporting Adverse Reaction</th>
+                  </tr>
+                  <tr>
+                      <td rowspan="2" width="250">&nbsp;</td>
+                      <td width="200" align="center" style="font-weight: bold;">NUPLAZID 34 mg</td>
+                      <td width="200" align="center" style="font-weight: bold;">Placebo</td>
+                  </tr>
+                  <tr>
+                      <td width="200" align="center">N=472</td>
+                      <td width="200" align="center">N=467</td>
+                  </tr>
+                  <tr>
+                      <td colspan="3" style="font-weight:bold; padding-left: 10px;">Gastrointestinal disorders</td>
+                  </tr>
+                  <tr>
+                      <td style="padding-left:35px;">Constipation</td>
+                      <td width="200" align="center">3%</td>
+                      <td width="200" align="center">2%</td>
+                  </tr>
+                  <tr>
+                      <td colspan="3" style="font-weight:bold; padding-left: 10px;">General disorders</td>
+                  </tr>
+                  <tr>
+                      <td style="padding-left:35px;">Peripheral edema</td>
+                      <td width="200" align="center">4%</td>
+                      <td width="200" align="center">1%</td>
+                  </tr>
+                  <tr>
+                      <td colspan="3" style="font-weight:bold; padding-left: 10px;">Psychiatric disorders</td>
+                  </tr>
+                  <tr>
+                      <td style="padding-left:35px;">Agitation</td>
+                      <td width="200" align="center">5%</td>
+                      <td width="200" align="center">4%</td>
+                  </tr>
+                  <tr>
+                      <td style="padding-left:35px;">Confusional state</td>
+                      <td width="200" align="center">4%</td>
+                      <td width="200" align="center">2%</td>
+                  </tr>
+              </tbody>
+          </table>
+
+
+          <p style="text-decoration: underline;">Other Adverse Reactions Observed in Clinical Trials of NUPLAZID</p>
+          <p>Adverse reactions that occurred in 6-week placebo-controlled studies in patients with PDP reported at &#8805;2% and &#62;placebo, also included nausea (7% NUPLAZID 34 mg vs. 4% placebo), hallucination (5% NUPLAZID 34 mg vs. 3% placebo), and gait disturbance (2% NUPLAZID 34 mg vs. &#60;1% placebo).</p><br>
+          
+          <p>Adverse reactions that occurred in a 9-month relapse prevention study evaluating NUPLAZID once daily in DRP 
+              <em>[see Clinical Studies <a href="#dementia_psychosis">14.2</a>]</em> reported at &#8805;3% in the 12-week open label phase included urinary tract infection (5%). During the subsequent 26-week placebo-controlled randomized withdrawal phase, the adverse reactions occurring in &#8805;3% of patients who remained on NUPLAZID were headache (10% NUPLAZID vs. 5% placebo) and urinary tract infection (7% NUPLAZID vs. 4% placebo).</p><br> 
+          
+          <p style="text-decoration: underline;">Adverse Reactions in Demographic Subgroups<p>
+          <p>Examination of population subgroups in the 6-week, placebo-controlled studies in Parkinson&#8217;s disease psychosis did not reveal any differences in safety on the basis of age (&#8804;75 vs. >75 years) or sex. Because the study population was predominantly Caucasian (91%), racial or ethnic differences in the safety profile of NUPLAZID could not be assessed. In addition, in the 6-week, controlled studies, no clinically relevant differences in the incidence of adverse reactions were observed among those with a Mini-Mental State Examination (MMSE) score at 
+          entry of &#60;25 versus those with scores &#8805;25.</p><br> 
+          
+          <p>Examination of subgroups in a relapse prevention study in dementia-related psychosis did not reveal any differences in safety on the basis of age (&#8804;75 vs. >75 years), sex, or underlying dementia subtype.</p><br> 
+          
+          <h3 id="postmarketing_experience" class="nav-marker">6.2 &nbsp;Postmarketing Experience</h3>
+          <p>The following adverse reactions have been identified during postapproval use of NUPLAZID. Because these reactions are reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure. These reactions include rash, urticaria, reactions consistent with angioedema (e.g., tongue swelling, circumoral edema, throat tightness, and dyspnea), somnolence, falls, agitation, and aggression.</p><br>
+
+          <!-- 7 DRUG INTERACTIONS -->
+          <h2 id="drug_interactions" class="nav-marker">7 &nbsp;DRUG INTERACTIONS</h2>
+          <h3 id="drugs7-1" class="nav-marker">7.1 &nbsp;Drugs Having Clinically Important Interactions with NUPLAZID</h3><br>
+
+          <h3><span class="titleSpacer">Table 2</span> Clinically Important Drug Interactions with NUPLAZID</h3>
+
+          <table class="tables" width="650" border="1" cellspacing="0" cellpadding="1" align="center">
+              <tbody>
+                  <tr>
+                      <th colspan="2" align="left" style="padding-left:5px;">QT Interval Prolongation</th>
+                  </tr>
+                  <tr>
+                      <td width="150" style="padding-left:15px; vertical-align: text-top;">Clinical Impact:</td>
+            <td width="500" style="padding-left:5px;">Concomitant use of drugs that prolong the QT interval may add to the QT effects of NUPLAZID and increase the risk of cardiac arrhythmia.</td>
+                  </tr>
+                  <tr>
+                      <td width="150" style="padding-left:15px; vertical-align: text-top;">Intervention:</td>
+            <td width="500" style="padding-left:5px;">Avoid the use of NUPLAZID in combination with other drugs known to prolong QT interval <em>[see Warnings and Precautions (<a href="#qt_interval">5.2</a>)]</em>.</td>
+                  </tr>
+                  <tr>
+                      <td width="150" style="padding-left:15px; vertical-align: text-top;">Examples:</td>
+                      <td width="500" style="padding-left:5px;">
+                          Class 1A antiarrhythmics: &nbsp;quinidine, procainamide, disopyramide; <br>
+                          Class 3 antiarrhythmics: &nbsp;amiodarone, sotalol; <br>
+                          Antipsychotics: &nbsp;ziprasidone, chlorpromazine, thioridazine; <br>
+                          Antibiotics: &nbsp;gatifloxacin, moxifloxacin</td>
+                  </tr>
+                  <tr>
+                      <th colspan="2" align="left" style="padding-left:5px;">Strong CYP3A4 Inhibitors</th>
+                  </tr>
+                  <tr>
+                      <td width="150" style="padding-left:15px; vertical-align: text-top;">Clinical Impact:</td>
+            <td width="500" style="padding-left:5px;">Concomitant use of NUPLAZID with a strong CYP3A4 inhibitor increases pimavanserin exposure <em>[see Clinical Pharmacology (<a href="#pharmacokinetics">12.3</a>)]</em>.</td>
+                  </tr>
+                  <tr>
+                      <td width="150" style="padding-left:15px; vertical-align: text-top;">Intervention:</td>
+            <td width="500" style="padding-left:5px;">If NUPLAZID is used with a strong CYP3A4 inhibitor, reduce the dosage of NUPLAZID <em>[see Dosage and Administration (<a href="#administration_information">2.2</a>)]</em>.</td>
+                  </tr>
+                  <tr>
+                      <td width="150" style="padding-left:15px; vertical-align: text-top;">Examples:</td>
+            <td width="500" style="padding-left:5px;">itraconazole, ketoconazole, clarithromycin, indinavir</td>
+                  </tr>
+          <tr>
+                      <th colspan="2" align="left" style="padding-left:5px;">Strong or Moderate CYP3A4 Inducers</th>
+                  </tr>
+                  <tr>
+                      <td width="150" style="padding-left:15px; vertical-align: text-top;">Clinical Impact:</td>
+            <td width="500" style="padding-left:5px;">Concomitant use of NUPLAZID with strong or moderate CYP3A4 inducers reduces pimavanserin exposure <em>[see Clinical Pharmacology (<a href="#pharmacokinetics">12.3</a>)]</em>.</td>
+                  </tr>
+                  <tr>
+                      <td width="150" style="padding-left:15px; vertical-align: text-top;">Intervention:</td>
+            <td width="500" style="padding-left:5px;">Avoid concomitant use of strong or moderate CYP3A4 inducers with NUPLAZID.  <em>[see Dosage and Administration (<a href="#administration_information">2.2</a>)]</em>.</td>
+                  </tr>
+                  <tr>
+                      <td width="150" style="padding-left:15px; vertical-align: text-top;">Examples:</td>
+            <td width="500" style="padding-left:5px;">Strong inducers: &nbsp;carbamazepine, St. John&#8217;s wort, phenytoin, rifampin<br>
+            Moderate inducers: &nbsp;modafinil, thioridazine, efavirenz, nafcillin
+            </td>
+                  </tr>
+              </tbody>
+          </table>
+          <!-- <img class="tables" src="images/table2.png" width="650"> -->
+
+
+          <h3 id="drugs7-2" class="nav-marker">7.2 &nbsp;Drugs Having No Clinically Important Interactions with NUPLAZID</h3>
+          <p>Based on pharmacokinetic studies, no dosage adjustment of carbidopa/levodopa is required when administered concomitantly with NUPLAZID <em>[see Clinical Pharmacology (<a href="#pharmacokinetics">12.3</a>)]</em>.</p><br>
+
+
+          <!-- 8 USE IN SPECIFIC POPULATIONS -->
+          <h2 id="use_specific" class="nav-marker">8 &nbsp;USE IN SPECIFIC POPULATIONS</h2>
+          <h3 id="pregnancy" class="nav-marker">8.1 &nbsp;Pregnancy</h3>
+          <p style="text-decoration: underline;">Risk Summary</p>
+          <p>There are no data on NUPLAZID use in pregnant women that would allow assessment of the drug-associated risk of major congenital malformations or miscarriage.  In animal reproduction studies, no adverse developmental effects were seen when pimavanserin was administered orally to rats or rabbits during the period of organogenesis at doses up to 10- or 12-times the maximum recommended human dose (MRHD) of 34 mg/day, respectively. Administration of pimavanserin to pregnant rats during pregnancy and lactation resulted in maternal toxicity and lower pup survival and body weight at doses which are 2-times the MRHD of 34 mg/day <em>[see <a href="#data">Data</a>]</em>.</p><br>
+          
+          <p>The estimated background risk of major birth defects and miscarriage for the indicated population is unknown. In the U.S. general population, the estimated background risk of major birth defects and miscarriage in clinically recognized pregnancies is 2-4% and 15-20%, respectively.</p><br>
+          
+          <p id="data" style="text-decoration: underline;">Data</p>
+          <p><em>Animal Data</em></p>
+          <p>Pimavanserin was not teratogenic in pregnant rats when administered during the period of organogenesis at oral doses of 0.9, 8.5, and 51 mg/kg/day, which are 0.2- and 10-times the maximum recommended human dose (MRHD) of 34 mg/day based on AUC at mid and high doses, respectively. Maternal toxicity included reduction in body weight and food consumption at the highest dose.</p><br>
+          
+          <p>Administration of pimavanserin to pregnant rats during pregnancy and lactation at oral doses of 8.5, 26, and 51 mg/kg/day, which are 0.14- to 14-times the MRHD of 34 mg/day based on AUC, caused maternal toxicity, including mortality, clinical signs including dehydration, hunched posture, and rales, and decreases in body weight, and/or food consumption at doses &#8805;26 mg/kg/day (2-times the MRHD based on AUC). At these maternally toxic doses there was a decrease in pup survival, reduced litter size, and reduced pup weights, and food consumption.  Pimavanserin had no effect on sexual maturation, neurobehavioral function including learning and memory, or reproductive function in the first generation pups up to 14-times the MRHD of 34 mg/day based on AUC.</p><br>
+          
+          <p>Pimavanserin was not teratogenic in pregnant rabbits during the period of organogenesis at oral doses of 4.3, 43, and 85 mg/kg/day, which are 0.2- to 12-times the MRHD of 34 mg/day based on AUC. Maternal toxicity, including mortality, clinical signs of dyspnea and rales, decreases in body weight and/or food consumption, and abortions occurred at doses 12-times the MRHD of 34 mg/day based on AUC.</p><br>
+          
+          <h3 id="lactation" class="nav-marker">8.2 &nbsp;Lactation</h3>
+          <p style="text-decoration: underline;">Risk Summary</p>
+          <p>There is no information regarding the presence of pimavanserin in human milk, the effects on the breastfed infant, or the effects on milk production. The developmental and health benefits of breastfeeding should be considered along with the mother&apos;s clinical need for NUPLAZID and any potential adverse effects on the breastfed infant from NUPLAZID or from the underlying maternal condition.</p><br>
+          
+          <h3 id="pediatric_use" class="nav-marker">8.4 &nbsp;Pediatric Use</h3>
+          <p>Safety and effectiveness of NUPLAZID have not been established in pediatric patients.</p><br>
+
+          <h3 id="geriatric_use" class="nav-marker">8.5 &nbsp;Geriatric Use</h3>
+          <p>No dose adjustment is required for elderly patients.</p><br>
+          
+          <p>Parkinson&apos;s disease psychosis is a disorder occurring primarily in individuals over 55 years of age. The mean age of patients with PDP enrolled in the 6-week clinical studies with NUPLAZID <em>[see Adverse Reactions (<a href="#">6.1</a>)]</em> was 71 years, with 49% 65-75 years old and 31% &gt;75 years old. In the pooled population of patients with PDP enrolled in 6-week, placebo-controlled studies (N=614), 27% had Mini-Mental State Examination (MMSE) scores from 21 to 24 compared to 73% with scores &#8805;25. No clinically meaningful differences in safety or effectiveness were noted between these two groups.</p><br>
+
+          <p>Dementia-related psychosis primarily occurs in individuals over 65 years of age. The mean age of patients with DRP in clinical studies of up to 9 months duration was 75.5 years, with 30% 65-75 years old and 58% &gt;75 years old. No overall differences in safety or effectiveness were observed in patients with DRP &ge;75 years old compared to &lt;75 years old.</p><br>
+          
+          <p>In these studies, NUPLAZID treatment was not associated with a decline in cognition, as measured by MMSE score, or the onset or worsening of extrapyramidal symptoms, as measured by ESRS-A, compared to placebo <em>[see Clinical Studies Section <a href="#dementia_psychosis">14.2</a>]</em>.</p><br>
+          
+          <h3 id="patients_renal" class="nav-marker">8.6 &nbsp;Patients with Renal Impairment</h3>
+          <p>No dosage adjustment for NUPLAZID is needed in patients with mild to severe renal impairment or end stage renal disease (ESRD); however, increased exposure (C<sub>max</sub> and AUC) to NUPLAZID occurred in patients with severe renal impairment (CrCL &#60;30 mL/min, Cockcroft-Gault) in a renal impairment study <em>[see Clinical Pharmacology (<a href="#pharmacokinetics">12.3</a>)]</em>.</p><br>
+          
+          <p>NUPLAZID should be used with caution in patients with severe renal impairment and end stage renal disease.</p><br>
+          
+          <p>In a renal impairment study, dialysis did not appear to significantly affect the concentrations of NUPLAZID 
+              <em>[see Clinical Pharmacology (<a href="#pharmacokinetics">12.3</a>)]</em>.</p><br>
+          
+          <h3 id="patients_hepatic" class="nav-marker">8.7 &nbsp;Patients with Hepatic Impairment</h3>
+          <p>No dosage adjustment for NUPLAZID is recommended in patients with hepatic impairment based on the exposure differences observed in patients with and without hepatic impairment in a hepatic impairment study <em>[see Clinical Pharmacology (<a href="#pharmacokinetics">12.3</a>)]</em>.</p><br>
+          
+          <h3 id="other_specific" class="nav-marker">8.8 &nbsp;Other Specific Populations</h3>
+          <p>No dosage adjustment is required based on patient&#8217;s age, sex, ethnicity, or weight. These factors do not affect the pharmacokinetics of NUPLAZID <em>[see Clinical Pharmacology (<a href="#pharmacokinetics">12.3</a>)]</em>.</p><br>
+
+          <!-- 9 DRUG ABUSE AND DEPENDENCE -->
+          <h2 id="drug_abuse" class="nav-marker">9 &nbsp;DRUG ABUSE AND DEPENDENCE</h2>
+          
+          <h3 id="controlled_substance" class="nav-marker">9.1 &nbsp;Controlled Substance</h3>
+          <p>NUPLAZID is not a controlled substance.</p><br>
+
+          <h3 id="abuse9-2" class="nav-marker">9.2 &nbsp;Abuse</h3>
+          <p>NUPLAZID has not been systematically studied in humans for its potential for abuse, tolerance, or physical dependence.</p><br>  
+
+          <p>While short-term, placebo-controlled and long-term, open-label clinical trials did not reveal increases in drug-seeking behavior, the limited experience from the clinical trials do not predict the extent to which a CNS-active drug will be misused, diverted, and/or abused once marketed.</p><br>
+
+          <!-- 10 OVERDOSAGE -->
+          <h2 id="overdosage" class="nav-marker">10 &nbsp;OVERDOSAGE</h2>
+          <h3 id="human_experience" class="nav-marker">10.1 &nbsp;Human Experience</h3>
+          <p>The pre-marketing clinical trials involving NUPLAZID in approximately 1200 subjects and patients do not provide information regarding symptoms with overdose. In healthy subject studies, dose-limiting nausea and vomiting were observed.</p><br>
+
+          <h3 id="management_overdose" class="nav-marker">10.2 &nbsp;Management of Overdose</h3>
+          <p>There are no known specific antidotes for NUPLAZID. In managing overdose, cardiovascular monitoring should commence immediately and should include continuous ECG monitoring to detect possible arrhythmias <em>[see Warnings and Precautions (<a href="#qt_interval">5.2</a>)]</em>. If antiarrhythmic therapy is administered, disopyramide, procainamide, and quinidine should not be used, as they have the potential for QT-prolonging effects that might be additive to those of NUPLAZID <em>[see Drug Interactions (<a href="#drugs7-1">7.1</a>)]</em>. Consider the long plasma half-life of pimavanserin (about 57 hours) and the possibility of multiple drug involvement. Consult a Certified Poison Control Center (1-800-222-1222) for up-to-date guidance and advice.</p><br>
+          
+          <!-- 11 DESCRIPTION -->
+          <h2 id="description" class="nav-marker">11 &nbsp;DESCRIPTION</h2>
+          <p>NUPLAZID contains pimavanserin, an atypical antipsychotic, which is present as pimavanserin tartrate salt with the chemical name, urea, <em>N</em>-[(4-fluorophenyl)methyl]-<em>N</em>-(1-methyl-4-piperidinyl)-<em>N</em>'-[[4-(2-methylpropoxy)phenyl]methyl]-,(2<em>R</em>,3<em>R</em>)-2,3-dihydroxybutanedioate (2:1). Pimavanserin tartrate is freely soluble in water. Its molecular formula is (C<sub>25</sub>H<sub>34</sub>FN<sub>3</sub>O<sub>2</sub>)<sub>2</sub>·C<sub>4</sub>H<sub>6</sub>O<sub>6</sub> and its molecular weight is 1005.20 (tartrate salt). The chemical structure is:</p>
+          <div style="text-align: center;">
+              <img class="tables" src="images/molecular.png" width="350">
+          </div>
+
+          <p>The molecular formula of pimavanserin free base is C<sub>25</sub>H<sub>34</sub>FN<sub>3</sub>O<sub>2</sub> and its molecular weight is 427.55.</p><br>
+
+          <p>NUPLAZID capsules are intended for oral administration only. Each capsule contains 40 mg of pimavanserin tartrate, which is equivalent to 34 mg of pimavanserin free base. Inactive ingredients include magnesium stearate and microcrystalline cellulose. Additionally, the following inactive ingredients are present as components of the capsule shell: black iron oxide, FD&C blue #1, hypromellose, titanium dioxide, and yellow iron oxide.</p><br>
+
+          <p>NUPLAZID tablets are intended for oral administration only. Each round, orange, immediate-release, film coated tablet contains 11.8 mg of pimavanserin tartrate, which is equivalent to 10 mg pimavanserin free base. Inactive ingredients include magnesium stearate, pregelatinized starch, and silicified microcrystalline cellulose. Additionally, the following inactive ingredients are present as components of the film coat: polyethylene glycol, polyvinyl alcohol, red iron oxide, talc, titanium dioxide, and yellow iron oxide.</p><br>
+          
+          <!-- 12 CLINICAL PHARMACOLOGY -->
+          <h2 id="clinical_pharmacology" class="nav-marker">12 &nbsp;CLINICAL PHARMACOLOGY</h2>
+          <h3 id="mechanism_action" class="nav-marker">12.1 &nbsp;Mechanism of Action</h3>
+          <p>The mechanism of action of pimavanserin in the treatment of hallucinations and delusions associated with Parkinson&#8217;s disease psychosis and dementia-related psychosis is unclear. However, the effect of pimavanserin is believed to be due to serotonin receptor modulation, primarily through a combination of inverse agonist and antagonist activity at serotonin 5-HT<sub>2A</sub> receptors and to a lesser extent at serotonin 5-HT<sub>2C</sub> receptors.</p><br>
+
+          <h3 id="pharmacodynamics" class="nav-marker">12.2 &nbsp;Pharmacodynamics</h3> 
+          <p><em>In vitro</em>, pimavanserin acts as an inverse agonist and antagonist at serotonin 5-HT<sub>2A</sub> receptors with high binding affinity (K<sub>i</sub> value 0.087 nM) and at serotonin 5-HT<sub>2C</sub> receptors with lower binding affinity (K<sub>i</sub> value 0.44 nM). Pimavanserin shows low binding to sigma 1 receptors (K<sub>i</sub> value 120 nM) and has no appreciable affinity (K<sub>i</sub> value >300 nM), to serotonin 5-HT<sub>2B</sub>&nbsp;, dopaminergic (including D<sub>2</sub>), muscarinic, histaminergic, or adrenergic receptors, or to calcium channels.</p><br>
+
+          <p style="text-decoration: underline;">Cardiac Electrophysiology</p>
+          <p>The effect of NUPLAZID on the QTc interval was evaluated in a randomized placebo- and positive-controlled double-blind, multiple-dose parallel thorough QTc study in 252 healthy subjects. A central tendency analysis of the QTc data at steady-state demonstrated that the maximum mean change from baseline (upper bound of the two-sided 90% CI) was 13.5 (16.6) msec at a dose of twice the therapeutic dose. A pharmacokinetic/ pharmacodynamic analysis with NUPLAZID suggested a concentration-dependent QTc interval prolongation in the therapeutic range.</p><br>
+
+          <p>In the 6-week, placebo-controlled effectiveness studies, mean increases in QTc interval of ~5-8 msec were observed in patients receiving once-daily doses of NUPLAZID 34 mg. These data are consistent with the profile observed in a thorough QT study in healthy subjects. Sporadic QTcF values &#8805;500 msec and change from baseline values &#8805;60 msec were observed in subjects treated with NUPLAZID 34 mg; although the incidence was generally similar for NUPLAZID and placebo groups. There were no reports of torsade de pointes or any differences from placebo in the incidence of other adverse reactions associated with delayed ventricular repolarization in studies of NUPLAZID, including those patients with hallucinations and delusions associated with PDP or DRP <em>[see Warnings and Precautions (<a href="#qt_interval">5.2</a>)]</em>.</p><br>
+
+          <h3 id="pharmacokinetics" class="nav-marker">12.3 &nbsp;Pharmacokinetics</h3> 
+          <p>Pimavanserin demonstrates dose-proportional pharmacokinetics after single oral doses from 17 to 255 mg (0.5- to 7.5-times the recommended dosage). The pharmacokinetics of pimavanserin are similar in both the study population and healthy subjects. The mean plasma half-lives for pimavanserin and the active metabolite (<em>N</em>-desmethylated metabolite) are approximately 57 hours and 200 hours, respectively.</p><br>
+
+          <p style="text-decoration: underline;">Absorption</p>
+          <p>The median T<sub>max</sub> of pimavanserin was 6 (range 4-24) hours and was generally unaffected by dose. 
+              The bioavailability of pimavanserin oral tablet and pimavanserin solution was essentially identical. 
+              The formation of the major circulating <em>N</em>-desmethylated metabolite AC-279 (active) from pimavanserin occurs with a median T<sub>max</sub> of 6 hours.</p> <br>
+
+          <p>Ingestion of a high-fat meal had no significant effect on rate (C<sub>max</sub>) and extent (AUC) of pimavanserin exposure. C<sub>max</sub> decreased by about 9% while AUC increased by about 8% with a high-fat meal.</p><br>
+
+          <p>Administration of one 34 mg capsule once daily results in plasma pimavanserin concentrations that are similar to exposure with two 17 mg tablets once daily.</p><br>
+
+          <p style="text-decoration: underline;">Distribution<p>
+          <p>Pimavanserin is highly protein bound (~95%) in human plasma. Protein binding appeared to be dose-independent and did not change significantly over dosing time from Day 1 to Day 14. Following administration of a single dose of NUPLAZID (34 mg), the mean (SD) apparent volume of distribution was 2173 (307) L.</p><br>
+
+          <p style="text-decoration: underline;">Elimination</p>
+          <p><em>Metabolism</em></p>
+          <p>Pimavanserin is predominantly metabolized by CYP3A4 and CYP3A5 and to a lesser extent by CYP2J2, CYP2D6, and various other CYP and FMO enzymes. CYP3A4 is the major enzyme responsible for the formation of its major active metabolite (AC-279). Pimavanserin does not cause clinically significant CYP inhibition or induction of CYP3A4. Based on <em>in vitro</em> data, pimavanserin is not an irreversible inhibitor of any of the major hepatic and intestinal human CYP enzymes involved in drug metabolism (CYP1A2, 2B6, 2C8, 2C9, 2C19, 2D6, and 3A4).</p><br>
+
+          <p>Based on <em>in vitro</em> studies, transporters play no significant role in the disposition of pimavanserin.</p><br>
+
+          <p>AC 279 is neither a reversible or irreversible (metabolism-dependent) inhibitor of any of the major hepatic and intestinal human CYP enzymes involved in drug metabolism (CYP1A2, 2B6, 2C8, 2C9, 2C19, 2D6, and 3A4). AC-279 does not cause clinically significant CYP3A induction and is not predicted to cause induction of any other CYP enzymes involved in drug metabolism.</p><br>
+
+          <p><em>Excretion</em></p>
+          <p>Approximately 0.55% of the 34 mg oral dose of <sup>14</sup>C-pimavanserin was eliminated as unchanged drug in urine and 1.53% was eliminated in feces after 10 days.</p><br>
+
+          <p>Less than 1% of the administered dose of pimavanserin and its active metabolite AC-279 were recovered in urine.</p><br>
+
+          <p style="text-decoration: underline;">Specific Populations</p>
+          <p>Population PK analysis indicated that age, sex, ethnicity, and weight do not have clinically relevant effect on 
+              the pharmacokinetics of pimavanserin.  In addition, the analysis indicated that exposure of pimavanserin in patients with mild to moderate renal impairment was similar to exposure in patients with normal renal function.</p><br>
+
+          <p>The effects of other intrinsic factors on pimavanserin pharmacokinetics is shown in <a href="#figure1" style="font-weight:500;">Figure 1</a> <br>
+            <em>[see Use in Specific Populations (<a href="#patients_renal">8.6</a> and <a href="#patients_hepatic">8.7</a>)]</em>.</p><br>
+      
+          <h3 id="figure1"><span class="titleSpacer">Figure 1</span> Effects of Intrinsic Factors on Pimavanserin Pharmacokinetics</h3>
+
+
+          <img class="tables" src="images/figure1effects.png" width="600">
+
+
+
+          <p class="tableFootnote">*Less than 10% of the administered dose of NUPLAZID was recovered in the dialysate.</p>
+
+          <p style="text-decoration: underline;">Drug Interaction Studies</p>
+          <p>CYP3A4 Inhibitor: ketoconazole, a strong inhibitor of CYP3A4, increased pimavanserin C<sub>max</sub> by 1.5-fold and AUC by 3-fold. Population PK modeling and simulation show that steady-state exposure (C<sub>max,ss</sub> and AUC<sub>tau</sub>) for 10 mg pimavanserin with ketoconazole is similar to exposure for 34 mg pimavanserin alone <em>[see Dosage and Administration (<a href="#dosage_modifications">2.3</a>) and Drug Interactions (<a href="#drugs7-1">7.1</a>)]</em>.</p><br>
+
+          <p>CYP3A4 Inducer: In a clinical study where single doses of 34 mg pimavanserin were administered on Days 1 and 22, and 600 mg rifampin, a strong inducer of CYP3A4, was given daily on Days 15 through 21, pimavanserin C<sub>max</sub> and AUC decreased by 71% and 91%, respectively, compared to pre-rifampin plasma concentrations. In a simulation with a moderate CYP3A4 inducer (efavirenz), physiologically based pharmacokinetic (PBPK) models predicted pimavanserin C<sub>max,ss</sub> and AUC<sub>tau</sub> at steady state decreased by approximately 60% and 70%, respectively <em>[see Dosage and Administration (<a href="#dosage_modifications">2.3</a>) and Drug Interactions (<a href="#drugs7-1">7.1</a>)]</em>.</p><br>
+
+          <p>There is no effect of pimavanserin on the pharmacokinetics of midazolam, a CYP3A4 substrate, or carbidopa/levodopa as shown in <a href="#figure2" style="font-weight:500;">Figure 2</a>.</p><br>
+
+          <h3 id="figure2"><span class="titleSpacer">Figure 2</span> Effects of Pimavanserin on the Pharmacokinetics of Other Drugs</h3><br>
+
+          <img src="images/figure2effects.png" width="600"/>
+
+
+          <p class="tableFootnote" style="font-size:12px;">*AUC and C<sub>max</sub> depict levodopa levels.</p>
+
+          <!-- 13 NONCLINICAL TOXICOLOGY -->
+          <h2 id="nonclinical_toxicology" class="nav-marker">13 &nbsp;NONCLINICAL TOXICOLOGY</h2>
+          <h3 id="carcinogenesis" class="nav-marker">13.1 &nbsp;Carcinogenesis, Mutagenesis, Impairment of Fertility</h3>
+          <p style="text-decoration: underline;">Carcinogenesis</p>
+          <p>There was no increase in the incidence of tumors following daily oral administration of pimavanserin to mice or rats for 2 years. Mice were administered pimavanserin at oral doses of 2.6, 6, and 13 (males)/8.5, 21, and 43 mg/kg/day (females) which are 0.01- to 1- (males)/0.5- to 7- (females) times the MRHD of 34 mg/day based on AUC. Rats were administered pimavanserin at oral doses of 2.6, 8.5, and 26 (males)/4.3, 13, and 43 mg/kg/day (females) which are 0.01- to 4- (males)/0.04- to 16- (females) times the MRHD of 34 mg/day based on AUC.</p><br>
+
+          <p style="text-decoration: underline;">Mutagenesis</p>
+          <p>Pimavanserin was not mutagenic in the <em>in vitro</em> Ames reverse mutation test, or in the <em>in vitro</em> mouse lymphoma assay, and was not clastogenic in the <em>in vitro</em> mouse bone marrow micronucleus assay.</p><br>
+
+          <p style="text-decoration: underline;">Impairment of Fertility</p>
+          <p>Pimavanserin was administered orally to male and female rats before mating, through mating, and up to Day 7 of gestation at doses of 8.5, 51, and 77 mg/kg/day, which are approximately 2-, 15-, and 22-times the maximum recommended human dose (MRHD) of 34 mg/day based on mg/m<sup>2</sup>, respectively. Pimavanserin had no effect on fertility or reproductive performance in male and female rats at doses up to 22-times the MRHD of 34 mg based on mg/m<sup>2</sup>. Changes in uterine parameters (decreases in the number of corpora lutea, number of implants, viable implants, and increases in pre-implantation loss, early resorptions and post-implantation loss) occurred at the highest dose which was also a maternally toxic dose. Changes in sperm parameters (decreased density and motility) and microscopic findings of cytoplasmic vacuolation in the epididymis occurred at doses approximately 15-times the MRHD of 34 mg/day based on mg/m<sup>2</sup>.</p><br>
+          
+          <h3 id="animal_toxicology" class="nav-marker">13.2 &nbsp;Animal Toxicology and/or Pharmacology</h3>
+          <p>Phospholipidosis (foamy macrophages and/or cytoplasmic vacuolation) was observed in multiple tissues and organs of mice, rats, and monkeys following oral daily administration of pimavanserin. The occurrence of phospholipidosis was both dose- and duration-dependent. The most severely affected organs were the lungs and kidneys. In rats, diffuse phospholipidosis was associated with increased lung and kidney weights, respiratory-related clinical signs including rales, labored breathing, and gasping, renal tubular degeneration, and, in some animals, focal/multifocal chronic inflammation in the lungs at exposures &#8805;10-times those at the maximum recommended human dose (MRHD) of 34 mg/day based on AUC. Phospholipidosis caused mortality in rats at exposures &#8805;16-times the MRHD of 34 mg/day based on AUC. The chronic inflammation in the rat lung was characterized by minimal to mild focal collagen positive fibroplasia as shown by specialized staining. Chronic inflammation of the lungs was not seen in monkeys treated for 12 months (exposures 9-times the MRHD). Based on the exposures at the estimated No Observed Effect Level (NOEL) for chronic lung inflammation in rats, there is a 5- to 9-times safety margin after 6-months of treatment and a 2- to 4-times safety margin after 24-months (lifetime) treatment compared to exposure at the MRHD. The relevance of these findings to human risk is not clear.</p><br>
+      
+          <!-- 14 CLINICAL STUDIES -->
+          <h2 id="clinical_studies" class="nav-marker">14 &nbsp;CLINICAL STUDIES</h2>
+          <h3 id="parkinsons" class="nav-marker">14.1 &nbsp;Parkinson&apos;s Disease Psychosis</h3>
+          <p>The efficacy of NUPLAZID 34 mg as a treatment of hallucinations and delusions associated with Parkinson&#8217;s disease psychosis was demonstrated in a 6-week, randomized, placebo controlled, parallel-group study. In this outpatient study, 199 patients were randomized in a 1:1 ratio to NUPLAZID 34 mg or placebo once daily. Study patients (male or female and aged 40 years or older) had a diagnosis of Parkinson&#8217;s disease (PD) established at least 1 year prior to study entry and had psychotic symptoms (hallucinations and/or delusions) that started after the PD diagnosis and that were severe and frequent enough to warrant treatment with an antipsychotic. At entry, patients were required to have a Mini-Mental State Examination (MMSE) score &#8805;21 and to be able to self-report symptoms. The majority of patients were on PD medications at entry; these medications were required to be stable for at least 30 days prior to study start and throughout the study period.</p><br>
+
+          <p>The PD-adapted Scale for the Assessment of Positive Symptoms (SAPS-PD) was used to evaluate the efficacy of NUPLAZID 34 mg. SAPS-PD is a 9-item scale adapted for PD from the Hallucinations and Delusions domains of the SAPS. Each item is scored on a scale of 0-5, with 0 being none and 5 representing severe and frequent symptoms. The SAPS-PD total score can range from 0 to 45 with higher scores reflecting greater severity of illness. A negative change in score indicates improvement. Primary efficacy was evaluated based on change from baseline to Week 6 in SAPS-PD total score.</p><br>
+
+          <p>As shown in <a href="#table3" style="font-weight:500;color:#5b5b5b;">Table 3</a>, <a href="#figure3">Figure 3</a>, and <a href="#figure4">Figure 4</a>, NUPLAZID 34 mg (n=95) was statistically significantly superior to placebo (n=90) in decreasing the frequency and/or severity of hallucinations and delusions in patients with PDP as measured by central, independent, and blinded raters using the SAPS-PD scale. An effect was seen on both the hallucinations and delusions components of the SAPS-PD.</p><br>
+
+          <h3 id="table3"><span class="titleSpacer">Table 3</span> Primary Efficacy Analysis Result Based on SAPS-PD (N=185)</h3>
+      
+          <table class="tables" width="650" border="1" cellspacing="0" cellpadding="1" align="center" style="font-size: 14px; margin-bottom:2px;">
+              <tbody>
+                  <tr>
+                      <td width="110" style="font-weight:bold; padding-left: 8px;">Endpoint</td>
+                      <td width="150" style="font-weight:bold; padding-left: 8px;">Treatment Group</td>
+                      <td align="center" width="110" style="font-weight:bold;">Mean Baseline Score (SD)</td>
+                      <td align="center" width="120" style="font-weight:bold;">LS Mean Change from Baseline (SE)</td>
+                      <td align="center" width="140" style="font-weight:bold;">Placebo-subtracted Difference<sup>a</sup> (95% CI)</td>
+                  </tr>
+                  <tr>
+                      <td rowspan="2" style="font-weight:bold;padding-left: 8px;">SAPS-PD</td>
+                      <td style="padding-left: 8px;">NUPLAZID</td>
+                      <td align="center">15.9 (6.12)</td>
+                      <td align="center">-5.79 (0.66)</td>
+                      <td align="center">-3.06* (-4.91, -1.20)</td>
+                  </tr>
+                  <tr>
+                      <td style="padding-left: 8px;">Placebo</td>
+                      <td align="center">14.7 (5.55)</td>
+                      <td align="center">-2.73 (0.67)</td>
+                      <td align="center">--</td>
+                  </tr>
+                  <tr>
+                      <td rowspan="2" style="padding-left: 20px;">SAPS-PD<br> Hallucinations<sup>b</sup></td>
+                      <td style="padding-left: 8px;">NUPLAZID</td>
+                      <td align="center">11.1 (4.58)</td>
+                      <td align="center">-3.81 (0.46)</td>
+                      <td align="center">-2.01 (-3.29, -0.72)</td>
+                  </tr>
+                  <tr>
+                      <td style="padding-left: 8px;">Placebo</td>
+                      <td align="center">10.0 (3.80)</td>
+                      <td align="center">-1.80 (0.46)</td>
+                      <td align="center">--</td>
+                  </tr>
+                  <tr>
+                      <td rowspan="2" style="padding-left: 20px;">SAPS-PD<br> Delusions<sup>b</sup></td>
+                      <td style="padding-left: 8px;">NUPLAZID</td>
+                      <td align="center">4.8 (3.59)</td>
+                      <td align="center">-1.95 (0.32)</td>
+                      <td align="center">-0.94 (-1.83, -0.04)</td>
+                  </tr>
+                  <tr>
+                      <td style="padding-left: 8px;">Placebo</td>
+                      <td align="center">4.8 (3.82)</td>
+                      <td align="center">-1.01 (0.32)</td>
+                      <td align="center">--</td>
+                  </tr>
+              </tbody>
+          </table>
+
+          <p style="color:#000000; font-family:'Times New Roman', Times, serif; font-size:12px; padding-left:5px;">SD: standard deviation; SE: standard error; LS Mean: least-squares mean; CI: confidence interval.</p><br>
+
+
+          <!-- <img class="tables" src="images/table3.fpo.png" width="650"> -->
+
+          
+          <p style="font-size: 14px;"><sup>a</sup>Difference (drug minus placebo) in least-squares mean change from baseline.<br>
+          <sup>b</sup>Supportive analysis.<br>
+          *Statistically significantly superior to placebo.</p><br>
+          
+          <p style="letter-spacing: -.01em;">The effect of NUPLAZID on SAPS-PD improved through the six-week trial period, as shown in <a href="#figure3"><span style="font-weight:500;">Figure 3</span></a>.</p><br>
+          
+        <h3 id="figure3"><span class="titleSpacer">Figure 3</span> SAPS-PD Change from Baseline through 6 Weeks Total Study Treatment</h3>
+      
+          <img class="tables" src="images/figure3_saps.png" width="600">
+
+
+
+
+          <h3 id="figure4" style="letter-spacing: -.5px;"><span class="titleSpacer">Figure 4</span> Proportion of Patients with SAPS-PD Score Improvement at the End of Week 6 (N=185)</h3>
+
+
+          <img class="tables" src="images/figure4saps.png" width="600">
+
+
+          <p style="text-decoration: underline; letter-spacing: -.5px;">Motor Function in Patients with Hallucinations and Delusions Associated with Parkinson&#8217;s Disease Psychosis</p>
+
+          <p>NUPLAZID 34 mg did not show an effect compared to placebo on motor function, as measured using the Unified Parkinson&#8217;s Disease Rating Scale Parts II and III (UPDRS Parts II+III) (<a href="#figure5" style="font-weight:500;">Figure 5</a>). A negative change in score indicates improvement. The UPDRS Parts II+III was used to assess the patient&#8217;s Parkinson&#8217;s disease state during the 6-week double-blind treatment period. The UPDRS score was calculated as the sum of the 40 items from activities of daily living and motor examination, with a range of 0 to 160.</p><br>
+          
+          <h3 id="figure5"><span class="titleSpacer">Figure 5</span> Motor Function Change from Baseline to Week 6 in UPDRS Parts II+III (LSM - SE)</h3>
+
+          
+          <img class="tables" src="images/figure5.png" width="400">
+          
+          <p class="tableFootnote">LSM: least-squares mean; SE: standard error. The error bars extend one SE below the LSM.</p>
+          
+          <p>Long-term efficacy of NUPLAZID 34 mg in Parkinson&#8217;s disease psychosis patients with dementia was shown in a 9-month relapse-prevention study of patients <em>[see Clinical Studies, <a href="#dementia_psychosis">14.2</a>]</em>.</p><br>
+          
+          <h3 id="dementia_psychosis" class="nav-marker">14.2 &nbsp;Dementia-Related Psychosis</h3>
+          <p>NUPLAZID 34 mg once daily treatment of hallucinations and delusions associated with dementia-related psychosis, 
+              with or without behavioral symptoms, was studied in a 38-week, multicenter, randomized, double-blind, 
+              placebo-controlled relapse prevention study. Patients with dementia (MMSE scores of 6-24) subtypes of either 
+              possible or probable Alzheimer&apos;s disease (66.3%), Parkinson&#8217;s disease dementia (15.1%), vascular dementia (9.7%), dementia with Lewy bodies (7.1%), or a frontotemporal degeneration spectrum disorder (1.8%) were enrolled and had a mean age of 74.5 years, a mean MMSE score of 16.7, and 70% were on antidementia medications at Baseline.</p><br>
+      
+          <p>Patients must have had psychotic symptoms for at least 2 months and a score &#8805;10 on the Scale for the Assessment of Positive Symptoms&ndash;Hallucinations+Delusions (SAPS-H+D), including global scores for either Hallucinations or Delusions &#8805;4 (marked) and Clinical Global Impression&ndash;Severity (CGI-S) scores &#8805;4 (moderately ill) to enter the 12-week open-label phase. Patients demonstrating a stable response at both weeks 8 and 12, defined as &#8805;30% improvement in the SAPS-H+D and a CGI-Improvement (CGI-I) score of 1 (very much improved) or 2 (much improved), were randomized in the double-blind phase in a 1:1 ratio to either NUPLAZID or placebo for up to 26 weeks and assessed regularly for relapse. Relapse was defined as one or more of the following: 1) &#8805;30% worsening on the SAPS-H+D score AND CGI-I score of 6 or 7 (much or very much worse), 2) treatment with another antipsychotic for dementia-related delusions and/or hallucinations, 3) drug discontinuation due to lack of efficacy, or 4) hospitalization for worsening dementia-related psychosis.</p><br>
+
+          <p>Three hundred and ninety-two (392) patients entered the open-label phase, and 62% of eligible patients (217/351) met sustained response criteria and entered the double-blind phase, with the stabilization rate being consistent across dementia subtypes. By Week 2 of the open-label phase, 30% of enrolled patients met full response criteria; this continued to increase with time in the open-label phase (50% of patients at Week 4 and 70% at Week 8), and 88% of patients who responded at Week 8 had sustained response at Week 12 (<a href="#figure6" style="font-weight:500;">Figure 6</a>).</p><br>
+
+          <h3 id="figure6"><span class="titleSpacer">Figure 6</span> Responder Analysis by Visit in Open Label Phase</h3>
+
+          <img class="tables" src="images/figure6.png" width="400"/>
+
+
+          <p>NUPLAZID was statistically superior to placebo in delaying the time to relapse of dementia-related psychosis at a prespecified interim primary efficacy analysis. A 2.8-fold reduction in risk of relapse (one sided p=0.0023) was observed in NUPLAZID treated patients compared to placebo. NUPLAZID treatment was also statistically superior to placebo in reducing the risk of all-cause discontinuation by 2.2-fold (one-sided p=0.0024). The K-M estimation (<a href="#figure7" style="font-weight:500;">Figure 7</a>) characterizes the proportion of stabilized patients remaining free from relapse over the 26-week double blind period.</p><br>
+
+          <h3 id="figure7"><span class="titleSpacer">Figure 7</span> Kaplan-Meier Estimation of Cumulative Proportion of Relapse-Free Patients</h3> 
+
+          <img class="tables" src="images/figure7.png" width="600">
+
+          <p style="letter-spacing: -.02em;">In the open label period, the mean change from baseline (SE) to Week 12 score in MMSE, a measure of cognition, was 1.0 (0.22). During the double-blind period there was no decline observed in mean MMSE in NUPLAZID-treated patients or difference from placebo-treated patients. The mean change from baseline (SE) for patients treated with NUPLAZID for the entire duration of the study (9 months) was 1.2 (0.51).</p><br>
+
+          <p>In the open label period, the mean change from baseline (SE) in the abbreviated Extrapyramidal Symptoms Rating Scale-A (ESRS-A), a measure of motor dysfunction, was -0.7, (0.17). During the double-blind period there were no changes in mean ESRS-A in NUPLAZID-treated patients or difference from placebo-treated patients.</p><br>
+
+          <p>In a double-blind, placebo-controlled study of NUPLAZID once daily treatment of 181 nursing home residents (mean age of 86 years) with moderate to severe dementia-related psychosis secondary to Alzheimer&#8217;s disease (mean MMSE score 10), NUPLAZID demonstrated a statistically significant reduction in the primary endpoint of the Neuropsychiatric Inventory&ndash;Nursing Home Version (NPI-NH) psychosis score compared to placebo after 6-weeks of treatment (p=0.0451).</p><br>
+      
+          <!-- 16 HOW SUPPLIED/STORAGE AND HANDLING -->
+          <h2 id="supplied_storage" class="nav-marker">16 &nbsp;HOW SUPPLIED/STORAGE AND HANDLING</h2>
+          <p>NUPLAZID (pimavanserin) is available as:</p><br>
+
+          <h3>34 mg Capsule:</h3>
+          <p>Opaque white and light green capsule with "PIMA" and "34" printed in black.</p>
+          <p>Bottle of 30: NDC 63090-340-30</p><br>
+
+          <h3>10 mg Tablet:</h3>
+          <p>Orange, round, coated tablet debossed with "P" on one side and "10" on the reverse.</p>
+          <p>Bottle of 30: NDC 63090-100-30</p><br>
+
+          <h3><em>Storage</em></h3>
+          <h3>34 mg Capsule:</h3>
+          <p>Store at 20°C to 25°C (68ºF to 77°F); excursions permitted between 15°C and 30°C (59°F and 86°F) [See USP Controlled Room Temperature]. To prevent potential capsule color fading, protect from light.</p><br>
+
+          <h3>10 mg Tablet:</h3>
+          <p>Store at 20°C to 25°C (68°F to 77°F); excursions permitted between 15°C and 30°C (59°F and 86°F) [See USP Controlled Room Temperature].</p><br>
+
+          <!-- 17 PATIENT COUNSELING INFORMATION -->
+          <h2 id="patient_counseling" class="nav-marker">17 &nbsp;PATIENT COUNSELING INFORMATION</h2>
+          <p style="text-decoration: underline;">Concomitant Medication</p>
+          <p>Advise patients to inform their healthcare providers if there are any changes to their current prescription or over-the-counter medications, since there is a potential for drug interactions <em>[see Warnings and Precautions (<a href="#qt_interval">5.2</a>), Drug Interactions (<a href="#drug_interactions">7</a>)]</em>.</p><br>
+
+          <p>Distributed by:<br>
+          Acadia Pharmaceuticals Inc.<br> 
+          San Diego, CA 92130 USA</p><br>
+
+          <p>&copy;2021 Acadia Pharmaceuticals Inc.<br> 
+            Acadia and NUPLAZID are registered trademarks of<br> 
+            Acadia Pharmaceuticals Inc. NU-1959 01/21</p>
+          <br/><br/>
+    </main>
+    
+    <script src="js/scripts.js"></script>
+</body>
+</html>
