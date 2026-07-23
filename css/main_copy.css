@@ -7,7 +7,8 @@ body {
  font-size: 18px;
  font-weight: 300;
  /* color: rgb(240, 240, 240); */
- color: rgb(42, 42, 42);
+ /* color: rgb(42, 42, 42); */
+ color: #e5e4e4;
  overflow-x: hidden;
  min-height: 100vh;
  height: 100%;
@@ -57,8 +58,10 @@ a:hover {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
  font-weight: 300;
+ color: #2d2d2d;
 }
 .media-body {
  margin-bottom: 40px;
