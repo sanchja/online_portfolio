@@ -1,0 +1,71 @@
+<html lang="en"><head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1;">
+		<title>Step 3 - Optimizing overflow:scroll on iOS5</title>
+		<style>
+			* {margin: 0; padding: 0;}
+			
+			body {
+				background-color: lightgrey;
+			}
+
+			.scrollable {
+				position:absolute;
+				top:30px;
+				left:30px;
+				background-color: white;
+				width:260px;
+				height:250px;
+				border: 1px solid black;
+				overflow-y: auto;
+				-webkit-overflow-scrolling: touch;
+			}
+
+			.scrollable ul {
+				height:100%;
+				overflow-y: auto;
+			}
+			
+			li {
+				font-family: sans-serif;
+				font-size: 12px;
+				border-bottom: 1px solid #e7e7e7;
+				padding: 0.6em 0.3em;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="scrollable">
+			<ul>
+				<li>Element 1</li>
+				<li>Element 2</li>
+				<li>Element 3</li>
+				<li>Element 4</li>
+				<li>Element 5</li>
+				<li>Element 6</li>
+				<li>Element 7</li>
+				<li>Element 8</li>
+				<li>Element 9</li>
+				<li>Element 10</li>
+				<li>Element 11</li>
+				<li>Element 12</li>
+				<li>Element 13</li>
+				<li>Element 14</li>
+				<li>Element 15</li>
+				<li>Element 16</li>
+				<li>Element 17</li>
+				<li>Element 18</li>
+				<li>Element 19</li>
+				<li>Element 21</li>
+				<li>Element 22</li>
+				<li>Element 23</li>
+				<li>Element 24</li>
+				<li>Element 25</li>
+				<li>Element 26</li>
+				<li>Element 27</li>
+				<li>Element 28</li>
+			</ul>
+		</div>
+	
+
+</body></html>

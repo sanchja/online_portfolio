@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'pillgothic600mg regular';
+	src: url('pillgothic600mg-regular-webfont.eot');
+	src: url('pillgothic600mg-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		url('pillgothic600mg-regular-webfont.woff') format('woff'),
+		url('pillgothic600mg-regular-webfont.ttf') format('truetype'),
+		url('pillgothic600mg-regular-webfont.svg') format('svg');
+}
+

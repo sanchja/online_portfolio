@@ -1,0 +1,10 @@
+@font-face {
+	
+font-family: 'pillgothic600mg boldobliq';
+	src: url('pillgothic600mg-boldobliq-webfont.eot');
+	src: url('pillgothic600mg-boldobliq-webfont.eot?#iefix') format('embedded-opentype'),
+		url('pillgothic600mg-boldobliq-webfont.woff') format('woff'),
+		url('pillgothic600mg-boldobliq-webfont.ttf') format('truetype'),
+		url('pillgothic600mg-boldobliq-webfont.svg') format('svg');
+		
+}

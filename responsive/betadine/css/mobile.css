@@ -1,0 +1,889 @@
+/**********************************
+
+TABLE OF CONTENTS
+
+Global content
+	Font Usage
+	Color Styles
+1.0	Betadine Home
+2.0	Consumer Home
+	2.1	What is Betadine?
+	2.2	Consumer Products
+	2.3	Learning Center
+	2.4	Build Your First Aid Kit
+	2.5	Frequently Asked Questions
+	2.6	Where to Buy
+3.0	Healthcare Professional Home
+	3.1	The Science of Betadine
+	3.2	Professional Products
+	3.3	Clinical Use
+	3.4	News & Resources
+	3.5	Frequently Asked Questions
+	3.6	Purchasing
+4.0	Medical Supply Dealers
+	4.1	About Betadine
+	4.2	Product Specification Sheets
+	4.3	Material Safety Data Sheets
+5.0	Contact Us
+6.0	Register
+	6.1	Registration Confirmation
+7.0	Unsubscribe
+	7.1	Unsubscribe Confirmation
+8.0	Share Via Email
+	8.1	Email Confirmation
+9.0	Share Via Twitter 
+	9.1	Twitter Autofill 
+10.0  Terms of Use 
+11.0  Privacy Policy
+12.0  Sitemap
+404 Error Message
+Leaving this site interstitial
+
+*************************************************/
+
+
+/**********************************
+
+FONT USAGE
+*************************************************/
+
+@import url("../webfonts/pillgothic600mg_boldobliq/stylesheet.css");
+@import url("../webfonts/pillgothic600mg_bold/stylesheet.css");
+@import url("../webfonts/pillgothic600mg_regular/stylesheet.css");
+/********************************
+
+COLOR STYLE GUIDES 
+-------------------
+RED COLOR = #bd202e
+LIGHT GREEN = #82bda0
+DARK GREEN = #1f7346
+LIGHT BROWN = #a38a68
+DARK BROWN = #3c2a12
+
+
+***********************************************/
+
+
+
+/**********************************
+
+BETADINE HOME (HOME PAGE)
+*************************************************/
+*{ margin:0px; padding:0px;	}
+
+body{font-family:"pillgothic600mg regular"; width:100%; line-height:1.3em;}
+h1, h2, h3, h4, h5, h6 { font-family:"pillgothic600mg bold"; line-height:1.5em; }
+h1{ font-size:1.7em; }
+h2{ font-size:1.5em; }
+h3{ font-size:1.3em; color:#bd202e; }
+h4{ font-size:1.1em; }
+h4 a:{ color:#bd202e;}
+h5{ font-size:1em; }
+h6{ font-size:.8em; }
+
+p{ font-size:.9em; }
+sup, sub { line-height:0px; font-size:.7em; }
+a:{ color:blue;}
+a:visited {
+	color: inherit;
+}
+#wrapper{
+	background-color:#e1f4fd;	
+}
+header{
+	width:100%;
+	height:130px;
+	background-color:white;
+	display:block;
+	z-index:2;
+	position:fixed;
+	float:left;		
+}
+#betadine{
+	width:180px;
+	height:90px;
+	background-image:url(../images/betadine_logo_200px.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:100%;
+	margin-left:15px;
+	line-height:90px;
+	float:left;
+}
+#betadine a{
+	display:block;
+	text-indent:-9999px;
+	cursor:pointer;	
+}
+#bottlesNav1{
+		
+}
+#bottlesNav1 li{
+		float:left;
+		list-style-type:none;
+		margin-left:15px;
+		margin-top:0px;
+		height:90px;
+		text-indent:0px;
+		overflow:hidden;
+}
+#consumerNav1 {
+	width:50px;
+	height:90px;
+	background-image:url(../images/mobile_consumer_bottle_nav_87pxH.png);
+	background-repeat:no-repeat;
+	margin-right:15px; 
+}
+#hcpNav1 {
+	width:50px;
+	height:100px;
+	background-image:url(../images/mobile_hcp_bottle_nav_87pxH.png);
+	background-repeat:no-repeat;
+	background-size:auto;
+}
+#dealerNav1 {
+	width:100px;
+	height:90px;
+	background-image:url(../images/mobile_dealer_bottle_nav_87pxH.png);
+	background-repeat:no-repeat;
+	padding-left:0px; 	
+}
+#consumerNav1 a {
+	display:none;
+}
+#hcpNav1 a {
+	display:none;
+}
+#dealerNav1 a{
+	display:none; 	
+}
+#bottlesNav{
+		
+}
+#bottlesNav li{
+		float:left;
+		list-style-type:none;
+		margin-left:15px;
+		margin-top:0px;
+		height:90px;
+		text-indent:0px;
+		overflow:hidden;
+		line-height:90px;
+}
+#consumerNav {
+	font-family:"pillgothic600mg boldobliq";
+	width:170px;
+	height:90px;
+	background-image:url(../images/mobile_consumer_bottle_nav_87pxH.png);
+	background-repeat:no-repeat;
+	margin-right:15px;
+	float:left; 
+}
+#consumerNav a {
+	display:block;
+	padding-left:50px;
+	line-height:90px;
+	text-decoration:none;	
+}
+#hcpNav {
+	font-family:"pillgothic600mg boldobliq";
+	width:250px;
+	height:90px;
+	background-image:url(../images/mobile_hcp_bottle_nav_87pxH.png);
+	background-repeat:no-repeat;
+	margin-right:15px;
+	float:left;
+}
+
+#hcpNav a {
+	color: #1f7346;
+	display:block;
+	padding-left:50px;
+	line-height:90px;
+	text-decoration:none;
+}
+#dealerNav {
+	font-family:"pillgothic600mg boldobliq";
+	width:250px;
+	height:90px;
+	background-image:url(../images/mobile_dealer_bottle_nav_87pxH.png);
+	background-repeat:no-repeat;
+	margin-right:15px;
+	float:left; 
+}
+#dealerNav a {
+	color:#3c2a12;
+	display:block;
+	padding-left:70px;
+	line-height:90px;
+	text-decoration:none;
+}
+#dealerNav a:hover{
+	color:#a38a68;	
+}
+
+#consumerNav img{
+	
+}
+#consumerNav img a{
+	display:block;
+}
+#vertNav{
+	display:none;	
+}
+#mainNav{
+	background-color:#bd202e;
+	height:auto;
+	color:white;
+	line-height:40px;
+	font-size:1.1em;
+	text-indent:15px;
+	clear:both;
+	list-style-type:none;
+	display:block;
+}
+#mainNav li{
+	/*border-bottom:2px solid #333;*/
+	display:block;
+	border-bottom:1px solid #333;
+}
+#mainNav li:nth-child(1){
+	border-top:1px solid #333;
+}
+#mainNav li a{
+	color:white;
+	text-decoration:none;
+	height:auto;
+	background-color:#bd202e;	
+	padding-left:30px;
+	display:block;
+	
+}
+a.blank{
+	background-image:url(../images/plus-white.png);
+	background-repeat:no-repeat;
+	display:block;
+	background-size:20px;
+	background-position:15px center;
+	display:block;
+	color:white;
+	text-decoration:none;
+	background-color:#bd202e;
+	height:40px;
+	line-height:40px;
+	font-size:2em;
+	padding-left:15px;
+	clear:both;
+	font-family:"pillgothic600mg bold";
+}
+a.blankMinus{
+	background-image:url(../images/minus-white.png);
+	background-repeat:no-repeat;
+	background-size:20px;
+	background-position:15px center;
+	display:block;
+	color:white;
+	background-color:#bd202e;
+	height:40px;
+	line-height:40px;
+	padding-left:15px;
+	clear:both;
+}
+#wrapArticle{
+	color:#4d4d4f;
+	z-index:1;
+	
+}
+#splash{
+	width:100%;
+	height:420px;
+	background-image:url(../images/mobile_consumer_bkgd_500px.jpg);
+	background-repeat:no-repeat;
+    background-position: 0px 90px;
+	background-size:100% 100%;
+	float:left;	
+	z-index:1;
+}
+.caption{
+	font-family: "pillgothic600mg boldobliq";
+	font-size: 2em;
+	color: #9b9b9b;
+	text-shadow: 4px 4px 3px #1f030a;
+	position: absolute;
+	margin-top: 280px;
+	margin-left: 15px;
+}
+#largeBottle{
+	background-image:url(../images/mobile_consumer_bottle_large_250pxHeight.png);
+	background-repeat:no-repeat;
+	width:118px;
+	height:250px;
+	float:right;
+	margin-top:190px;
+	margin-right:30px;
+}
+#splashMain{
+	width:100%;
+	height:600px;
+	background-image:url(../images/mobile_consumer_bkgd_500px.jpg);
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+	float:left;	
+	z-index:1;
+}
+.captionMain{
+	font-family: "pillgothic600mg boldobliq";
+	font-size: 2em;
+	color: white;
+	text-shadow: 4px 4px 3px #1f030a;
+	position: absolute;
+	margin-top: 280px;
+	margin-left: 15px;
+}
+#largeBottleMain{
+	background-image:url(../images/mobile_consumer_bottle_large_300pxHeight.png);
+	background-repeat:no-repeat;
+	width:142px;
+	height:310px;
+	float:right;
+	margin-top:330px;
+	margin-right:30px;
+}
+footer{
+	width:70%;
+	height:30px;
+	background-color:#e1f4fd;
+	bottom:0px;
+	z-index:2;
+	font-size:.7em;
+	padding:5px;
+	padding-left:15px;
+	clear:both;
+	line-height:1.5em;
+	color:#515050;
+}
+footer a{
+	color:#515050;
+	text-decoration:none;
+}
+footer a:hover{
+	text-decoration:underline;
+}
+#purdue{
+	background-image:url(../images/purdue_logo.png);
+	background-repeat:no-repeat;
+	float:left;
+	width:46px;
+	height:30px;	
+}
+
+
+/**********************************
+
+2.0	CONSUMER HOME
+*************************************************/
+
+#showLeftPush{
+	background-color:#69F;
+	-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+	width:45px;
+	height:45px;
+	cursor:pointer;
+	float:left;
+	margin-top:215px;
+	padding:0px;
+	line-height:40px;
+	text-align:center;
+	-webkit-box-shadow: 0px 6px 8px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 6px 8px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 6px 8px 0px rgba(50, 50, 50, 0.75);
+	
+	background: #1e5799; /* Old browsers */
+
+background: -moz-linear-gradient(left,  #1e5799 0%, #7db9e8 100%); /* FF3.6+ */
+
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#1e5799), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+
+background: -webkit-linear-gradient(left,  #1e5799 0%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+
+background: -o-linear-gradient(left,  #1e5799 0%,#7db9e8 100%); /* Opera 11.10+ */
+
+background: -ms-linear-gradient(left,  #1e5799 0%,#7db9e8 100%); /* IE10+ */
+
+background: linear-gradient(to right,  #1e5799 0%,#7db9e8 100%); /* W3C */
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 */
+
+
+}
+#showLeftPush.sb-toggle-left a img{
+	width:auto;
+	height:35px;
+	padding-top:5px;	
+}
+#showLeftPush a{
+	text-decoration:none;
+}
+#navside{
+	list-style-type:none;
+}
+#navside li{
+	font-family:"pillgothic600mg regular";
+	height:40px;
+	margin-bottom:10px;
+	border-bottom:thin solid white;
+	width:90%;
+	line-height:35px;	
+}
+#navside li:nth-child(4){
+	height:50px;
+	line-height:50px;
+}
+#navside a{
+	text-decoration:none;
+	color:white;
+}
+#navside a:hover{
+	text-decoration:none;
+	color:#bd202e;
+}
+#search{
+	height:50px;
+	background-color:#039;
+	width:110%;
+	margin-left:-10px;
+	padding-right:0px;
+	text-indent:50px;
+	line-height:50px;
+	color:white;	
+}
+
+/**********************************
+
+2.1	WHAT IS BETADINE?
+*************************************************/
+
+.wrap{
+	width:95%;
+	height:auto;
+	padding:20px;
+	padding-top:20px;
+	clear:both;	
+}
+.wrap ul{
+	margin-left:30px;
+	line-height:1.5em;
+    color:#039;
+}
+.wrap ol {
+	margin-left:20px;
+	line-height:1.5em;
+	color:#039;	
+}
+
+/**********************************
+
+3.0	HEALTHCARE PROFESSIONAL HOME
+*************************************************/
+
+#vertNavHCP{
+	display: none;
+}
+#vertNavMSD{
+	display:none;	
+}
+#mainNav{
+	background-color:#bd202e;
+	height:auto;
+	color:white;
+	line-height:40px;
+	font-size:1.1em;
+	text-indent:15px;
+	clear:both;
+	list-style-type:none;
+	display:block;
+}
+#mainNav li{
+	/*border-bottom:2px solid #333;*/
+	display:none;
+	border-bottom:1px solid #333;
+}
+#mainNav li:nth-child(1){
+	border-top:1px solid #333;
+}
+#mainNav li a{
+	color:white;
+	text-decoration:none;
+	height:auto;
+	background-color:#bd202e;	
+	padding-left:30px;
+}
+#splashHCP{
+	width:100%;
+	height:415px;
+	background-image:url(../images/mobile_hcp_bkgd419pxHeight.jpg);
+	background-repeat:no-repeat;
+	float:left;	
+	z-index:1;
+}
+.captionHCP{
+	font-family: "pillgothic600mg boldobliq";
+	font-size: 1.4em;
+	color: white;
+	text-shadow: 2px 2px 1px #1f030a;
+	position: absolute;
+	margin-top: 120px;
+	margin-left: 145px;
+}
+#largeBottleHCP{
+	background-image:url(../images/mobile_hcp_bottle_large_300pxHeight.png);
+	background-repeat:no-repeat;
+	background-size:100%;
+	width:110px;
+	height:300px;
+	float:right;
+	margin-top:220px;
+	margin-right:30px;
+}
+#splashHCPMain{
+	width:100%;
+	height:415px;
+	background-image:url(../images/mobile_hcp_bkgd419pxHeight.jpg);
+	background-repeat:no-repeat;
+	float:left;	
+	z-index:1;
+}
+.captionHCPMain{
+	font-family: "pillgothic600mg boldobliq";
+	font-size: 1.4em;
+	color: white;
+	text-shadow: 2px 2px 1px #1f030a;
+	position: absolute;
+	margin-top: 120px;
+	margin-left: 145px;
+}
+#largeBottleHCPMain{
+	background-image:url(../images/mobile_hcp_bottle_large_300pxHeight.png);
+	background-repeat:no-repeat;
+	background-size:100%;
+	width:110px;
+	height:300px;
+	float:right;
+	margin-top:220px;
+	margin-right:30px;
+}
+#showLeftPushHCP{
+	/*background-image:url(../images/bullets-green.png);
+	background-repeat: no-repeat;*/
+	/*background-color:#e1f4fd;*/    /*LIGHT BLUE BACKGROUND*/
+	background-color:#82bda0;
+	-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+	width:55px;
+	height:50px;
+	cursor:pointer;
+	float:left;
+	margin-top:180px;
+	padding:0px;
+	line-height:40px;
+	text-align:center;
+	-webkit-box-shadow: 0px 6px 8px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 6px 8px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 6px 8px 0px rgba(50, 50, 50, 0.75);
+	
+	background: #82bda0; /* Old browsers */
+
+background: -moz-linear-gradient(left,  #1f7346 0%, #82bda0 100%); /* FF3.6+ */
+
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#1f7346), color-stop(100%,#82bda0)); /* Chrome,Safari4+ */
+
+background: -webkit-linear-gradient(left,  #1f7346 0%,#82bda0 100%); /* Chrome10+,Safari5.1+ */
+
+background: -o-linear-gradient(left,  #1f7346 0%,#82bda0 100%); /* Opera 11.10+ */
+
+background: -ms-linear-gradient(left,  #1f7346 0%,#82bda0 100%); /* IE10+ */
+
+background: linear-gradient(to right,  #1f7346 0%,#82bda0 100%); /* W3C */
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f7346', endColorstr='#82bda0',GradientType=1 ); /* IE6-9 */
+
+
+}
+#showLeftPushHCP.sb-toggle-left a img{
+	width:auto;
+	height:45px;
+	padding-top:3px;	
+}
+#showLeftPushHCP a{
+	text-decoration:none;
+}
+#navsideHCP{
+	list-style-type:none;
+}
+#navsideHCP li{
+	font-family:"pillgothic600mg regular";
+	height:40px;
+	margin-bottom:10px;
+	border-bottom:thin solid white;
+	width:90%;
+	line-height:35px;	
+}
+#navsideHCP li:nth-child(1){
+	height:40px;
+	line-height:17px;
+	padding-top:5px;
+}
+#navsideHCP li:nth-child(2){
+	height:40px;
+	line-height:17px;
+}
+#navsideHCP li:nth-child(4){
+	height:40px;
+	line-height:17px;
+}
+#navsideHCP a{
+	text-decoration:none;
+	color:white;
+}
+#navsideHCP a:hover{
+	text-decoration:none;
+	color:#bd202e;
+}
+#searchHCP{
+	height:50px;
+	background-color:#1f7346;
+	width:110%;
+	border:none;
+	margin-top:0px;
+	margin-left:-10px;
+	padding-right:0px;
+	text-indent:40px;
+	line-height:60px;
+	color:white;
+	background-image:url(../images/searchicon.png);
+	background-repeat:no-repeat;
+	background-size:auto;
+}
+#subNavConsumers{
+	display:none;	
+}
+#subNavHCP{
+	display:none;	
+}
+#subNavMSD{
+	display:none;	
+}
+
+#splashMSD{
+	width:100%;
+	height:415px;
+	background-image:url(../images/dealer_intro420pxH.jpg);
+	background-repeat:no-repeat;
+	background-position:center 60px;
+    float:left;	
+    z-index:1;
+}
+.captionMSD{
+	font-family: "pillgothic600mg boldobliq";
+	font-size: 1.4em;
+	color: white;
+	text-shadow: 2px 2px 1px #1f030a;
+	position: absolute;
+	margin-top: 195px;
+	margin-left: 125px;
+}
+.captionMSDMain{
+	font-family: "pillgothic600mg boldobliq";
+	font-size: 1.5em;
+	color: white;
+	text-shadow: 3px 3.5px 2px #1f030a;
+	position: absolute;
+	margin-top: 195px;
+	margin-left:120px;
+}
+#largeBottleMSD{
+	background-image:url(../images/mobile_hcp_bottle_large_300pxHeight.png);
+	background-repeat:no-repeat;
+	background-size:100%;
+	width:110px;
+	height:300px;
+	float:right;
+	margin-top:200px;
+	margin-right:30px;
+}
+#showLeftPushMSD{
+	/*background-image:url(../images/bullets-green.png);
+	background-repeat: no-repeat;*/
+	/*background-color:#e1f4fd;*/    /*LIGHT BLUE BACKGROUND*/
+	background-color:#a38a68;
+	-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+	width:55px;
+	height:50px;
+	cursor:pointer;
+	float:left;
+	margin-top:180px;
+	padding:0px;
+	line-height:40px;
+	text-align:center;
+	-webkit-box-shadow: 0px 6px 8px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 6px 8px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 6px 8px 0px rgba(50, 50, 50, 0.75);
+	
+	background: #a38a68; /* Old browsers */
+
+background: -moz-linear-gradient(left, #3c2a12 0%, #a38a68 100%); /* FF3.6+ */
+
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#3c2a12), color-stop(100%,#a38a68)); /* Chrome,Safari4+ */
+
+background: -webkit-linear-gradient(left, #3c2a12 0%,#a38a68 100%); /* Chrome10+,Safari5.1+ */
+
+background: -o-linear-gradient(left, #3c2a12 0%,#a38a68 100%); /* Opera 11.10+ */
+
+background: -ms-linear-gradient(left, #3c2a12 0%,#a38a68 100%); /* IE10+ */
+
+background: linear-gradient(to right, #3c2a12 0%,#a38a68 100%); /* W3C */
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c2a12', endColorstr='#a38a68',GradientType=1 ); /* IE6-9 */
+
+}
+#showLeftPushMSD.sb-toggle-left a img{
+	width:auto;
+	height:45px;
+	padding-top:3px;	
+}
+#showLeftPushMSD a{
+	text-decoration:none;
+}
+
+
+
+@-webkit-keyframes splash{
+ 
+ from{-webkit-transform: translateY(0px);}
+ to{-webkit-transform: translateY(-100px);}
+
+}
+
+@-moz-keyframes splash{
+
+ from{-moz-transform:translateY(0px);}
+ to{-moz-transform:translateY(-100px);}
+}
+
+@keyframes splash{
+
+ from{transform:translateY(0px);}
+ to{transform:translateY(-100px);}
+}
+
+.splashAnimation{
+ 	-webkit-animation-name:splash;
+ 	-webkit-animation-duration:.5s;
+ 	-webkit-animation-timing-function:ease-out;
+ 	-webkit-animation-iteration-count:1;
+ 	-webkit-animation-delay:.5s;
+	-webkit-animation-fill-mode:forwards;
+	
+	-moz-animation-name:splash;
+ 	-moz-animation-duration:.5s;
+ 	-moz-animation-timing-function:ease-out;
+ 	-moz-animation-iteration-count:1;
+ 	-moz-animation-delay:1s;
+	-moz-animation-fill-mode:forwards;
+	
+	animation-name:splash;
+ 	animation-duration:.5s;
+ 	animation-timing-function:ease-out;
+ 	animation-iteration-count:1;
+ 	animation-delay:1s;
+	animation-fill-mode:forwards;	
+ }
+
+
+.wrapSide{
+	display:none;
+}.retail{
+text-decoration:none;
+list-style-type:none;
+padding:10px 10px;
+}
+.retail li{
+margin-bottom:25px;
+text-align:center;	
+}
+.wrapSideHCP {
+    display:none;
+}
+
+.wrapSideMSD {
+    display:none;
+}
+
+#footerHCP {
+    padding-top:20px;
+    font-size:.75em;
+}
+
+.wrapMSD {
+    background-color:#a38a68;
+    padding:15px;
+}
+
+#vertNavHome li{
+    display:none;
+}
+
+#navsideMSD {
+    list-style-type:none;
+}
+
+#navsideMSD li{
+	font-family:"pillgothic600mg regular";
+	height:40px;
+	margin-bottom:10px;
+	border-bottom:thin solid white;
+	width:90%;
+	line-height:35px;	
+}
+#navsideMSD li:nth-child(1){
+	height:40px;
+	line-height:34px;
+	padding-top:5px;
+}
+#navsideMSD li:nth-child(2){
+	height:40px;
+	line-height:34px;
+}
+#navsideMSD li:nth-child(3){
+	height:40px;
+	line-height:34px;
+}
+#navsideMSD a{
+	text-decoration:none;
+	color:white;
+}
+#navsideMSD a:hover{
+	text-decoration:none;
+	color:#bd202e;
+}
+
+#searchMSD{
+	height:50px;
+	background-color:#3c2a12;
+	width:110%;
+	border:none;
+	margin-top:0px;
+	margin-left:-10px;
+	padding-right:0px;
+	text-indent:40px;
+	line-height:60px;
+	color:white;
+	background-image:url(../images/searchicon.png);
+	background-repeat:no-repeat;
+	background-size:auto;
+}
