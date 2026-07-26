@@ -330,6 +330,7 @@ img.img-fluid {
 }
 .rule {
  clear: both;
+ border-color: black;
 }
 address {
  font-size: 1rem;
