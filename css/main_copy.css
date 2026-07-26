@@ -61,7 +61,7 @@ h2,
 h3,
 h4 {
  font-weight: 300;
- color: #2d2d2d;
+ color: #191818;
 }
 .media-body {
  margin-bottom: 40px;
@@ -70,6 +70,7 @@ h4 {
  margin: 10px 0;
  text-transform: uppercase;
  color: #771111;
+ font-weight: 400;
 }
 
 p {
