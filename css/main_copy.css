@@ -41,7 +41,7 @@ a:focus {
 }
 
 a {
- color: #9f1f00;
+ color: #e5e4e4;
  font-weight: 400;
 }
 a:visited {
@@ -52,7 +52,7 @@ a:visited {
 }
 
 a:hover {
- color: #202c9e;
+ color: #434343;
  text-decoration: none;
 }
 
