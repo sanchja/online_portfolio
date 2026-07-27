@@ -1,0 +1,500 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Zilretta 300x250</title>
+    <meta name="ad.size" content="width=300,height=250">
+
+
+    <script language="javascript">
+        ScrollRate = 110;
+
+        function scrollDiv_init() {
+            DivElmnt = document.getElementById('warning');
+            ReachedMaxScroll = false;
+
+            DivElmnt.scrollTop = 0;
+            PreviousScrollTop = 0;
+
+            ScrollInterval = setInterval('scrollDiv()', ScrollRate);
+        }
+
+        function scrollDiv() {
+
+            if (!ReachedMaxScroll) {
+                DivElmnt.scrollTop = PreviousScrollTop;
+                PreviousScrollTop++;
+
+                ReachedMaxScroll = DivElmnt.scrollTop >= (DivElmnt.scrollHeight - DivElmnt.offsetHeight);
+            }
+            // THIS CAN BE UNCOMMENTED IF YOU WANT IT TO SCROLL BACK UP
+            //        else {
+            //            ReachedMaxScroll = (DivElmnt.scrollTop == 0)?false:true;
+            //
+            //            DivElmnt.scrollTop = PreviousScrollTop;
+            //            PreviousScrollTop--;
+            //        }
+        }
+
+        function pauseDiv() {
+            clearInterval(ScrollInterval);
+        }
+
+        function resumeDiv() {
+            PreviousScrollTop = DivElmnt.scrollTop;
+            ScrollInterval = setInterval('scrollDiv()', ScrollRate);
+        }
+    </script>
+
+    <script type="text/javascript">
+        var clickTag1 = 'https://zilretta.com/';
+        var clickTag2 = 'https://zilrettalabel.com/prescribing-information.pdf';
+        var clickTag3 = 'http://www.fda.gov/medwatch';
+    </script>
+
+
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            font-size: 8px;
+            line-height: 9.6px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #1a0dab;
+        }
+
+        #hotspot {
+            z-index: 999;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 300px;
+            height: 189px;
+            opacity: 0;
+            cursor: pointer;
+            display: block;
+        }
+
+        p {
+            margin: 0px;
+            margin-bottom: 8px;
+            line-height: 9.6px;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            margin-bottom: 8px;
+        }
+
+        .bulletContainer p {
+            margin-left: 4px;
+        }
+
+        .bullets {
+            margin-left: 4px;
+        }
+
+        #wrapper {
+            border: 1px solid #000000;
+            width: 298px;
+            height: 248px;
+            position: relative;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .banner {
+            width: 300px;
+            height: 189px;
+            background-color: #028189;
+            position: relative;
+            box-sizing: border-box;
+            overflow: hidden;
+            border-bottom: 1px solid black;
+        }
+
+        #warning {
+            position: absolute;
+            top: 190px;
+            width: 280px;
+            height: 50px;
+            background-color: #ffffff;
+            overflow: auto;
+            color: #000000;
+            position: absolute;
+            z-index: 10;
+            padding-left: 8.6px;
+            padding-right: 8.6px;
+            border-top: 6px solid white;
+            scroll-behavior: smooth;
+            scrollbar-width: thin;
+        }
+
+        #results {
+            opacity: 0;
+            width: 79px;
+            height: 15px;
+            position: absolute;
+            left: 8.6px;
+            top: 171px;
+            animation: fadeend 3s;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+            z-index: 10;
+        }
+
+        #frame1 {
+            opacity: 0;
+            width: 135px;
+            height: 163px;
+            position: absolute;
+            left: 8.6px;
+            top: 8.6px;
+            animation: fade 5s;
+            animation-delay: 500ms;
+            animation-fill-mode: forwards;
+            z-index: 10;
+        }
+
+        #frame2 {
+            opacity: 0;
+            width: 134px;
+            height: 163px;
+            position: absolute;
+            left: 8.6px;
+            top: 8.6px;
+            animation: fade 5s;
+            animation-delay: 5s;
+            animation-fill-mode: forwards;
+            z-index: 10;
+        }
+
+        #frame3 {
+            opacity: 0;
+            width: 300px;
+            height: 250px;
+            position: absolute;
+            animation: fade 5s;
+            animation-delay: 10s;
+            animation-fill-mode: forwards;
+            z-index: 9;
+        }
+
+        #frame4 {
+            opacity: 0;
+            width: 300px;
+            height: 190px;
+            position: absolute;
+            animation: fade 5s;
+            animation-delay: 500ms;
+            animation-fill-mode: forwards;
+            z-index: 2;
+        }
+
+        #frame5 {
+            opacity: 0;
+            width: 128px;
+            height: 54px;
+            position: absolute;
+            left: 21px;
+            top: 12px;
+            animation: fadeend 5s;
+            animation-delay: 9s;
+            animation-fill-mode: forwards;
+            z-index: 2;
+        }
+
+        #frame6 {
+            opacity: 0;
+            width: 135px;
+            height: 50px;
+            position: absolute;
+            left: 21px;
+            top: 89px;
+            animation: fadeend 5s;
+            animation-delay: 9s;
+            animation-fill-mode: forwards;
+            z-index: 2;
+        }
+
+        #frame7 {
+            opacity: 0;
+            width: 300px;
+            height: 190px;
+            position: absolute;
+            animation: fade 5s;
+            animation-delay: 5s;
+            animation-fill-mode: forwards;
+            z-index: 2;
+        }
+
+        #frame8 {
+            opacity: 0;
+            width: 300px;
+            height: 190px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            animation: fadeend 5s;
+            animation-delay: 9s;
+            animation-fill-mode: forwards;
+            z-index: 2;
+        }
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeout {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+
+        @keyframes fade {
+
+            0%,
+            100% {
+                opacity: 0
+            }
+
+            50% {
+                opacity: 1
+            }
+        }
+
+        @keyframes fadeend {
+
+            0%,
+            100% {
+                opacity: 0
+            }
+
+            100% {
+                opacity: 1
+            }
+        }
+
+        .title {
+            font-size: 10px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .titleWarning {
+            font-size: 8px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .paragraph {
+            font-weight: 400;
+            font-size: 8px;
+        }
+
+        .indent {
+            margin-left: 8px;
+        }
+
+        .indentWarning {
+            margin-left: 8px;
+            margin-bottom: 4px;
+            font-weight: bold;
+        }
+
+        @keyframes vertical-marquee {
+
+            0% {
+                top: 10px;
+
+            }
+
+            100% {
+                top: -587px;
+
+
+            }
+        }
+    </style>
+
+</head>
+
+<body onload="setTimeout(scrollDiv_init, 13000)">
+
+    <!-- <body> -->
+
+
+    <div id="wrapper">
+        <a id="hotspot" href="javascript:window.open(window.clickTag1)"></a>
+        <div class="banner">
+            <img id="frame1" src="images/Needrelief.png" width="135" height="163"
+                alt="Need relief from your OA Knee pain">
+            <img id="frame2" src="images/askYourdoctor.png" width="134" height="163"
+                alt="Ask your doctor if Zilretta is the right choice for you">
+
+            <img id="frame4" src="images/frame1background.jpg" width="259" height="259" alt="zoom in on knee pain">
+            <img id="frame7" src="images/frame2background.jpg" width="247" height="247"
+                alt="stand up with Zilretta knee pain relief with Zilretta logo">
+            <img id="frame8" src="images/frame3background.jpg" width="259" height="259"
+                alt="stand up with Zilretta knee pain relief without logo">
+            <img id="frame5" src="images/zilrettalogo.png" width="128" height="54" alt="Zilretta logo">
+            <img id="frame6" src="images/cta.png" width="134" height="50" 0
+                alt="and take cotrol of your knee pain button, including Zilretta logo">
+        </div>
+
+        <!-- <div id="warning" onMouseOver="pauseDiv()" onMouseOut="resumeDiv()"> -->
+        <div id="warning" onMouseOver="pauseDiv()" onMouseOut="resumeDiv()">
+            <h1 class="title">Indication and Important Risk Information
+            </h1>
+            <strong class="margin-bottom0" style="margin-bottom: 8.6px;">What is ZILRETTA?</strong>
+
+            <p>ZILRETTA<span style="font-size: 6px; position: relative; top: -1.6px;">&reg;</span>
+                (triamcinolone
+                acetonide
+                extended-release injectable
+                suspension) is an extended-release
+                corticosteroid approved to manage osteoarthritis knee pain. The benefits and risks of repeat
+                injections
+                have
+                not been demonstrated.</p>
+
+            <strong class="margin-bottom0">Who should not receive ZILRETTA?</strong>
+            <p class="margin-top0">You should not receive a ZILRETTA injection if you are allergic to
+                corticosteroids,
+                triamcinolone
+                acetonide, or any other component of the product.</p>
+
+            <strong class="margin-bottom0">What possible side effects of corticosteroids could occur with
+                ZILRETTA?</strong>
+            <div class="paragraph bulletContainer">
+                <span>&bull;</span><span class="bullets">Rare serious allergic reactions</span>
+                <br>
+                <span>&bull;</span><span class="bullets">Effects in the injected knee such as infection (with pain,
+                    swelling and</span>
+                <br><span style="margin-left: 6px;">restricted motion) or joint damage</span>
+                <br>
+                <span>&bull;</span><span class="bullets">Increased chance of getting an infection, and a decreased
+                    ability to fight
+                    <br><span style="margin-left: 6px;"></span>an infection</span>
+                <br>
+                <span>&bull;</span><span class="bullets">Effects on hormone production. These effects can be
+                    reversible</span>
+                <br>
+                <span>&bull;</span><span class="bullets">Elevated blood pressure, sodium and water retention, and
+                    potassium
+                    loss</span>
+                <br>
+                <span>&bull;</span><span class="bullets">Intestinal perforation if you have certain
+                    gastrointestinal</span>
+                <br>
+                <span>&bull;</span><span class="bullets">Weakening of bones</span>
+                <br>
+                <span>&bull;</span><span class="bullets">Changes in behavior or mood disturbances</span>
+                <br>
+                <span>&bull;</span><span class="bullets">Increased pressure inside the eye</span>
+            </div>
+            <br>
+            <!-- <ul class="paragraph">
+                    <li class="indent">Rare serious allergic reactions</li>
+                    <li class="indent">Effects in the injected knee such as infection (with pain, swelling and
+                        restricted motion) or joint damage</li>
+                    <li class="indent">Increased chance of getting an infection, and a decreased ability to fight an
+                        infection</li>
+                    <li class="indent">Effects on hormone production. These effects can be reversible</li>
+                    <li class="indent">Elevated blood pressure, sodium and water retention, and potassium loss</li>
+                    <li class="indent">Intestinal perforation if you have certain gastrointestinal disorders</li>
+                    <li class="indent">Weakening of bones</li>
+                    <li class="indent">Changes in behavior or mood disturbances</li>
+                    <li class="indent">Increased pressure inside the eye</li>
+                </ul> -->
+
+
+            <strong class="margin-bottom0">What are the most common side effects of receiving a ZILRETTA
+                injection?</strong>
+            <p class="margin-top0">In multiple clinical trials, the most common side effects seen in people
+                taking
+                ZILRETTA were joint pain,
+                headache, joint swelling, back pain, sore throat and runny nose, upper respiratory tract
+                infection,
+                and
+                bruising.</p>
+
+            <strong class="margin-bottom0">What should you tell your doctor BEFORE receiving a ZILRETTA
+                injection?</strong>
+            <p class="margin-top0">Tell your doctor about all of the medications you are taking (including both
+                prescription and
+                over-the-counter medicines) and about any medical conditions, especially if you have high blood
+                pressure, heart disease, ulcers, diverticulitis or other gastrointestinal disorders, kidney
+                problems,
+                diabetes, glaucoma, behavior or mood disorders, and/or infections.</p>
+
+            <strong class="margin-bottom0">What should you tell your doctor AFTER receiving a ZILRETTA
+                injection?</strong>
+            <p class="margin-top0">Contact your doctor if you develop a fever or other signs of infection, have
+                an
+                increase in pain along
+                with swelling of the injected knee, restriction of joint motion, or a general feeling of
+                discomfort.
+                Contact your doctor immediately if you are exposed to chicken pox or measles, or for any new or
+                worsening changes in behavior or mood.</p>
+
+            <strong class="margin-bottom0">These are not all of the possible side effects with ZILRETTA or
+                corticosteroid
+                medications.
+                Please see the full Prescribing Information at <a href="javascript:window.open(window.clickTag2)"
+                    style="color:#000000; text-decoration: underline;">www.zilrettalabel.com/prescribing-information.pdf</a>.
+                Always contact your
+                doctor if you have questions or experience any side effects.</strong>
+
+            <strong class="margin-bottom0">You are encouraged to report negative side effects of prescription drugs
+                to
+                the FDA.
+                Visit
+                <a href="javascript:window.open(window.clickTag3)"
+                    style="color:#000000; text-decoration: underline;">www.fda.gov/medwatch</a>, or call <span
+                    style="color:#000000; text-decoration: underline;">1-800-FDA-1088</span>.</strong>
+
+            <img src="images/paciralogo.png" width="82" style="margin-top: 8px; margin-bottom: 8px;"
+                alt="Pacira logo" />
+
+            <p>&copy;2026 Pacira Pharmaceuticals, Inc., a wholly owned subsidiary of Pacira Biosciences, Inc.
+                All
+                rights
+                reserved. ZILRETTA is a registered trademark of Pacira Therapeutics, Inc, a wholly owned
+                subsidiary
+                of
+                Pacira Biosciences, Inc.</p>
+
+            <p>01/26 PP-ZA-US-1010</p>
+            <br>
+        </div>
+    </div>
+    <script>
+
+        function delayScroll() {
+            const delayscroll = document.querySelector('body');
+            delayscroll.append(scrollDiv_init());
+        }
+    </script>
+</body>
+
+</html>
