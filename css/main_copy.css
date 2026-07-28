@@ -499,6 +499,7 @@ footer a {
  }
  .projectImage img {
   width: 100%;
+  height: auto;
  }
 }
 
